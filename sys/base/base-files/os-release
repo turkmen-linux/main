@@ -1,11 +1,11 @@
-NAME="Turkman Linux"
+NAME="Turkmen Linux"
 ID=turkish
 ID_LIKE=turkish
 BUILD_ID=rolling
-PRETTY_NAME="Turkman GNU/Linux"
+PRETTY_NAME="Türkmen Linux"
 ANSI_COLOR="5;31"
-HOME_URL="https://turkman.gitlab.io/"
-DOCUMENTATION_URL="https://turkman.gitlab.io/devel/doc/wiki/"
-BUG_REPORT_URL="https://gitlab.com/groups/turkman/-/issues/"
-LOGO=turkman
+HOME_URL="https://turkmen-linux.gitlab.io/"
+DOCUMENTATION_URL="https://turkmen-linux..io/devel/doc/wiki/"
+BUG_REPORT_URL="https://gitlab.com/groups/turkmen-linux/-/issues/"
+LOGO=turkmen
 

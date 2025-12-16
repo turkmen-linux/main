@@ -1,8 +1,8 @@
 #!/bin/bash
 name=base-files
-release=4
+release=5
 version=$release
-url='https://gitlab.com/turkman/devel/sources/base-files'
+url='https://gitlab.com/turkmen-linux/devel/sources/base-files'
 description='Base system files'
 email='parduscix@yandex.ru'
 maintainer='sulincix'
@@ -11,7 +11,7 @@ source=("https://gitlab.com/turkman/devel/sources/base-files/-/archive/$version/
         "base-files.sysconf"
         "logo.svg"
         "os-release")
-sha256sums=('3b0bea2267b9e17a22360bb991238d03fcb9726d87375a1051bfca439f11bff9'
+sha256sums=('46a7cf788cc0e4385c0836920b36f9b4827a5b042ef7144d9c8533078d96fe19'
          'SKIP'
          'SKIP'
          'SKIP')
@@ -26,5 +26,5 @@ package(){
     make install
     install ../base-files.sysconf  ${DESTDIR}/etc/sysconf.d/base-files
     install ../os-release  ${DESTDIR}/etc/
-    install ../logo.svg ${DESTDIR}/usr/share/icons/hicolor/scalable/apps/turkman.svg
+    install ../logo.svg ${DESTDIR}/usr/share/icons/hicolor/scalable/apps/turkmen.svg
 }
