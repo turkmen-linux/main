@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='mesa'
-release='10'
-version='25.1.4'
+release='11'
+version='25.2.8'
 url='https://gitlab.freedesktop.org/mesa/mesa'
 description='An open-source implementation of the OpenGL specification'
 email='aliriza.keskin@pardus.org.tr'
@@ -10,7 +10,7 @@ license=('GPLv3')
 source=("https://gitlab.freedesktop.org/mesa/mesa/-/archive/mesa-$version/mesa-mesa-$version.tar.gz")
 depends=(libva libvdpau libdrm llvm glslang elfutils libclc py3-mako libglvnd eudev)
 makedepends=(git directx-headers py3-ply py3-yaml)
-sha256sums=('49913a6dc0e6e7fba40a750d0fe1fb16528c06a8b522bb1c5736a4cb48505cbf')
+sha256sums=('f65d5b9097df93509a4a61ed8ad1de2e27e8b7a05993a60308e1358c1331e677')
 group=(media.libs)
 uses=(wayland x11)
 wayland_depends=(wayland wayland-protocols)
@@ -22,35 +22,40 @@ cd $name-$name-$version
 export CFLAGS="-O3 -s"
 export CXXFLAGS="-O3 -s"
 
+export PATH=$PATH:/usr/lib64/rust/toolchains/stable-$(uname -m)-unknown-linux-gnu/bin:$HOME/.cargo/bin
+
+prepare(){
+# install rust stuff
+    cargo install bindgen-cli cbindgen
+}
+
+options=(
+    -D android-libbacktrace=disabled
+    -D b_ndebug=true
+    -D b_lto=false
+    -D gallium-drivers=asahi,crocus,d3d12,freedreno,i915,iris,llvmpipe,nouveau,r300,r600,radeonsi,softpipe,svga,virgl,zink
+    -D gallium-extra-hud=true
+    -D gallium-mediafoundation=disabled
+    -D gallium-rusticl-enable-drivers=asahi,freedreno,radeonsi
+    -D gallium-rusticl=true
+    -D gles1=disabled
+    -D html-docs=disabled
+    -D intel-rt=enabled
+    -D libunwind=disabled
+    -D microsoft-clc=disabled
+    -D sysprof=false
+    -D valgrind=false
+    -D video-codecs=all
+    -D vulkan-drivers=amd,freedreno,intel,intel_hasvk,swrast,virtio,microsoft-experimental,nouveau,asahi,gfxstream
+    -D vulkan-layers=device-select,intel-nullhw,overlay,screenshot,vram-report-limit
+)
+
+unset meson
+
 setup(){
     meson setup build --prefix=/usr \
-        -D b_ndebug=true \
-        -D b_lto=false \
         -D platforms=$(use_opt x11 x11 ""),$(use_opt wayland wayland "") \
-        -D gallium-drivers=r300,r600,radeonsi,nouveau,virgl,svga,llvmpipe,softpipe,iris,crocus,i915,zink,d3d12 \
-        -D vulkan-drivers=amd,intel,intel_hasvk,swrast,virtio \
-        -D vulkan-layers=device-select,intel-nullhw,overlay \
-        -D platforms=x11,wayland \
-        -D llvm=enabled \
-        -D shared-llvm=enabled \
-        -D shared-glapi=enabled \
-        -D gbm=enabled \
-        -D glx=dri \
-        -D opengl=true \
-        -D osmesa=true \
-        -D gles1=enabled \
-        -D gles2=enabled \
-        -D egl=enabled \
-        -D gallium-extra-hud=true \
-        -D gallium-nine=true \
-        -D gallium-rusticl=false \
-        -D gallium-va=enabled \
-        -D gallium-vdpau=enabled \
-        -D gallium-xa=enabled \
-        -D rust_std=2021 \
-        -D video-codecs=all \
-        -D lmsensors=disabled \
-        -D zstd=false
+        ${options[@]}
 
 }
 
