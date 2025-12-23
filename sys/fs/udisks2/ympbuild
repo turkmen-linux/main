@@ -1,17 +1,19 @@
 #!/usr/bin/env bash
 name='udisks2'
-release='2'
-version='2.10.1'
+release='3'
+version='2.11.0'
 url='https://github.com/storaged-project/udisks'
 description='Disk Management Service, version 2'
 email='aliriza.keskin@pardus.org.tr'
 maintainer='aliriza'
 license=('GPLv3')
 source=("https://github.com/storaged-project/udisks/archive/refs/tags/udisks-$version.tar.gz"
-        udisks.initd)
+        udisks.initd
+        49-auth-udisks2.rules)
 depends=(libblockdev libatasmart libgudev polkit)
 makedepends=()
-sha256sums=('a1c4232ce0f4d6a800269f8e8c6e93afb0e39aa7017383082943e400a0bc8e13'
+sha256sums=('d9be7e83eb9608f3240c55082649615d2fba34d11dbc426c5976e6f95d3e7b85'
+         'SKIP'
          'SKIP')
 group=(sys.fs)
 uses=()
@@ -26,6 +28,7 @@ setup(){
         --localstatedir=/var \
         --libdir=/usr/lib64/ \
         --with-systemdsystemunitdir=no \
+        --without-gtk-doc  \
         --enable-lvm2 \
         --enable-lvmcache \
         --enable-btrfs \
@@ -39,7 +42,8 @@ build(){
 package(){
     make install $jobs
     # openrc service
-    mkdir -p $DESTDIR/etc/init.d
+    mkdir -p $DESTDIR/etc/init.d $DESTDIR/usr/share/polkit-1/rules.d/
     install ../udisks.initd $DESTDIR/etc/init.d/udisks
+    install ../49-auth-udisks2.rules $DESTDIR/usr/share/polkit-1/rules.d/
 }
 
