@@ -1,16 +1,18 @@
 #!/usr/bin/env bash
 name='flatpak'
-release='3'
-version='1.16.0'
+release='4'
+version='1.16.2'
 url='https://github.com/flatpak/flatpak'
 description='Linux application sandboxing and distribution framework'
 email='aliriza.keskin@pardus.org.tr'
 maintainer='aliriza'
 license=('GPLv3')
-source=("https://salsa.debian.org/debian/flatpak/-/archive/debian/$version-1/flatpak-debian-$version-1.tar.gz")
+source=("https://salsa.debian.org/debian/flatpak/-/archive/debian/$version-1/flatpak-debian-$version-1.tar.gz"
+        "flatpak.env")
 depends=(ostree desktop-file-utils shared-mime-info curl libX11 json-glib appstream py3-parsing libseccomp)
 makedepends=()
-sha256sums=('c5f32fa8d837ec1100cdc55410db4fef6d25ffca085662ce843dbf1f30638676')
+sha256sums=('38a71f4c1954ed9b2fab5fc645c9bd9a201288ae07be40549f82d4fa3406ca18'
+            'SKIP')
 group=(sys.apps)
 uses=()
 arch=('x86_64')
@@ -36,5 +38,7 @@ build(){
 
 package(){
     ninja -C build install $jobs
+    echo "# Turkmen linux extras" >> $DESTDIR/etc/profile.d/flatpak.sh
+    cat ../flatpak.env >> $DESTDIR/etc/profile.d/flatpak.sh
 }
 

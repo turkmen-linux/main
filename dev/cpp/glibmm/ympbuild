@@ -1,16 +1,16 @@
 #!/usr/bin/env bash
 name='glibmm'
-release='1'
-version='2.66.6'
+release='2'
+version='2.86.0'
 url='https://www.gtkmm.org'
 description='C++ bindings for GLib'
 email='akarsu@protonmail.com'
 maintainer='akarsu'
 license=('LGPL')
 source=("https://download.gnome.org/sources/glibmm/${version%.*}/glibmm-${version}.tar.xz")
-depends=(glib libsigc++2)
+depends=(glib libsigc++)
 makedepends=()
-md5sums=('6defa41dd789059e57b0b417c36c004f')
+sha256sums=('39c0e9f6da046d679390774efdb9ad564436236736dc2f7825e614b2d4087826')
 group=(dev.cpp)
 uses=()
 arch=('x86_64')
