@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='cairomm'
-release='2'
-version='1.14.5'
+release='3'
+version='1.18.0'
 url='https://www.cairographics.org/cairomm/'
 description='C++ bindings for Cairo'
 email='akarsu@protonmail.com'
@@ -10,7 +10,7 @@ license=('LGPL' 'MPL')
 source=("https://www.cairographics.org/releases/cairomm-${version}.tar.xz")
 depends=(cairo libsigc++)
 makedepends=(mm-common)
-sha256sums=('70136203540c884e89ce1c9edfb6369b9953937f6cd596d97c78c9758a5d48db')
+sha256sums=('b81255394e3ea8e8aa887276d22afa8985fc8daef60692eb2407d23049f03cfb')
 group=(dev.cpp)
 uses=()
 arch=('x86_64')

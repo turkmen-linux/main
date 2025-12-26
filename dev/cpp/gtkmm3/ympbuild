@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='gtkmm3'
-release='2'
-version='3.24.9'
+release='3'
+version='3.24.10'
 url='https://www.gtkmm.org/'
 description='C++ bindings for GTK+ 3'
 email='akarsu@protonmail.com'
@@ -10,13 +10,15 @@ license=('LGPL')
 source=("https://download.gnome.org/sources/gtkmm/${version%.*}/gtkmm-${version}.tar.xz")
 depends=(atkmm cairomm glibmm pangomm)
 makedepends=(mm-common)
-sha256sums=('30d5bfe404571ce566a8e938c8bac17576420eb508f1e257837da63f14ad44ce')
+sha256sums=('7ab7e2266808716e26c39924ace1fb46da86c17ef39d989624c42314b32b5a76')
 group=(dev.cpp)
 uses=()
 arch=('x86_64')
 
 cd "gtkmm"-$version
 
+
+unset  meson
 setup () {
 	#autoreconf -fvi
     meson setup build --prefix=/usr \
