@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='muffin'
-release='4'
-version='6.4.1'
+release='5'
+version='6.6.0'
 url='https://github.com/linuxmint/muffin'
 description='Cinnamon window manager based on Mutter'
 email='brkt8khn@gmail.com'
@@ -12,7 +12,7 @@ depends=(cinnamon-desktop gobject-introspection libcanberra libinput
          libSM libxkbcommon startup-notification zenity graphene pipewire
          xorg-xwayland)
 makedepends=(meson intltool gobject-introspection wayland-protocols)
-sha256sums=('3c4ef0139d9bbaf7ac17f39dd06b6397c175614a2eb6c55d463024a457293808')
+sha256sums=('f8cd088d39add3ee65011f0edd7e745f9b3f25154af47774a2baad1a7e0b1adf')
 group=(cinnamon.base)
 uses=()
 arch=('x86_64')

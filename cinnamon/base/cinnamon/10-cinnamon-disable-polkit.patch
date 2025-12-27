@@ -1,25 +1,13 @@
 diff --git a/js/ui/polkitAuthenticationAgent.js b/js/ui/polkitAuthenticationAgent.js
-index 97bad507c..5c6e41f70 100644
+index 9135790..b9fa41f 100644
 --- a/js/ui/polkitAuthenticationAgent.js
 +++ b/js/ui/polkitAuthenticationAgent.js
-@@ -494,14 +494,14 @@ var AuthenticationDialog = GObject.registerClass({
- var AuthenticationAgent = class {
-     constructor() {
-         this._native = new Cinnamon.PolkitAuthenticationAgent();
--        this._native.connect('initiate', this._onInitiate.bind(this));
--        this._native.connect('cancel', this._onCancel.bind(this));
-+        //this._native.connect('initiate', this._onInitiate.bind(this));
-+        //this._native.connect('cancel', this._onCancel.bind(this));
-         // TODO - maybe register probably should wait until later, especially at first login?
--        try {
--            this._native.register();
--        } catch(e) {
--            global.logWarning('Failed to register Polkit Agent');
--        }
-+        //try {
-+            //this._native.register();
-+        //} catch(e) {
-+        //    global.logWarning('Failed to register Polkit Agent');
-+        //}
-         this._currentDialog = null;
-     }
+@@ -556,7 +556,7 @@ var AuthenticationAgent = class {
+             const session = new GnomeSession.SessionManager();
+             const csSessionId = session.SessionId;
+ 
+-            let procSessionId = this._native.register();
++            let procSessionId = null; //this._native.register();
+             if (procSessionId !== csSessionId) {
+                 global.logWarning("Unable to register as the polkit agent for login session '%s'. Cinnamon is running under '%s'"
+                                   .format(csSessionId, procSessionId));

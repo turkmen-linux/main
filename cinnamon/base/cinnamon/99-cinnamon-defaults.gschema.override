@@ -1,2 +1,5 @@
 [org.cinnamon.launcher]
 memory-limit-enabled = false
+
+[org.cinnamon.desktop.interface]
+enable-animation = false
