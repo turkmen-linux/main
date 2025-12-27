@@ -1,0 +1,53 @@
+#!/usr/bin/env bash
+name='ibus'
+release='1'
+version='1.5.33'
+url='https://github.com/ibus/ibus/wiki'
+description='Intelligent Input Bus'
+email='aliriza.keskin@pardus.org.tr'
+maintainer='aliriza'
+license=('GPLv3')
+source=("https://github.com/ibus/ibus/archive/refs/tags/$version.tar.gz"
+        "fix.patch")
+depends=(gtk3)
+makedepends=()
+sha256sums=('a777068caba4ba7599a3214e2966f564daec01bba94cd7f2ca63062107e0604f'
+            'SKIP')
+group=(app.i18n)
+uses=()
+arch=('x86_64')
+
+cd $name-$version
+
+export CFLAGS="-Wno-all"
+
+prepare(){
+    # https://github.com/ibus/ibus/pull/2833
+    patch -Np1 -i ../fix.patch
+}
+
+setup () {
+    autoreconf -fvi
+    ./configure --prefix=/usr \
+     --libdir=/usr/lib64/ \
+     --disable-gtk-doc \
+  		--disable-memconf \
+ 		--disable-python2 \
+ 		--disable-gtk4 \
+ 		--disable-gtk2 \
+		--disable-emoji-dict \
+    --disable-unicode-dict \
+ 		--disable-systemd-services
+
+rm -f tools/main.c
+
+}
+
+build () {
+    make $jobs
+}
+
+package () {
+    make install $jobs
+}
+
