@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='hyprlang'
-release='2'
-version='0.6.3'
+release='3'
+version='0.6.7'
 url='https://github.com/hyprwm/hyprlang'
 description='The official implementation library for the hypr config language.'
 email='aliriza.keskin@pardus.org.tr'
@@ -10,7 +10,7 @@ license=('GPLv3')
 source=("https://github.com/hyprwm/hyprlang/archive/refs/tags/v$version.tar.gz")
 depends=(hyprutils glib)
 makedepends=()
-sha256sums=('f5effe017edc7a0036c20c7ecbea4edc2bfdacbc0f791b283bd21ec202384251')
+sha256sums=('e8d54af895ec04fe99553c68d1255dceddb43723ada4a134acdd46bfe1dbf924')
 group=(hyprland.libs)
 uses=()
 arch=('x86_64')

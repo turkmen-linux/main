@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 name='hyprwayland-scanner'
-release='2'
-version='0.4.4'
-url='https://github.com/hyprwm/hyprlang'
+release='3'
+version='0.4.5'
+url='https://github.com/hyprwm/hyprwayland-scanner'
 description='A Hyprland implementation of wayland-scanner, in and for C++.'
 email='aliriza.keskin@pardus.org.tr'
 maintainer='aliriza'
@@ -10,7 +10,7 @@ license=('GPLv3')
 source=("https://github.com/hyprwm/hyprwayland-scanner/archive/refs/tags/v$version.tar.gz")
 depends=(hyprutils glib pugixml)
 makedepends=()
-sha256sums=('ac73f626019f8d819ff79a5fca06ce4768ce8a3bded6f48c404445f3afaa25ac')
+sha256sums=('2125d279eea106e3e6c8dc9fa15181c75d67467b5352d24e2a07903b10abad62')
 group=(hyprland.libs)
 uses=()
 arch=('x86_64')

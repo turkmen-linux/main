@@ -1,16 +1,16 @@
 #!/usr/bin/env bash
 name='aquamarine'
-release='2'
-version='0.8.0'
+release='3'
+version='0.10.0'
 url='https://github.com/hyprwm/aquamarine'
 description='Aquamarine is a very light linux rendering backend library'
 email='aliriza.keskin@pardus.org.tr'
 maintainer='aliriza'
 license=('GPLv3')
 source=("https://github.com/hyprwm/aquamarine/archive/refs/tags/v$version.tar.gz")
-depends=(hyprwayland-scanner libglvnd libglvnd libinput mesa seatd wayland)
+depends=(hyprwayland-scanner libglvnd libglvnd libinput mesa seatd wayland libdisplay-info hwdata)
 makedepends=()
-sha256sums=('1c3570de268fff008c6dd76472d783710b7f62c545f76091580c9edd13ad23d5')
+sha256sums=('0ec80c86dd94d7f2836aac9ed415b9170109bd77048de791d837ee729f1ad76a')
 group=(hyprland.libs)
 uses=()
 arch=('x86_64')

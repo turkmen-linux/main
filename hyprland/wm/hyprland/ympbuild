@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='hyprland'
-release='2'
-version='0.49.0'
+release='3'
+version='0.52.2'
 url='https://github.com/hyprwm/hyprland'
 description="Hyprland is an independent, highly customizable, dynamic tiling Wayland compositor that doesn't sacrifice on its looks."
 email='aliriza.keskin@pardus.org.tr'
@@ -10,7 +10,7 @@ license=('GPLv3')
 source=("https://github.com/hyprwm/Hyprland/releases/download/v$version/source-v$version.tar.gz")
 depends=(hyprcursor libXcursor libglvnd libinput libxcb libxcb libxkbcommon mesa pango util-linux xcb-util-errors xcb-util-wm hyprgraphics re2)
 makedepends=(glaze)
-sha256sums=('fd96fb043cfeda09a1ab9a5eb69fee55562475c0c6a41f79dad2bcc652dc5730')
+sha256sums=('57b4db99896cad8388482b945b119b206fd7ea94638793b550210be08274d7dd')
 group=(hyprland.wm)
 uses=()
 arch=('x86_64')

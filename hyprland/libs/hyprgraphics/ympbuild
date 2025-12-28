@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='hyprgraphics'
-release='1'
-version='0.1.5'
+release='2'
+version='0.4.0'
 url='https://github.com/hyprwm/hyprgraphics'
 description='Hyprland graphics / resource utilities'
 email='aliriza.keskin@pardus.org.tr'
@@ -10,7 +10,7 @@ license=('GPLv3')
 source=("https://github.com/hyprwm/hyprgraphics/archive/refs/tags/v$version.zip")
 depends=(cairo file libjpeg-turbo libjxl libwebp)
 makedepends=()
-sha256sums=('de9a8ecd94ee38c9969c1205da0bd1f00d14ac9f84f2e09f34860b34f3692e56')
+sha256sums=('c82cab599dd235e0039d0fac7168d86682ea22863239cc57bb2c4a3294c12394')
 group=(hyprland.libs)
 uses=()
 arch=('x86_64')
