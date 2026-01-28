@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='chrpath'
-release='2'
-version='0.17'
+release='3'
+version='0.18'
 url='https://directory.fsf.org/wiki/Chrpath'
 description='Chrpath can modify the rpath and runpath of ELF executables'
 email='bayramk@gmail.com'
@@ -10,7 +10,7 @@ license=('GPLv3')
 source=("https://codeberg.org/pere/chrpath/archive/release-$version.tar.gz")
 depends=()
 makedepends=()
-md5sums=('a76a47c9c82016821808f5726a66e600')
+sha256sums=('f09c49f0618660ca11fc6d9580ddde904c7224d4c6d0f6f2d1f9bcdc9102c9aa')
 group=(app.admin)
 uses=()
 arch=('x86_64')

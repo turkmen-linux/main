@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='cups'
-release='2'
-version='2.4.7'
+release='3'
+version='2.4.13'
 url='https://github.com/OpenPrinting/cups'
 description='The Common Unix Printing System '
 email='bk@gmail.com'
@@ -11,9 +11,9 @@ source=("https://github.com/OpenPrinting/cups/releases/download/v${version}/cups
         'cups.groups'
         'cups.users'
 		'cupsd.initd')
-depends=(openssl)
+depends=(openssl acl dbus libusb libxcrypt zlib)
 makedepends=()
-md5sums=('e0a5ddbf53dfad41da26fc1ef60b2256'
+sha256sums=('8255ecf037be72660de24a73bcada042fc5bf509fc87bc8ad16cd0675735c1a8'
          'SKIP'
          'SKIP'
 		 'SKIP')
