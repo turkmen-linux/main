@@ -29,7 +29,10 @@ gtk_depends=(gtk3 vte3)
 cd $name-$version
 
 prepare(){
+    # prevent patch pci ids (buggy)
+    cp -f include/hw/pci/pci.h include/hw/pci/pci.h.bak
     patch -Np1 -i ../qemu-$version.patch
+    cp -f include/hw/pci/pci.h.bak include/hw/pci/pci.h
     cd ..
     cp -prf $name-$version $name-$version.static
 }
