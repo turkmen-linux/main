@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='xfsprogs'
-release='5'
-version='6.6.0'
+release='6'
+version='6.18.0'
 url='https://xfs.wiki.kernel.org/'
 description='XFS filesystem utilities'
 email='bayramk@gmail.com'
@@ -10,7 +10,7 @@ license=('GPLv3')
 source=("https://mirrors.edge.kernel.org/pub/linux/utils/fs/xfs/xfsprogs/xfsprogs-${version}.tar.xz")
 depends=(inih liburcu icu)
 makedepends=()
-md5sums=('c008a752fae65aaf761096eb4698df86')
+sha256sums=('3a6dc7b1245ce9bccd197bab00691f1b190bd3694d3ccc301d21b83afc133199')
 group=(sys.fs)
 uses=()
 arch=('x86_64')
@@ -31,9 +31,6 @@ build(){
 package(){
    # make install $jobs
   make DIST_ROOT="${DESTDIR}" PKG_ROOT_SBIN_DIR="/usr/sbin" install install-dev
-  # add hack as we cannot set rootlibdir
-  mv "${DESTDIR}"/lib64/libhandle.so* "${DESTDIR}/usr/lib64/"
-  rm -rf "${DESTDIR}/lib64"
 
 }
 

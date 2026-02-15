@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='patch'
-release='1'
-version='2.7.6'
+release='2'
+version='2.8'
 url='https://ftp.gnu.org/gnu/patch/'
 description='A utility to apply patch files to original sources'
 email='aliriza.keskin@pardus.org.tr'
@@ -10,7 +10,7 @@ license=('GPLv3')
 source=("https://ftp.gnu.org/gnu/patch/patch-$version.tar.xz")
 depends=(attr)
 makedepends=()
-md5sums=('78ad9937e4caadcba1526ef1853730d5')
+sha256sums=('f87cee69eec2b4fcbf60a396b030ad6aa3415f192aa5f7ee84cad5e11f7f5ae3')
 uses=()
 group=(sys.devel)
 arch=('x86_64')
@@ -18,6 +18,7 @@ arch=('x86_64')
 cd $name-$version
 
 setup(){
+    autoreconf -vfi
     ./configure --prefix=/usr \
         --libdir=/usr/lib64/
 }

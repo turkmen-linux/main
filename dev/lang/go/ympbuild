@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='go'
-release='2'
-version='1.23.1'
+release='3'
+version='1.25.7'
 url='https://go.dev'
 description='Go programming language compiler'
 email='aliriza.keskin@pardus.org.tr'
@@ -11,7 +11,7 @@ depends=()
 makedepends=()
 source=("https://go.dev/dl/go$version.linux-$DEBARCH.tar.gz")
 if [[ "$DEBARCH" == "amd64" ]] ; then
-    sha256sums=('49bbb517cfa9eee677e1e7897f7cf9cfdbcf49e05f61984a2789136de359f9bd')
+    sha256sums=('12e6d6a191091ae27dc31f6efc630e3a3b8ba409baf3573d955b196fdf086005')
 fi
 group=(dev.lang)
 uses=()

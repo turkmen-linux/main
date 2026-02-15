@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='libsoup3'
 release='2'
-version='3.4.2'
+version='3.6.5'
 url='https://gitlab.gnome.org/GNOME/libsoup.git/'
 description='HTTP client/server library for GNOME '
 email='bayramk@gmail.com'
@@ -9,8 +9,8 @@ maintainer='bk'
 license=('GPLv3')
 source=("https://gitlab.gnome.org/GNOME/libsoup/-/archive/$version/libsoup-$version.tar.gz")
 depends=(smartypants glib-networking)
-makedepends=()
-md5sums=('d927a69038058f2010c49c12a31c8f1f')
+makedepends=(py3-packaging)
+sha256sums=('a97f88f9182db8dd7b46afc139a0ff19e463cf4a9f799682e8c4189cbd5815c4')
 group=(net.libs)
 uses=()
 arch=('x86_64')

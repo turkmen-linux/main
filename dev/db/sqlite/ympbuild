@@ -1,23 +1,22 @@
 #!/usr/bin/env bash
 name='sqlite'
 release='5'
-version='3.45.1'
+version='3.51.2'
 url='https://www.sqlite.org/download.html'
 description='A C library that implements an SQL database engine'
 email='parduscix@yandex.ru'
 maintainer='sulincix'
 license=('GPLv3')
-srcver='3450100'
-			  #https://www.sqlite.org/2024/sqlite-autoconf-3450100.tar.gz
-source=("https://www.sqlite.org/2024/sqlite-autoconf-$srcver.tar.gz")
+srcver='3510200'
+source=("https://www.sqlite.org/2026/sqlite-src-$srcver.zip")
 depends=(zlib readline)
 makedepends=( )
-md5sums=('743c99f996add46273694df83c9140d4')
+sha256sums=('85110f762d5079414d99dd5d7917bc3ff7e05876e6ccbd13d8496a3817f20829')
 uses=()
 group=(dev.db)
 arch=('x86_64')
 
-cd $name-autoconf-$srcver
+cd $name-src-$srcver
 
 setup(){
     ./configure --prefix=/usr \

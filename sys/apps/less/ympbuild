@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='less'
-release='4'
-version='668'
+release='5'
+version='685'
 url='https://ftp.gnu.org/gnu/less'
 description='Excellent text file viewer'
 email='aliriza.keskin@pardus.org.tr'
@@ -10,7 +10,7 @@ license=('GPLv3')
 source=("https://ftp.gnu.org/gnu/less/less-$version.tar.gz")
 depends=(ncurses)
 makedepends=()
-sha256sums=('2819f55564d86d542abbecafd82ff61e819a3eec967faa36cd3e68f1596a44b8')
+sha256sums=('2701041e767e697ee420ce0825641cedc8f20b51576abe99d92c1666d332e9dc')
 uses=(pcre2)
 pcre2_depends=(libpcre2)
 group=(sys.apps)

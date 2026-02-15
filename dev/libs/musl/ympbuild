@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='musl'
-release='1'
-version='1.2.3'
+release='2'
+version='1.2.5'
 url='https://musl.libc.org/'
 description='the musl c library (libc) implementation'
 email=' aliriza.keskin@pardus.org.tr'
@@ -12,7 +12,7 @@ source=("https://musl.libc.org/releases/musl-$version.tar.gz"
         'bits_types.h')
 depends=( )
 makedepends=( )
-md5sums=('a507ae4f7f20bcfe566d8eb65c1af73e'
+sha256sums=('a9a118bbe84d8764da0ea0d28b3ab3fae8477fc7e4085d90102b8596fc7c75e4'
          'SKIP'
          'SKIP')
 arch=('x86_64')

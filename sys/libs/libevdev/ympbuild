@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='libevdev'
-release='1'
-version='1.13.0'
+release='2'
+version='1.13.6'
 url='https://https://gitlab.freedesktop.org/libevdev/libevdev'
 description='Wrapper library for evdev devices'
 email='aliriza.keskin@pardus.org.tr'
@@ -10,7 +10,7 @@ license=('GPLv3')
 source=("https://gitlab.freedesktop.org/libevdev/libevdev/-/archive/libevdev-$version/libevdev-libevdev-$version.tar.gz")
 depends=()
 makedepends=()
-md5sums=('543bb8a1ea75720ed6cd6503614edeeb')
+sha256sums=('54748fded25633399a8418d7c4c123fe365037c901b4389e0bf3dd7688fb1c7e')
 group=(sys.libs)
 uses=()
 arch=('x86_64')
