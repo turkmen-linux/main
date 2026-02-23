@@ -20,7 +20,7 @@ dontstrip="31"
 package(){
     # install kernel (archlinux kernel config used)
     ALLOWROOT=1 bash mklinux -i -o "$DESTDIR" -t linux \
-     -c "https://gitlab.archlinux.org/archlinux/packaging/packages/linux/-/raw/main/config"  \
+     -c "https://gitlab.archlinux.org/archlinux/packaging/packages/linux-hardened/-/raw/main/config"  \
      -v $version -y 1
     # remove headers (for fix conflict with linux-headers)
     rm -rf ${DESTDIR}/usr/include
