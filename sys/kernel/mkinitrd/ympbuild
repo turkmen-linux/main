@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='mkinitrd'
-release='9'
-version='1.0.0'
+release='10'
+version='1.0.1'
 url='https://gitlab.com/turkman/devel/sources/mkinitrd'
 description='Initial ramdisk system from turkman linux'
 email='aliriza.keskin@pardus.org.tr'
@@ -11,7 +11,7 @@ source=("https://gitlab.com/turkman/devel/sources/mkinitrd/-/archive/$version/mk
         "mkinitrd.sysconf")
 depends=(findutils coreutils)
 makedepends=()
-sha256sums=('2d1d60f015f273f71f7fe0b251a96bad8a22294fce917e84b9c28a2987673e7f'
+sha256sums=('1f1f152ff7928fc382065091e13f4fdb4eea43cd3b63266c1ca7cbf396f7027f'
             'SKIP')
 uses=()
 group=(sys.kernel)
