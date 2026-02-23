@@ -19,7 +19,7 @@ dontstrip="31"
 
 package(){
     # install kernel (archlinux kernel config used)
-    ALLOWROOT=1 bash mklinux -i -o "$DESTDIR" -t linux \
+    ALLOWROOT=1 bash mklinux -f -q -x -o "$DESTDIR" -t linux \
      -c "https://gitlab.archlinux.org/archlinux/packaging/packages/linux-hardened/-/raw/main/config"  \
      -v $version -y 1
     # remove headers (for fix conflict with linux-headers)

@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+name='linux-tools'
+release='1'
+version='6.19.3'
+url='https://cdn.kernel.org/pub/linux/kernel/'
+description='Linux kernel'
+email='aliriza.keskin@pardus.org.tr'
+maintainer='aliriza'
+license=('GPLv2')
+source=()
+depends=(eudev libcap libnl llvm openssl pciutils)
+makedepends=(mklinux)
+sha256sums=()
+uses=()
+arch=('x86_64')
+group=(sys.kernel)
+
+package(){
+    # install kernel (archlinux kernel config used)
+    ALLOWROOT=1 bash mklinux -n -u -o "$DESTDIR" -t linux \
+     -c "https://gitlab.archlinux.org/archlinux/packaging/packages/linux-hardened/-/raw/main/config"  \
+     -v $version -y 1
+}
+
