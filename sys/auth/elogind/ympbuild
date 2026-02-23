@@ -65,7 +65,7 @@ package(){
 
     # shadow system-auth.d file
     mkdir -p "${DESTDIR}"/etc/pam.d/system-auth.d/
-    echo "session    include    elogind-user" > "${DESTDIR}"/etc/pam.d/system-auth.d/99-elogind
+    echo "session    optional    pam_elogind.so" > "${DESTDIR}"/etc/pam.d/system-auth.d/99-elogind
 
     # ld.so.conf
     mkdir -p "${DESTDIR}"/etc/ld.so.conf.d/
