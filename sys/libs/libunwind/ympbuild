@@ -1,34 +1,37 @@
 #!/usr/bin/env bash
 name='libunwind'
-release='1'
-version='1.7.0'
+release='2'
+version='1.8.3'
 url='https://savannah.nongnu.org/projects/libunwind'
 description='Portable and efficient API to determine the call-chain of a program '
 email='bayramk@gmail.com'
 maintainer='bk'
 license=('GPLv3')
-source=("https://github.com/libunwind/libunwind/archive/refs/tags/v$version-rc2.tar.gz")
+source=("https://github.com/libunwind/libunwind/archive/refs/tags/v$version.tar.gz")
 depends=()
 makedepends=()
-md5sums=('e4b4b6376884b02fb540f04b763df7b9')
+sha256sums=('21b26bc75cd37b548d7952f2794cde711efa6c6151c4147cc3c52cfedbf11df4')
 group=(sys.libs)
 uses=()
 arch=('x86_64')
 
-cd $name-$version-rc2
+cd $name-$version
+
+unset CFLAGS
+unset CXXFLAGS
 
 setup(){
-	autoreconf -fvi
-  ./configure --prefix=/usr \
-      --libdir=/usr/lib64/
-
+    autoreconf -i
+    ./configure --prefix=/usr \
+        --enable-cxx-exceptions \
+        --disable-tests
 }
 
 build(){
-    make -j`nproc`
+    make $job
 }
 
 package(){
-    make install -j`nproc`
+    make install $jobs
 }
 

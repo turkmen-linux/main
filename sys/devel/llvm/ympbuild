@@ -1,25 +1,21 @@
 #!/usr/bin/env bash
 name='llvm'
-release='5'
-version='20.1.7'
+release='6'
+version='22.1.0'
 url='https://llvm.org'
 description='Low Level Virtual Machine'
 email='aliriza.keskin@pardus.org.tr'
 maintainer='aliriza'
 license=('GPLv3')
-source=("https://github.com/llvm/llvm-project/releases/download/llvmorg-$version/llvm-$version.src.tar.xz"
-        "https://github.com/llvm/llvm-project/releases/download/llvmorg-$version/cmake-$version.src.tar.xz"
-        "https://anduin.linuxfromscratch.org/BLFS/llvm/llvm-third-party.src.tar.xz")
+source=("https://github.com/llvm/llvm-project/releases/download/llvmorg-$version/llvm-project-$version.src.tar.xz")
 depends=(libffi xz-utils libxml2 zlib)
-makedepends=(git)
-sha256sums=('10b62d003f16afbd1a5ee0aa6397704c13d9a12a2562103998a8c1eff4a0f1ea'
-            'afdab526c9b337a4eacbb401685beb98a18fb576037ecfaa93171d4c644fe791'
-            '640dfceac068374e3dbce3576892712d157705b35dfe13dd17518c256ad29d5e')
+makedepends=()
+sha256sums=('25d2e2adc4356d758405dd885fcfd6447bce82a90eb78b6b87ce0934bd077173')
 group=(sys.devel)
 uses=()
 arch=('x86_64')
 
-cd llvm-$version.src
+cd llvm-project-$version.src
 
 export PYTHON=/usr/bin/python3
 
@@ -38,31 +34,25 @@ cmake_args=(
     -DLLVM_ENABLE_RTTI=ON
     -DLLVM_ENABLE_SPHINX=OFF
     -DLLVM_INCLUDE_BENCHMARKS=OFF
+    -DLLVM_INCLUDE_TESTS=OFF
     -DLLVM_INSTALL_UTILS=ON
     -DLLVM_LINK_LLVM_DYLIB=ON
     -DLLVM_USE_PERF=ON
     -DSPHINX_WARNINGS_AS_ERRORS=OFF
 )
 
-prepare(){
-    mv ../cmake{-$version.src,}
-    mv ../llvm-third-party.src ../third-party
-}
 
 setup(){
-    mkdir build
-    cd build
-    cmake .. ${cmake_args[@]}
+    mkdir llvm/build
+    cmake -S llvm -B llvm/build  ${cmake_args[@]}
 }
 
 build(){
-    cd build
-    ninja ${jobs}
+    ninja -C llvm/build ${jobs}
 }
 
 package(){
-    cd build
-    ninja install ${jobs}
+    ninja -C llvm/build install ${jobs}
     mv ${DESTDIR}/usr/lib{,64}
 }
 

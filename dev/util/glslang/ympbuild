@@ -1,21 +1,21 @@
 #!/usr/bin/env bash
 name='glslang'
-release='4'
-version='1.3.261.1'
+release='5'
+version='1.4.341.0'
 url='https://github.com/KhronosGroup/glslang'
 description='OpenGL and OpenGL ES shader front end and validator'
 email='aliriza.keskin@pardus.org.tr'
 maintainer='aliriza'
 license=('GPLv3')
-source=("https://github.com/KhronosGroup/glslang/archive/refs/tags/sdk-$version.tar.gz")
+source=("https://github.com/KhronosGroup/glslang/archive/refs/tags/vulkan-sdk-$version.tar.gz")
 depends=(gcc)
 makedepends=()
-md5sums=('a2d585f532f08ff1402984577aa095a8')
+sha256sums=('18cdf7d40a39001dde842c6a1338b2c9321ac5e487139b9d52b4b9c666da3c86')
 group=(dev.util)
 uses=()
 arch=('x86_64')
 
-cd $name-sdk-$version
+cd $name-vulkan-sdk-$version
 
 export CXXFLAGS+=" -ffat-lto-objects"
 
@@ -25,12 +25,14 @@ setup(){
       -GNinja \
       -DCMAKE_INSTALL_PREFIX=/usr \
       -DCMAKE_BUILD_TYPE=None \
+      -DALLOW_EXTERNAL_SPIRV_TOOLS=YES \
       -DBUILD_SHARED_LIBS=ON
     cmake \
       -Bbuild-static \
       -GNinja \
       -DCMAKE_INSTALL_PREFIX=/usr \
       -DCMAKE_BUILD_TYPE=None \
+      -DALLOW_EXTERNAL_SPIRV_TOOLS=YES \
       -DBUILD_SHARED_LIBS=OFF
 }
 

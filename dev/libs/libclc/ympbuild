@@ -1,33 +1,33 @@
 #!/usr/bin/env bash
 name='libclc'
-release='5'
-version='20.1.7'
+release='6'
+version='22.1.0'
 url='https://libclc.llvm.org/'
 description='Open source implementation of the library requirements of the OpenCL C programming language'
 email='aliriza.keskin@pardus.org.tr'
 maintainer='aliriza'
 license=('GPLv3')
-source=("https://github.com/llvm/llvm-project/releases/download/llvmorg-$version/libclc-$version.src.tar.xz")
+source=("https://github.com/llvm/llvm-project/releases/download/llvmorg-$version/llvm-project-$version.src.tar.xz")
 depends=(spirv-llvm-translator)
 makedepends=()
-sha256sums=('22b29c1a9f18d8744e5a24f36ce6d4f198d523c126cd7182569c73806e1e1854')
+sha256sums=('25d2e2adc4356d758405dd885fcfd6447bce82a90eb78b6b87ce0934bd077173')
 group=(dev.libs)
 uses=()
 arch=('x86_64')
 
-cd $name-$version.src
+cd llvm-project-$version.src
 
 setup(){
-    mkdir build && cd build
-    cmake .. -G Ninja \
+    mkdir libclc/build
+    cmake -S libclc -B libclc/build -G Ninja \
         -DCMAKE_INSTALL_PREFIX=/usr
 }
 
 build(){
-    ninja -C build
+    ninja -C libclc/build
 }
 
 package(){
-    ninja -C build install
+    ninja -C libclc/build install
 }
 

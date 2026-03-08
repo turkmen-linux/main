@@ -1,41 +1,25 @@
 #!/usr/bin/env bash
 name='lld'
-release='5'
-version='20.1.7'
+release='6'
+version='22.1.0'
 url='https://github.com/llvm/llvm-project'
 description='The LLVM Project is a collection of modular and reusable compiler and toolchain technologies.'
 email='aliriza.keskin@pardus.org.tr'
 maintainer='aliriza'
 license=('GPLv3')
-source=(
-    "https://github.com/llvm/llvm-project/releases/download/llvmorg-$version/lld-$version.src.tar.xz"
-    "https://github.com/llvm/llvm-project/releases/download/llvmorg-$version/cmake-$version.src.tar.xz"
-    "https://github.com/llvm/llvm-project/releases/download/llvmorg-$version/libunwind-$version.src.tar.xz"
-    "https://github.com/llvm/llvm-project/releases/download/llvmorg-$version/llvm-$version.src.tar.xz"
-)
-
+source=("https://github.com/llvm/llvm-project/releases/download/llvmorg-$version/llvm-project-$version.src.tar.xz")
 depends=(llvm)
 makedepends=()
-sha256sums=(
-    '9cb94dac7db0e1f2b664469e1574c0b350bec3eacd0cbc524481a6f65fc0f185'
-    'afdab526c9b337a4eacbb401685beb98a18fb576037ecfaa93171d4c644fe791'
-    '46081293b2f857caca68a266cf11fad8366315c470a9a6766868ed6c369bac0c'
-    '10b62d003f16afbd1a5ee0aa6397704c13d9a12a2562103998a8c1eff4a0f1ea'
-)
-
+sha256sums=('25d2e2adc4356d758405dd885fcfd6447bce82a90eb78b6b87ce0934bd077173')
 group=(sys.devel)
 uses=()
 arch=('x86_64')
 
-cd $name-$version.src
-
-prepare(){
-    mv ../cmake{-$version.src,}
-    mv ../libunwind{-$version.src,}
-}
+cd llvm-project-$version.src
 
 local cmake_args=(
     -G Ninja
+    -Wno-dev
     -DCMAKE_BUILD_TYPE=Release
     -DCMAKE_INSTALL_PREFIX=/usr
     -DCMAKE_INSTALL_DOCDIR=share/doc
@@ -51,16 +35,26 @@ local cmake_args=(
     -DSPHINX_WARNINGS_AS_ERRORS=OFF
 )
 
+export CFLAGS="-O2 -DNDEBUG -Ilibunwind/include"
+export CXXFLAGS="-O2 -DNDEBUG -Ilibunwind/include"
+export CC=clang
+export CXX=clang++
+
+
+prepare(){
+    ln -s ../../libunwind/include/mach-o/ lld/MachO/mach-o
+}
+
 setup(){
-    mkdir build && cd build
-    cmake .. ${cmake_args[@]}
+    mkdir lld/build
+    cmake -S lld -B lld/build ${cmake_args[@]}
 }
 
 build(){
-    ninja -C build ${jobs}
+    ninja -C lld/build ${jobs}
 }
 
 package(){
-    ninja -C build install ${jobs}
+    ninja -C lld/build install ${jobs}
 }
 

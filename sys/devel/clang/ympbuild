@@ -1,41 +1,24 @@
 #!/usr/bin/env bash
 name='clang'
-release='5'
-version='20.1.7'
+release='6'
+version='22.1.0'
 url='https://github.com/llvm/llvm-project'
 description='The LLVM Project is a collection of modular and reusable compiler and toolchain technologies.'
 email='aliriza.keskin@pardus.org.tr'
 maintainer='aliriza'
 license=('GPLv3')
-source=(
-    "https://github.com/llvm/llvm-project/releases/download/llvmorg-$version/clang-$version.src.tar.xz"
-    "https://github.com/llvm/llvm-project/releases/download/llvmorg-$version/clang-tools-extra-$version.src.tar.xz"
-    "https://github.com/llvm/llvm-project/releases/download/llvmorg-$version/llvm-$version.src.tar.xz"
-    "https://github.com/llvm/llvm-project/releases/download/llvmorg-$version/cmake-$version.src.tar.xz"
-)
-
+source=("https://github.com/llvm/llvm-project/releases/download/llvmorg-$version/llvm-project-$version.src.tar.xz")
 depends=(llvm)
 makedepends=()
-sha256sums=(
-    'cb74965a2481008ae405419357a55fda2df6fa3aee262a0a9293a558532a29ae'
-    '0e1c675cf36bc5625514bf0dc582d39cb9b1cd0909601a46a2190f3afbc95633'
-    '10b62d003f16afbd1a5ee0aa6397704c13d9a12a2562103998a8c1eff4a0f1ea'
-    'afdab526c9b337a4eacbb401685beb98a18fb576037ecfaa93171d4c644fe791'
-)
-
+sha256sums=('25d2e2adc4356d758405dd885fcfd6447bce82a90eb78b6b87ce0934bd077173')
 group=(sys.devel)
 uses=()
 arch=('x86_64')
 
-cd $name-$version.src
+cd llvm-project-$version.src
 
 unset CFLAGS
 unset CXXFLAGS
-
-prepare(){
-    mv ../cmake{-$version.src,}
-    mv ../clang-tools-extra-$version.src ../clang-$version.src/tools/extra
-}
 
 local cmake_args=(
     -G Ninja
@@ -59,15 +42,15 @@ local cmake_args=(
   )
 
 setup(){
-    mkdir build && cd build
-    cmake .. ${cmake_args[@]}
+    mkdir clang/build
+    cmake -S clang -B clang/build ${cmake_args[@]}
 }
 
 build(){
-    ninja -C build ${jobs}
+    ninja -C clang/build ${jobs}
 }
 
 package(){
-    ninja -C build install ${jobs}
+    ninja -C clang/build install ${jobs}
 }
 
