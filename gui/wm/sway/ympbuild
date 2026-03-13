@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 name='sway'
-release='5'
-version='1.10.1'
-bg_version='1.2.1'
+release='6'
+version='1.11'
+bg_version='1.2.2'
 url='https://github.com/swaywm/sway'
 description=='i3-compatible Wayland window manager'
 email='aliriza.keskin@pardus.org.tr'
@@ -13,8 +13,8 @@ source=("https://github.com/swaywm/sway/archive/refs/tags/$version.zip"
         "sway.desktop")
 depends=(wlroots json-c gdk-pixbuf cairo libevdev libinput pango vulkan-loader xcb-util-renderutil)
 makedepends=()
-sha256sums=('4f16cb8645eed1475398abadad3bc620a6da399efc7b157b547aa9e867701ec1'
-            '45c4a1a3b83c86ddc321a6136402b708f195a022d0ccee4641b23d14c3a3c25e'
+sha256sums=('c4a86c3c4aef3c0f91635b983d7e0f27c3925c09092825dcc75f648cab640d65'
+            '94e5c06a765d969e554b0f321f9cdf9c283a3fdaf70ad4e3d28163b21bd4d240'
             'SKIP')
 group=(gui.wm)
 uses=()

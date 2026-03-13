@@ -1,25 +1,32 @@
 #!/usr/bin/env bash
 name='wlroots'
-release='4'
-version='0.18.2'
+release='5'
+version='0.19.2'
 url='https://gitlab.freedesktop.org/wlroots/wlroots'
 description='Pluggable, composable, unopinionated modules for building a Wayland compositor'
 email='bayramk@gmail.com'
 maintainer='bk'
 license=('GPLv3')
-source=("https://gitlab.freedesktop.org/wlroots/wlroots/-/archive/$version/wlroots-$version.tar.gz")
+source=("https://gitlab.freedesktop.org/wlroots/wlroots/-/archive/$version/wlroots-$version.tar.gz"
+        "fix1.patch")
 depends=(seatd hwdata eudev libxkbcommon wayland xcb-util-wm
          libglvnd libglvnd libinput libxcb libxcb mesa
          pixman vulkan-loader xcb-util-errors xcb-util-renderutil
          libdisplay-info xorg-xwayland lcms2
 )
 makedepends=()
-sha256sums=('703c515917d9eb258e44296795f8626190e119b0ee8bfb32fe9f834dab1a1462')
+sha256sums=('f0530ecaa8739d15f97bd1e1edddb77e281d57e42d4263fccb67157f71730d17'
+            'SKIP')
 group=(gui.libs)
 uses=()
 arch=('x86_64')
 
 cd $name-$version
+
+prepare(){
+    # remove this
+    patch -Np1 -i ../fix1.patch
+}
 
 setup(){
     meson setup build --prefix=/usr \

@@ -1,16 +1,16 @@
 #!/usr/bin/env bash
 name='grim'
-release='1'
-version='1.4.1'
+release='2'
+version='1.5.0'
 url='https://git.sr.ht/~emersion/grim'
 description='Grabs images from Wayland compositors'
 email='aliriza.keskin@pardus.org.tr'
 maintainer='aliriza'
 license=('GPLv3')
-source=("https://git.sr.ht/~emersion/grim/archive/v$version.tar.gz")
+source=("https://gitlab.freedesktop.org/emersion/grim/-/archive/v$version/grim-v$version.tar.gz")
 depends=(wayland libpng libjpeg-turbo)
 makedepends=(meson)
-md5sums=('41f163e0d386cf57581af28f02e3deaa')
+sha256sums=('9e72a98f7621b1f5741b405b8dbd447acf7d300ddb12667ec526db1ce6154eaa')
 group=(gui.apps)
 uses=()
 arch=('x86_64')

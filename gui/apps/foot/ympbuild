@@ -1,22 +1,23 @@
 #!/usr/bin/env bash
 name='foot'
-release='4'
-version='1.16.2'
+release='5'
+version='1.26.0'
 url='https://codeberg.org/dnkl/foot'
 description='Fast, lightweight and minimalistic Wayland terminal emulator'
 email='aliriza.keskin@pardus.org.tr'
 maintainer='aliriza'
 license=('GPLv3')
 source=("https://codeberg.org/dnkl/foot/archive/$version.tar.gz")
-depends=(wayland fontconfig ncurses pixman)
+depends=(wayland fontconfig ncurses pixman fcft)
 makedepends=()
-md5sums=('5e19001c74469c4951fbf425b84cdd23')
+sha256sums=('9ef510adc8f04a401c04fea8cfceadd54897f7122d75a93e8bcbc27064da876f')
 group=(gui.apps)
 uses=()
 arch=('x86_64')
 
 cd $name
 
+unset meson
 setup(){
     meson setup build --prefix=/usr \
         --libdir=/usr/lib64/
@@ -30,5 +31,8 @@ package(){
     ninja -C build install
     rm -f $DESTDIR/usr/share/terminfo/f/foot-direct
     rm -f $DESTDIR/usr/share/terminfo/f/foot
+    # remove systemd stuff
+    rm -rf  $DESTDIR/usr/share/applications/foot-*
+    rm -rf  $DESTDIR/usr/lib/systemd
 }
 
