@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='util-macros'
-release='2'
-version='1.20.1'
+release='3'
+version='1.20.2'
 url='https://gitlab.freedesktop.org/xorg/util/macros'
 description='X.Org autotools utility macros'
 email='kurth4cker@tutanota.com'
@@ -10,7 +10,7 @@ license=('MIT')
 source=("https://www.x.org/releases/individual/util/util-macros-${version}.tar.gz")
 depends=()
 makedepends=()
-sha256sums=('b373f72887b1394ce2193180a60cb0d1fb8b17bc96ddd770cfd7a808cb489a15')
+sha256sums=('f642f8964d81acdf06653fdf9dbc210c43ce4bd308bd644a8d573148d0ced76b')
 arch=('x86_64')
 group=(x11.misc)
 

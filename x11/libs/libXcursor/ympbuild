@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='libXcursor'
-release='1'
-version='1.2.1'
+release='2'
+version='1.2.3'
 url='https://gitlab.freedesktop.org/xorg/lib/libXcursor'
 description='X.Org Xcursor library'
 email='bayramk@gmail.com'
@@ -10,7 +10,7 @@ license=('GPLv3')
 source=("https://www.x.org/archive/individual/lib/libXcursor-$version.tar.xz")
 depends=(libXrender libXfixes libX11)
 makedepends=()
-md5sums=('4cdd1886fe5cce6f68554296edb46db8')
+sha256sums=('fde9402dd4cfe79da71e2d96bb980afc5e6ff4f8a7d74c159e1966afb2b2c2c0')
 group=(x11.libs)
 uses=()
 arch=('x86_64')
@@ -18,6 +18,7 @@ arch=('x86_64')
 cd $name-$version
 
 setup(){
+    autoreconf -fvi
     ./configure --prefix=/usr \
         --libdir=/usr/lib64/
 }

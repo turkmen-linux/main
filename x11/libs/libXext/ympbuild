@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='libXext'
-release='1'
-version='1.3.5'
+release='2'
+version='1.3.7'
 url='https://gitlab.freedesktop.org/xorg/lib/libXext.git/'
 description='X.Org Xext library'
 email='bayramk@gmail.com'
@@ -10,7 +10,7 @@ license=('GPLv3')
 source=("https://www.x.org/archive/individual/lib/libXext-$version.tar.xz")
 depends=(libX11 xorgproto)
 makedepends=()
-md5sums=('964942427fcc5a9fa0539661421857c8')
+sha256sums=('6c643c7035cdacf67afd68f25d01b90ef889d546c9fcd7c0adf7c2cf91e3a32d')
 group=(x11.libs)
 uses=()
 arch=('x86_64')
@@ -18,6 +18,7 @@ arch=('x86_64')
 cd $name-$version
 
 setup(){
+    autoreconf -fvi
     ./configure --prefix=/usr \
         --libdir=/usr/lib64/
 }

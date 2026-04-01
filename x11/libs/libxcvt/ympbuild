@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='libxcvt'
-release='1'
-version='0.1.2'
+release='2'
+version='0.1.3'
 url='https://gitlab.freedesktop.org/xorg/lib/libxcvt'
 description='X.Org xcvt library and cvt program'
 email='bayramk@gmail.com'
@@ -10,7 +10,7 @@ license=('GPLv3')
 source=("https://gitlab.freedesktop.org/xorg/lib/libxcvt/-/archive/libxcvt-$version/libxcvt-libxcvt-$version.tar.gz")
 depends=()
 makedepends=()
-md5sums=('abeb66cb8954dd6bf65cfa88496a6059')
+sha256sums=('5edaa65f5abd94ae12030b52fda66828eb8a41396aa9c02fd2c6210445fff61e')
 group=(x11.libs)
 uses=()
 arch=('x86_64')

@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='libXdmcp'
-release='1'
-version='1.1.4'
+release='2'
+version='1.1.5'
 url='X.Org X Display Manager Control Protocol library'
 description='X.Org X Display Manager Control Protocol library'
 email='bayramk@gmail.com'
@@ -10,7 +10,7 @@ license=('GPLv3')
 source=("https://www.x.org/archive/individual/lib/libXdmcp-$version.tar.xz")
 depends=()
 makedepends=()
-md5sums=('0b4056a282c1e14323d5daef8fb5345d')
+sha256sums=('d8a5222828c3adab70adf69a5583f1d32eb5ece04304f7f8392b6a353aa2228c')
 group=(x11.libs)
 uses=()
 arch=('x86_64')

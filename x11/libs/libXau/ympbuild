@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='libXau'
-release='1'
-version='1.0.10'
+release='2'
+version='1.0.12'
 url='https://www.x.org/wiki/'
 description='X.Org X authorization library'
 email='kurth4cker@tutanota.com'
@@ -10,7 +10,7 @@ license=('MIT')
 source=("https://www.x.org/releases/individual/lib/libXau-${version}.tar.xz")
 depends=(xorgproto)
 makedepends=()
-md5sums=('d32e6e8c70dd957c9c2d654e0f8d0a15')
+sha256sums=('74d0e4dfa3d39ad8939e99bda37f5967aba528211076828464d2777d477fc0fb')
 uses=()
 arch=('x86_64')
 group=(x11.libs)

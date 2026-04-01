@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='libXcomposite'
-release='1'
-version='0.4.6'
+release='2'
+version='0.4.7'
 url='https://gitlab.freedesktop.org/xorg/lib/libXcomposite'
 description='X.Org Xcomposite library'
 email='bayramk@gmail.com'
@@ -10,7 +10,7 @@ license=('GPLv3')
 source=("https://gitlab.freedesktop.org/xorg/lib/libxcomposite/-/archive/libXcomposite-$version/libxcomposite-libXcomposite-$version.tar.gz")
 depends=()
 makedepends=()
-md5sums=('931241d380a00b43c0ae6a0dbbd5eb30')
+sha256sums=('61b3608697abb4f3fa80782423b924d26aea77f8e66084658b26196572195dab')
 group=(x11.libs)
 uses=()
 arch=('x86_64')
