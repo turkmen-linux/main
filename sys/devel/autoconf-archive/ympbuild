@@ -1,0 +1,39 @@
+#!/usr/bin/env bash
+name='autoconf-archive'
+release='1'
+version='2024.10.16'
+url='https://www.gnu.org/software/autoconf/'
+description='A collection of freely re-usable Autoconf macros'
+email='aliriza.keskin@pardus.org.tr'
+maintainer='aliriza'
+license=('GPLv3')
+source=("https://fosszone.csd.auth.gr/gnu/autoconf-archive/autoconf-archive-$version.tar.xz")
+depends=(autoconf)
+makedepends=( )
+group=(sys.devel)
+sha256sums=('7bcd5d001916f3a50ed7436f4f700e3d2b1bade3ed803219c592d62502a57363')
+uses=()
+arch=('x86_64')
+
+cd $name-$version
+
+prepare(){
+    # dummy makeinfo
+    touch ~/makeinfo
+    chmod 755 ~/makeinfo
+}
+
+setup(){
+    autoreconf -fvi
+    ./configure --prefix=/usr \
+        --libdir=/usr/lib64
+}
+
+build(){
+    make $jobs
+}
+
+package(){
+    make install $jobs
+}
+
