@@ -1,16 +1,16 @@
 #!/usr/bin/env bash
 name='firefox-installer'
-release='4'
-version='1.0.2'
+release='5'
+version='1.0.3'
 url='https://turkman/devel/sources/firefox-installer'
 description='Firefox installer'
 email='aliriza.keskin@pardus.org.tr'
 maintainer='aliriza'
 license=('GPLv3')
 source=("https://gitlab.com/turkman/devel/sources/firefox-installer/-/archive/$version/firefox-installer-$version.tar.gz")
-depends=(dbus-glib alsa-lib ffmpeg libX11)
+depends=(alsa-lib ffmpeg libX11)
 makedepends=()
-sha256sums=('826d7b3fefcbd4b10fb205a26f0393892e0396bcd362d649cafae7955152e902')
+sha256sums=('ff614bf71fd949fa317c8ab3047632298c6cd96fcfcc02d06b0a5a79309db5fc')
 group=(www.client)
 uses=()
 arch=('x86_64')
