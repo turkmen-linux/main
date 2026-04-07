@@ -52,6 +52,8 @@ setup(){
         fi
         cd $tgt
         autoreconf -fvi
+        # fix a bug introduced in grub-2.14
+        sed 's/--image-base/--nonexist-linker-option/' -i configure
         ./configure --prefix=/usr \
             --sysconfdir=/etc \
             --libdir=/usr/lib64/ \
