@@ -1,16 +1,18 @@
 #!/usr/bin/env bash
 name='grub'
-release='3'
-version='2.12'
+release='4'
+version='2.14'
 url='https://ftp.gnu.org/gnu/grub'
 description='GNU GRand Unified Bootloader'
 email='parduscix@yandex.ru'
 maintainer='sulincix'
 license=('GPLv3')
-source=("https://ftp.gnu.org/gnu/grub/grub-$version.tar.xz")
+source=("https://ftp.gnu.org/gnu/grub/grub-$version.tar.xz"
+        "grub.default")
 depends=(lvm2)
 makedepends=()
-md5sums=('60c564b1bdc39d8e43b3aab4bc0fb140')
+sha256sums=('bc8d3c73535b8838d8c8e2654d73edc4e6ae8c8acdb45d5df5dc9a1547446d43'
+            'SKIP')
 group=(sys.boot)
 uses=(efi bios)
 uses_extra=(ia32)
@@ -79,17 +81,7 @@ package(){
     done
     # default grub config
     mkdir -p $DESTDIR/etc/default $DESTDIR/usr/bin/
-    {
-	  echo 'GRUB_DISTRIBUTOR=""'
-    echo 'GRUB_TERMINAL_OUTPUT=console'
-    echo 'GRUB_CMDLINE_LINUX_DEFAULT="quiet"'
-    echo 'GRUB_CMDLINE_LINUX=""'
-	  echo 'GRUB_DEFAULT=0'
-	  echo 'GRUB_TIMEOUT=5'
-	  echo 'GRUB_DISABLE_SUBMENU=y'
-    echo 'GRUB_DISABLE_OS_PROBER=true'
-	  echo 'GRUB_DISABLE_RECOVERY=true'
-    } > $DESTDIR/etc/default/grub
+    install -D -m0644 ./grub.default ${DESTDIR}/etc/default/grub
     echo "#!/bin/sh" > $DESTDIR/usr/bin/update-grub
     echo "grub-mkconfig -o /boot/grub/grub.cfg" >> $DESTDIR/usr/bin/update-grub
 }
