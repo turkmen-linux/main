@@ -12,7 +12,7 @@ source=("https://gitlab.freedesktop.org/pipewire/pipewire/-/archive/$version/pip
 depends=(lilv libpulse alsa-lib dbus)
 makedepends=()
 sha256sums=('93db72dc06768db548d48ae2b8e96e7c299c89a47f5c4426f152221aa90b0f2d'
-         'ec6329020ee5535b07f2313181f1f3a4414c57ffeeffc4bcf89a1b0850e7e20b')
+             'eb119bc6249419801c5fb77f50fa40c7eef801fc4637ef1789148a4b6396ae60')
 group=(media.video)
 uses=(alsa gstreamer bluetooth jack)
 uses_extra=(v4l2)
