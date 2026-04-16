@@ -1,22 +1,22 @@
 #!/usr/bin/env bash
 name='nano'
-release='5'
-version='8.3'
+release='6'
+version='9.0'
 url='https://www.nano-editor.org/download.php'
 description='Pico editor clone with enhancements'
 email='parduscix@yandex.ru'
 maintainer='sulincix'
 license=('GPLv3')
-_commit="ff189e2baa8d89f44b5f58ea7da7aac04ee4ad8b"
-source=("https://www.nano-editor.org/dist/v8/nano-$version.tar.xz"
+_commit="359cc2b641a55579cef347451b064061fbc00aaf"
+source=("https://www.nano-editor.org/dist/v9/nano-$version.tar.xz"
         "https://github.com/galenguyer/nano-syntax-highlighting/archive/${_commit}.zip"
         "nanorc"
         "nano.desktop"
         "icon.svg")
 depends=(file zlib ncurses bzip2)
 makedepends=()
-sha256sums=('551b717b2e28f7e90f749323686a1b5bbbd84cfa1390604d854a3ca3778f111e'
-            '9e836760f61473a7a6ae28ac5e10b8d5b26f0415d1bd0c85d56d9b09e27a9fe1'
+sha256sums=('9f384374b496110a25b73ad5a5febb384783c6e3188b37063f677ac908013fde'
+            '107de8e981952c5995fb03163fa4760a6f9d864eff0cf22115dd1e1566fe3c17'
             'SKIP'
             'SKIP'
             'SKIP'

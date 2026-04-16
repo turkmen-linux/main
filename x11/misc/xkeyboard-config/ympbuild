@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='xkeyboard-config'
-release='5'
-version='2.41'
+release='6'
+version='2.46'
 url='https://gitlab.freedesktop.org/xkeyboard-config/xkeyboard-config'
 description='X keyboard configuration database'
 email='aliriza.keskin@pardus.org.tr'
@@ -10,7 +10,7 @@ license=('GPLv3')
 source=("https://gitlab.freedesktop.org/xkeyboard-config/xkeyboard-config/-/archive/xkeyboard-config-$version/xkeyboard-config-xkeyboard-config-$version.tar.gz")
 depends=()
 makedepends=()
-md5sums=('343fb6e96d5423790f7a180f0b73a5d1')
+sha256sums=('81107e12f71087b3f1d7dea43c186805d46abaffead0cafca9bdd24b94c2007e')
 group=(x11.misc)
 uses=()
 arch=('x86_64')
@@ -27,5 +27,9 @@ build(){
 
 package(){
     ninja -C build install
+    # fix absolute path symlink
+    rm -f $DESTDIR/usr/share/X11/xkb
+    mv $DESTDIR/usr/share/xkeyboard-config-2 $DESTDIR/usr/share/X11/xkb
+    ln -s X11/xkb $DESTDIR/usr/share/xkeyboard-config-2
 }
 

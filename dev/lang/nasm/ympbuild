@@ -1,16 +1,16 @@
 #!/usr/bin/env bash
 name='nasm'
-release='1'
-version='2.16.01'
+release='2'
+version='3.01'
 url='https://github.com/netwide-assembler/nasm'
 description='80x86 assembler designed for portability and modularity'
 email='akarsu@protonmail.com'
 maintainer='akarsu'
 license=('BSD')
 source=("https://github.com/netwide-assembler/nasm/archive/refs/tags/nasm-$version.tar.gz")
-depends=(asciidoc xmlto)
-makedepends=(diffutils)
-md5sums=('d1912050d04c95645479e72d0d58e032')
+depends=(zlib)
+makedepends=(diffutils asciidoc xmlto)
+sha256sums=('af2f241ecc061205d73ba4f781f075d025dabaeab020b676b7db144bf7015d6d')
 group=(dev.lang)
 uses=()
 arch=('x86_64')

@@ -1,18 +1,18 @@
 #!/usr/bin/env bash
 name='openssh'
-release='6'
-version='10.0p1'
+release='7'
+version='10.3p1'
 url='https://ftp.openbsd.org/pub/OpenBSD/OpenSSH/portable'
 description='OpenBSD ssh server & client'
 email='aliriza.keskin@pardus.org.tr'
 maintainer='aliriza'
 license=('GPLv3')
-source=("https://ftp.openbsd.org/pub/OpenBSD/OpenSSH/portable/openssh-$version.tar.gz"
+source=("https://cdn.openbsd.org/pub/OpenBSD/OpenSSH/portable/openssh-$version.tar.gz"
         "sshd.initd"
         "sshd.confd")
 depends=(zlib libxcrypt openssl libmd)
 makedepends=()
-sha256sums=('021a2e709a0edf4250b1256bd5a9e500411a90dddabea830ed59cef90eb9d85c'
+sha256sums=('56682a36bb92dcf4b4f016fd8ec8e74059b79a8de25c15d670d731e7d18e45f4'
          'SKIP'
          'SKIP')
 group=(net.misc)

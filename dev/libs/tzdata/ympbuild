@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='tzdata'
-release='2'
-version='2025b'
+release='3'
+version='2026a'
 url='https://www.iana.org/time-zones'
 description='Timezone data'
 email='parduscix@yandex.ru'
@@ -12,8 +12,8 @@ source=("https://www.iana.org/time-zones/repository/releases/tzcode$version.tar.
 	      "tzdata.sysconf")
 depends=()
 makedepends=()
-sha256sums=('05f8fedb3525ee70d49c87d3fae78a8a0dbae4fe87aa565c65cda9948ae135ec'
-            '11810413345fc7805017e27ea9fa4885fd74cd61b2911711ad038f5d28d71474'
+sha256sums=('f80a17a2eddd2b54041f9c98d75b0aa8038b016d7c5de72892a146d9938740e1'
+            '77b541725937bb53bd92bd484c0b43bec8545e2d3431ee01f04ef8f2203ba2b7'
             'SKIP')
 group=(dev.libs)
 uses=()
