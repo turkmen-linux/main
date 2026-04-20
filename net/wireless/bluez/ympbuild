@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='bluez'
-release='5'
-version='5.79'
+release='6'
+version='5.86'
 url='https://www.bluez.org'
 description='Daemons for the bluetooth protocol stack'
 email='akarsu@protonmail.com'
@@ -9,9 +9,9 @@ maintainer='akarsu'
 license=('GPLv2')
 source=("https://www.kernel.org/pub/linux/bluetooth/bluez-${version}.tar.xz"
         "bluetooth.initd")
-depends=(glib)
-makedepends=(dbus libical json-c alsa-lib ell)
-sha256sums=('4164a5303a9f71c70f48c03ff60be34231b568d93a9ad5e79928d34e6aa0ea8a'
+depends=(glib dbus eudev json-c libical readline)
+makedepends=(json-c alsa-lib ell)
+sha256sums=('99f144540c6070591e4c53bcb977eb42664c62b7b36cb35a29cf72ded339621d'
          'SKIP')
 group=(net.wireless)
 uses=()

@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='libavif'
-release='2'
-version='1.2.1'
+release='3'
+version='1.4.1'
 url='https://aomediacodec.github.io/av1-avif/'
 description='Library for encoding and decoding .avif files'
 email='akarsu@protonmail.com'
@@ -10,7 +10,7 @@ license=('BSD')
 source=("https://github.com/AOMediaCodec/libavif/archive/v${version}/libavif-v${version}.tar.gz")
 depends=(libaom dav1d libjpeg-turbo)
 makedepends=(cmake gdk-pixbuf)
-sha256sums=('9c859c7c12ccb0f407511bfe303e6a7247f5f6738f54852662c6df8048daddf4')
+sha256sums=('d4aea31a4becb3273ba7968221be2e48148ba05eb8a68d14e671963e17785648')
 group=(media.libs)
 uses=()
 arch=('x86_64')

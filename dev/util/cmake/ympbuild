@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='cmake'
-release='8'
-version='4.1.1'
+release='9'
+version='4.2.3'
 url='https://github.com/Kitware/CMake'
 description='A cross-platform open-source make system'
 email='aliriza.keskin@pardus.org.tr'
@@ -10,7 +10,7 @@ license=('GPLv3')
 source=("https://github.com/Kitware/CMake/releases/download/v$version/cmake-$version.tar.gz")
 depends=()
 makedepends=()
-sha256sums=('b29f6f19733aa224b7763507a108a427ed48c688e1faf22b29c44e1c30549282')
+sha256sums=('7efaccde8c5a6b2968bad6ce0fe60e19b6e10701a12fce948c2bf79bac8a11e9')
 uses=()
 uses_extra=(qt)
 group=(dev.util)
