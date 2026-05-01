@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='linux'
-release='11'
-version='6.19.3'
+release='12'
+version='7.0.3'
 url='https://cdn.kernel.org/pub/linux/kernel/'
 description='Linux kernel'
 email='aliriza.keskin@pardus.org.tr'
@@ -17,10 +17,14 @@ group=(sys.kernel)
 # Kernel module strip make garbage it.
 dontstrip="31"
 
+prepare(){
+    wget https://cdn.kernel.org/pub/linux/kernel/v7.x/linux-$version.tar.xz -O - | tar -xJvf -
+}
+
 package(){
     # install kernel (archlinux kernel config used)
-    ALLOWROOT=1 bash mklinux -f -q -x -o "$DESTDIR" -t linux \
-     -c "https://gitlab.archlinux.org/archlinux/packaging/packages/linux-hardened/-/raw/main/config"  \
+    ALLOWROOT=1 bash mklinux -f -q -x -o "$DESTDIR" -t local -b linux-$version \
+     -c "https://gitlab.archlinux.org/archlinux/packaging/packages/linux-hardened/-/raw/main/config.x86_64"  \
      -v $version -y 1
     # remove headers (for fix conflict with linux-headers)
     rm -rf ${DESTDIR}/usr/include

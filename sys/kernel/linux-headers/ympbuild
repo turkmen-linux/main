@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='linux-headers'
-release='11'
-version='6.19.3'
+release='12'
+version='7.0.3'
 url='https://cdn.kernel.org/pub/linux/kernel/'
 description='Linux kernel headers'
 email='aliriza.keskin@pardus.org.tr'
@@ -15,9 +15,15 @@ uses=()
 arch=('x86_64')
 group=(sys.kernel)
 
+prepare(){
+    wget https://cdn.kernel.org/pub/linux/kernel/v7.x/linux-$version.tar.xz -O - | tar -xJvf -
+}
+
+
 package(){
     # install kernel (archlinux kernel config used)
-    ALLOWROOT=1 mklinux -f -o $DESTDIR -t linux -v $version -y 1 --no-build \
+    ALLOWROOT=1 mklinux -f -o $DESTDIR -v $version -y 1 \
+        -t local -b linux-$version --no-build \
        -c "https://gitlab.archlinux.org/archlinux/packaging/packages/linux-hardened/-/raw/main/config"
     # symlink for musl
     mkdir -p $DESTDIR/usr/include/musl
