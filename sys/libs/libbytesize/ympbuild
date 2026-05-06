@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='libbytesize'
-release='2'
-version='2.11'
+release='3'
+version='2.12'
 url='https://github.com/storaged-project/libbytesize'
 description='A tiny library providing a C "class" for working with arbitrary big sizes in bytes'
 email='aliriza.keskin@pardus.org.tr'
@@ -10,7 +10,7 @@ license=('GPLv3')
 source=("https://github.com/storaged-project/libbytesize/archive/refs/tags/$version.tar.gz")
 depends=()
 makedepends=()
-sha256sums=('794fc1804dd16ff0d5a505dbab2dd84c174d1159f4a58f3764fee1c8e5d949ca')
+sha256sums=('e8b39afc6580f5777c9b1c8488e21fcbb60a3effdac7399eef0236185639bc41')
 group=(sys.libs)
 uses=()
 arch=('x86_64')
@@ -29,5 +29,6 @@ build(){
 
 package(){
     make install $jobs
+    mv $DESTDIR/usr/lib/python3.*/site-packages $DESTDIR/usr/lib/python3
 }
 

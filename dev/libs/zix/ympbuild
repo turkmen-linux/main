@@ -1,0 +1,35 @@
+#!/usr/bin/env bash
+name='zix'
+release='1'
+version='0.8.0'
+url='https://drobilla.net/software/zix.html'
+description='Lightweight C library of portability wrappers and data structures'
+email='bayramk@gmail.com'
+maintainer='bk'
+license=('GPLv3')
+source=("https://github.com/drobilla/zix/archive/refs/tags/v$version.tar.gz")
+depends=()
+makedepends=()
+sha256sums=('6904fc9929ad886fb27e0323251ba5bf05701a9359c96d36b7b7144d780afa22')
+group=(dev.libs)
+uses=()
+arch=('x86_64')
+
+cd $name-$version
+
+unset meson
+
+setup(){
+    meson setup build --prefix=/usr \
+        --libdir=/usr/lib64/ \
+       -Ddocs=disabled
+}
+
+build(){
+    ninja -C build
+}
+
+package(){
+    ninja -C build install
+}
+

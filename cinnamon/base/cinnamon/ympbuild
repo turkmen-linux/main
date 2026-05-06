@@ -14,7 +14,7 @@ depends=(nm-applet accountsservice cinnamon-control-center cinnamon-menus
         cinnamon-session cinnamon-settings-daemon cjs gsound gstreamer libcroco
 		    libgnomekbd libkeybinder3 librsvg muffin nemo polkit-gnome py3-cairo py3-dbus py3-pygobject
 		    py3-pam py3-pexpect py3-pillow py3-inotify py3-tz py3-tinycss2 py3-xapp py3-requests
-		    timezonemap xapp xdg-desktop-portal-xapp caribou ibus
+		    timezonemap xapp xdg-desktop-portal-xapp ibus
 )
 makedepends=(meson gobject-introspection intltool py3-sass)
 sha256sums=('220f9ba77860d63708e682aa3fdc48cd8597b41b698467f116e477b45d514249'

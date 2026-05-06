@@ -1,25 +1,27 @@
 #!/usr/bin/env bash
 name='lilv'
-release='1'
-version='0.24.20'
+release='2'
+version='0.26.4'
 url='https://drobilla.net/software/lilv.html'
 description='Library to make the use of LV2 plugins as simple as possible for applications '
 email='bayramk@gmail.com'
 maintainer='bk'
 license=('GPLv3')
-source=("https://github.com/lv2/lilv/archive/refs/tags/v$version.tar.gz")
-depends=(lv2 serd sord sratom)
+source=("https://download.drobilla.net/lilv-$version.tar.xz")
+depends=(lv2 serd sord sratom zix)
 makedepends=()
-md5sums=('39402417dfc0a86415f5d6891a426f9f')
+sha256sums=('1c8b5fcb78718173e67d76e51ad423f5113a9ff68463f2566195ae46396089e3')
 group=(media.libs)
 uses=()
 arch=('x86_64')
 
 cd $name-$version
 
+unset meson
+
 setup(){
     meson setup build --prefix=/usr \
-        --libdir=/usr/lib64/
+        --libdir=/usr/lib64/ -Ddocs=disabled
 }
 
 build(){
@@ -28,5 +30,7 @@ build(){
 
 package(){
     ninja -C build install
+    mv $DESTDIR/usr/lib/python3.*/site-packages $DESTDIR/usr/lib/python3
+
 }
 

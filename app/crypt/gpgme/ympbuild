@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='gpgme'
-release='4'
-version='1.23.2'
+release='5'
+version='2.0.1'
 url='https://www.gnupg.org/ftp/gcrypt/gpgme'
 description='gnupg made easy'
 email='aliriza.keskin@pardus.org.tr'
@@ -10,12 +10,17 @@ license=('GPLv3')
 source=("https://www.gnupg.org/ftp/gcrypt/gpgme/gpgme-$version.tar.bz2")
 depends=(gnupg)
 makedepends=()
-sha256sums=('9499e8b1f33cccb6815527a1bc16049d35a6198a6c5fae0185f2bd561bce5224')
+sha256sums=('821ab0695c842eab51752a81980c92b0410c7eadd04103f791d5d2a526784966')
 group=(app.crypt)
 uses=()
 arch=('x86_64')
 
 cd $name-$version
+
+prepare(){
+    > ~/makeinfo
+    chmod +x ~/makeinfo
+}
 
 setup(){
     ./configure --prefix=/usr \

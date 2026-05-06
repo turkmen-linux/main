@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='sord'
-release='1'
-version='0.16.14'
+release='2'
+version='0.16.22'
 url='https://drobilla.net/software/sord.html'
 description='Library for storing RDF data in memory '
 email='bayramk@gmail.com'
@@ -10,7 +10,7 @@ license=('GPLv3')
 source=("https://download.drobilla.net/sord-$version.tar.xz")
 depends=(lv2)
 makedepends=()
-md5sums=('73ed5c03c43ef3cc62558c6826b15fa4')
+sha256sums=('bb23b34b216579136795d518cffa73d91cf205594ce9accebfd408afb839173f')
 group=(dev.libs)
 uses=()
 arch=('x86_64')
@@ -19,7 +19,7 @@ cd $name-$version
 
 setup(){
     meson setup build --prefix=/usr \
-        --libdir=/usr/lib64/
+        --libdir=/usr/lib64/ -Db_lto=true
 }
 
 build(){

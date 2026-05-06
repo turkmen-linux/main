@@ -1,21 +1,21 @@
 #!/usr/bin/env bash
 name='lirc'
-release='1'
+release='2'
 version='0.10.2'
 url='https://www.lirc.org/'
 description='decode and send infra-red signals of many commonly used remote controls'
 email='bayramk@gmail.com'
 maintainer='bk'
 license=('GPLv3')
-source=("https://netix.dl.sourceforge.net/project/lirc/LIRC/$version/lirc-$version.tar.bz2")
+source=("https://salsa.debian.org/debian/lirc/-/archive/debian/0.10.2-0.10/lirc-debian-0.10.2-0.10.tar.gz")
 depends=(libxslt)
 makedepends=()
-md5sums=('cb96cfb0af8067c0062e2f5a100f426a')
+sha256sums=('38fd07d28c81a33ee142c7dd34ad365a114e98dab1aa0c91c2349a7033545e27')
 group=(app.misc)
 uses=()
 arch=('x86_64')
 
-cd $name-$version
+cd $name-debian-$version-0.10
 
 setup(){
 	autoreconf -fvi
@@ -38,5 +38,11 @@ package(){
     make install $jobs
     # remove unused files
     rm -rf $DESTDIR/usr/share/doc/
+    mv $DESTDIR/usr/lib/python3.*/site-packages $DESTDIR/usr/lib/python3
+    # fix symlinks
+    rm -f $DESTDIR//usr/bin/lirc-setup
+    ln -s ../lib/python3/lirc-setup/lirc-setup
+    rm -f $DESTDIR/usr/lib/python3/lirc-setup/configs
+    ln -s ../../../share/lirc/configs $DESTDIR/usr/lib/python3/lirc-setup/configs
 }
 

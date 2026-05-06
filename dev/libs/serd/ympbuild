@@ -1,16 +1,16 @@
 #!/usr/bin/env bash
 name='serd'
-release='2'
-version='0.32.0'
+release='3'
+version='0.32.8'
 url='https://drobilla.net/software/serd.html'
 description='Library for RDF syntax which supports reading and writing Turtle and NTriples '
 email='bayramk@gmail.com'
 maintainer='bk'
 license=('GPLv3')
-source=("https://download.drobilla.net/serd-$version.tar.xz")
+source=("https://github.com/drobilla/serd/archive/refs/tags/v$version.tar.gz")
 depends=(lv2)
 makedepends=()
-md5sums=('95e58d31e0e3beef220a87cc939cdde1')
+sha256sums=('057cb46d2dee09cfa91727c6835341811c1789e8f06d4372f2ffbfe36924ffb4')
 group=(dev.libs)
 uses=()
 arch=('x86_64')

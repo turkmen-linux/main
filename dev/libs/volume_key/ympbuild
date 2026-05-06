@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 name='volume_key'
-release='1'
+release='2'
 version='0.3.12'
 url='https://pagure.io/volume_key'
 description='A library for manipulating storage volume encryption keys and storing them separately from volumes to handleforgotten passphrases, and the associated command-line tool '
@@ -29,5 +29,7 @@ build(){
 
 package(){
     make install $jobs
+    mv $DESTDIR/usr/lib/python3.*/site-packages $DESTDIR/usr/lib/python3
+
 }
 

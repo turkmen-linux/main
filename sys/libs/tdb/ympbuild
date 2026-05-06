@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='tdb'
-release='1'
-version='1.4.8'
+release='2'
+version='1.4.15'
 url='https://tdb.samba.org/'
 description='Simple database API '
 email='bayramk@gmail.com'
@@ -10,7 +10,7 @@ license=('GPLv3')
 source=("https://www.samba.org/ftp/tdb/tdb-$version.tar.gz")
 depends=()
 makedepends=()
-md5sums=('2b46875d656cafd13f5d1d5bc64bfa21')
+sha256sums=('fba09d8df1f1b9072aeae8e78b2bd43c5afef20b2f6deefa633aa14a377a8dd2')
 group=(sys.libs)
 uses=()
 arch=('x86_64')
@@ -18,7 +18,6 @@ arch=('x86_64')
 cd $name-$version
 
 setup(){
-	#autoreconf -fvi
   ./configure --prefix=/usr \
       --libdir=/usr/lib64/
 
