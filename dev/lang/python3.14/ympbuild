@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
-name='python3.12'
+name='python3.14'
 release='1'
-version='3.12.4'
+version='3.14.4'
 url='https://www.python.org/downloads/'
 description='Next generation of the python high-level scripting language'
 email='parduscix@yandex.ru'
@@ -11,7 +11,7 @@ source=("https://www.python.org/ftp/python/$version/Python-$version.tar.xz"
        'turkman.patch')
 depends=('bzip2' 'gdbm'  'libnsl' 'libxcrypt' 'openssl' 'zlib' 'mpdecimal')
 makedepends=( )
-sha256sums=('f6d419a6d8743ab26700801b4908d26d97e8b986e14f95de31b32de2b0e79554'
+sha256sums=('d923c51303e38e249136fc1bdf3568d56ecb03214efdef48516176d3d7faaef8'
          'SKIP')
 expat_depends=('expat')
 arch=('x86_64')
@@ -36,7 +36,8 @@ setup(){
 		    --with-computed-gotos \
 		    --with-dbmliborder=gdbm:ndbm \
 		    --with-system-expat \
-        --with-system-libmpdec
+        --with-system-libmpdec \
+        --without-ensurepip
 
     sed -i 's/^all:.*$/all: build_all/' Makefile
     env -i PATH=$PATH make $jobs
@@ -45,14 +46,17 @@ setup(){
 package(){
     env -i PATH=$PATH make install $jobs DESTDIR=$DESTDIR
     # this symlinks provided by main python metapackage
-    for bin in pydoc3 idle3 python3 python3-config pip3 2to3; do
+    for bin in pydoc3 idle3 python3 python3-config; do
         rm -f ${DESTDIR}/usr/bin/$bin
     done
+    # pip3 command
+    echo '#!/bin/sh' > ${DESTDIR}/usr/bin/pip3.14
+    echo 'exec python3.14 -m pip "$@"' >> ${DESTDIR}/usr/bin/pip3.14
     rm -f ${DESTDIR}/usr/lib64/pkgconfig/python3.pc
     rm -f ${DESTDIR}/usr/lib64/pkgconfig/python3-embed.pc
     # remove unused file
     rm -f ${DESTDIR}/usr/share/man/man1/python3.1
     # move libpython3.so file
-    mv ${DESTDIR}/usr/lib64/libpython3.so ${DESTDIR}/usr/lib64/libpython3.so.3.12
+    mv ${DESTDIR}/usr/lib64/libpython3.so ${DESTDIR}/usr/lib64/libpython3.so.3.14
 }
 

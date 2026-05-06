@@ -1,22 +1,22 @@
 #!/usr/bin/env bash
 name='py3-dbus'
 _name='dbus-python'
-release='2'
+release='3'
 version='1.4.0'
 url='https://www.freedesktop.org/wiki/Software/DBusBindings'
 description='Python3 bindings for DBUS'
 email='brkt8khn@gmail.com'
 maintainer='brkt8khn'
 license=('MIT')
-source=("https://dbus.freedesktop.org/releases/dbus-python/$_name-${version}.tar.xz")
+source=("https://gitlab.freedesktop.org/dbus/dbus-python/-/archive/dbus-python-$version/dbus-python-dbus-python-$version.tar.gz")
 depends=(python dbus)
 makedepends=(py3-sphinx py3-tomli)
-sha256sums=('c36b28f10ffcc8f1f798aca973bcc132f91f33eb9b6b8904381b4077766043d5')
+sha256sums=('da4ee9bbb9eb901d463a7cc9f99dfdbe6c751c8b48b29b78d378985a3c9656ad')
 group=(dev.python)
 uses=()
 arch=('x86_64')
 
-cd $_name-$version
+cd $_name-$_name-$version
 
 setup(){
     meson setup build --prefix=/usr \

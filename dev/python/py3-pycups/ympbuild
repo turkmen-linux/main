@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 name='py3-pycups'
-release='2'
+release='3'
 version='2.0.4'
 url='https://github.com/OpenPrinting/pycups'
 description='Python bindings for cups'

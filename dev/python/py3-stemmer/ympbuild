@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 name='py3-stemmer'
-release='2'
+release='3'
 version='3.0.0'
 url='https://github.com/snowballstem/pystemmer'
 description='String processing language for creating stemming algorithms'

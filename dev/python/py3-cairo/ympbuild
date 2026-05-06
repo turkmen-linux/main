@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='py3-cairo'
-release='6'
-version='1.28.0'
+release='7'
+version='1.29.0'
 url='https://github.com/pygobject/pycairo/'
 description='Python bindings for the cairo library'
 email='bayramk@gmail.com'
@@ -11,7 +11,7 @@ source=("https://github.com/pygobject/pycairo/archive/refs/tags/v$version.tar.gz
 pyver=$(python -c "import sys; print(str( sys.version_info[0]) +\".\"+ str(sys.version_info[1] ))")
 depends=(python"$pyver" cairo)
 makedepends=(meson py3-sphinx)
-sha256sums=('e7e1a487820467a174512633f3ec4c49d567041e40f2d0135d14679045b054e9')
+sha256sums=('25c6a8a5a488afdd21208b5a71f95796891cceb2ee94f2ec1c51fdf0735eab0b')
 group=(dev.python)
 uses=()
 arch=('x86_64')

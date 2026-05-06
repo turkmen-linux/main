@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='py3-pillow'
-release='6'
-version='11.2.1'
+release='7'
+version='12.2.0'
 url='https://python-pillow.org/'
 description='Python Imaging Library'
 email='brkt8khn@gmail.com'
@@ -10,7 +10,7 @@ license=('BSD')
 source=("https://github.com/python-pillow/Pillow/archive/refs/tags/${version}.tar.gz")
 depends=(python freetype lcms2  libtiff  libxcb)
 makedepends=(py3-build py3-installer py3-wheel py3-setuptools libwebp)
-sha256sums=('67dd6d40e282fd3b50189bd7f68a6e9b8e59b297d3684cb35ab107e7aec8379e')
+sha256sums=('15d08a03e16953813045ad24c5818e2909ef2141a0b97b2bd3bc8ec6f222cadb')
 group=(dev.python)
 uses=()
 arch=('x86_64')

@@ -1,30 +1,36 @@
 #!/usr/bin/env bash
 name='py3-hotdoc'
 release='2'
-version='0.17.4'
+version='0.18.2'
 url='https://pypi.org/project/hotdoc/'
 description='A documentation tool micro-framework'
 email='aliriza.keskin@pardus.org.tr'
 maintainer='aliriza'
 license=('GPLv3')
 #source=("https://github.com/hotdoc/hotdoc/archive/refs/tags/$version.tar.gz")
-source=(https://files.pythonhosted.org/packages/60/fd/32e24a747181e060ace04cd927698b2b5b3b90f6bf2c014e12df630c183a/hotdoc-0.17.4.tar.gz)
-
+source=("https://files.pythonhosted.org/packages/26/f3/94ed01195952d8ba87e43ed1417f03bf50cd9d7d8db9c2c4364932e150a0/hotdoc-0.18.2.tar.gz"
+        "remove-bootstrap.patch")
 depends=(python json-glib)
 makedepends=()
-sha256sums=('c4d5dff647f03aa87a1d2d06035d2819edd099b91635e3b2ee390829357ae9fc')
+sha256sums=('ded2c2cd06f4527f891b2d469ab5bc0161fdc84aa90d07b190bd63694a059389'
+            'SKIP')
 group=(dev.python)
 uses=()
 arch=('x86_64')
 
 cd hotdoc-$version
 
+
+prepare(){
+    patch -Np1 -i ../remove-bootstrap.patch
+}
+
 build(){
-    python setup.py build
+    python -m build --wheel
 }
 
 package(){
-    python setup.py install --root="${DESTDIR}" --optimize=1 --skip-build
+    python -m installer --destdir="$DESTDIR" dist/*.whl
 
 }
 

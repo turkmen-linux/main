@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='btrfs-progs'
-release='8'
-version='6.16.1'
+release='9'
+version='6.17.1'
 url='https://github.com/storaged-project/libblockdev'
 description='A library for manipulating block devices'
 email='bayramk@gmail.com'
@@ -10,7 +10,7 @@ license=('GPLv3')
 source=("https://github.com/kdave/btrfs-progs/archive/refs/tags/v${version}.tar.gz")
 depends=(e2fsprogs zlib libgcrypt eudev)
 makedepends=()
-sha256sums=('4b449d402f1a636b57ebf537fede7e3ae04f24d273f79df79b0f333702e439db')
+sha256sums=('6eba55443b7c0c4dfa91619f8629cfa75e27734f76e564ca83bff6b6e344a5ff')
 group=(sys.fs)
 uses=()
 arch=('x86_64')

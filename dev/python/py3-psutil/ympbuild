@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='py3-psutil'
-release='3'
-version='7.0.0'
+release='4'
+version='7.2.2'
 url='https://github.com/giampaolo/psutil'
 description='Cross-platform lib for process and system monitoring in Python'
 email='aliriza.keskin@pardus.org.tr'
@@ -10,7 +10,7 @@ license=('GPLv3')
 source=("https://github.com/giampaolo/psutil/archive/refs/tags/release-$version.tar.gz")
 depends=(python)
 makedepends=()
-sha256sums=('a3c736187215d1f94ebe18ee6b14202d1b89c165c2eaad159f55cdfb494f7a1c')
+sha256sums=('38f406bf21acc67e45f414b7980463b2e6e6270ba3616ffd41995d997078cbe6')
 group=(dev.python)
 uses=()
 arch=('x86_64')
@@ -24,5 +24,7 @@ build () {
 
 package () {
     python3 setup.py install --skip-build --root="$DESTDIR"
+    mv $DESTDIR/usr/lib/python3.*/site-packages $DESTDIR/usr/lib/python3
+
 }
 

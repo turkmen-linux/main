@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='py3-yaml'
-release='3'
-version='6.0.2'
+release='4'
+version='6.0.3'
 url='https://github.com/yaml/pyyaml'
 description='Python3 bindings for YAML'
 email='aliriza.keskin@pardus.org.tr'
@@ -10,7 +10,7 @@ license=('GPLv3')
 source=("https://github.com/yaml/pyyaml/archive/refs/tags/$version.tar.gz")
 depends=(libyaml python)
 makedepends=(py3-wheel py3-setuptools py3-build py3-installer)
-sha256sums=('9377c381ac3fccad8df73d96b5139ef8b1a2c57a0d913e95ab0a2275d66b5caa')
+sha256sums=('c7b45011e052458ae79015d5eea3046c37d099023d4b253dde26ee1c29ea2f36')
 group=(dev.python)
 uses=()
 arch=('x86_64')

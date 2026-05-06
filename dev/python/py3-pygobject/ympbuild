@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='py3-pygobject'
-release='2'
-version='3.50.1'
+release='3'
+version='3.56.2'
 url='Python bindings for GObject Introspection'
 description='Python bindings for GObject Introspection'
 email='bayramk@gmail.com'
@@ -11,12 +11,14 @@ source=("https://gitlab.gnome.org/GNOME/pygobject/-/archive/$version/pygobject-$
 pyver=$(python -c "import sys; print(str( sys.version_info[0]) +\".\"+ str(sys.version_info[1] ))")
 depends=(python"$pyver" gobject-introspection py3-cairo)
 makedepends=()
-sha256sums=('c4f28db7715c674e23577ffc797ef1c37b2c009248c73b69dd577861c889c564')
+sha256sums=('2132deca4ffde99933affdbcd2201f064e70ce3fc7877eac062ceb92ef95b8c2')
 group=(dev.python)
 uses=()
 arch=('x86_64')
 
 cd pygobject-$version
+
+unset meson
 
 setup(){
     meson setup build --prefix=/usr \

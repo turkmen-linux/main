@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='py3-packaging'
-release='4'
-version='25.0'
+release='5'
+version='26.2'
 url='https://pypi.org/project/packaging'
 description='Core utilities for Python3 packages'
 email='brkt8khn@gmail.com'
@@ -10,7 +10,7 @@ license=('Apache-2.0 AND BSD-2-Clause')
 source=("https://github.com/pypa/packaging/archive/refs/tags/${version}.tar.gz")
 depends=(python)
 makedepends=(py3-build py3-installer)
-sha256sums=('15b6ba95eb12d8f99dcf215ea37cbea16812ef28358e8ef3d9344acb827acac1')
+sha256sums=('24d24b249ba8fb0213ac046d8e2c1cecf6b1013311a5febfb87a02093ef2c991')
 group=(dev.python)
 uses=()
 arch=('x86_64')
@@ -33,8 +33,8 @@ build(){
 }
 
 package(){
-#    mkdir -p $DESTDIR/usr/lib64/python3
-#    cp -prfv src/* $DESTDIR/usr/lib64/python3
     python -m installer --destdir="$DESTDIR" dist/*.whl
+    mv $DESTDIR/usr/lib/python3.*/site-packages $DESTDIR/usr/lib/python3
+
 }
 

@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='py3-setproctitle'
 release='3'
-version='1.3.6'
+version='1.3.7'
 url='https://github.com/dvarrazzo/py-setproctitle'
 description='A Python module to customize the process title'
 email='akarsu@protonmail.com'
@@ -10,7 +10,7 @@ license=('BSD-3-Clause')
 source=("https://github.com/dvarrazzo/py-setproctitle/archive/refs/tags/version-${version}.tar.gz")
 depends=(python)
 makedepends=()
-sha256sums=('be91b6f4e476bf3c6412db08df79f95cd54f8e1bb52b35452fb38066997a9cce')
+sha256sums=('e34ad337c3be087da1052e8846c6576a5816e0fcbf0a8ba9dd170e205166e533')
 group=(dev.python)
 uses=()
 arch=('x86_64')

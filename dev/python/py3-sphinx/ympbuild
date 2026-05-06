@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='py3-sphinx'
-release='3'
-version='8.2.3'
+release='4'
+version='9.1.0'
 url='https://www.sphinx-doc.org/'
 description='Python Documentation Generator'
 email='akarsu@protonmail.com'
@@ -10,7 +10,7 @@ license=('BSD-2-Clause')
 source=("https://github.com/sphinx-doc/sphinx/archive/refs/tags/v${version}.tar.gz")
 depends=(python py3-babel py3-docutils py3-imagesize py3-jinja py3-packaging py3-pygments py3-requests py3-snowballstemmer)
 makedepends=(py3-build py3-flit py3-installer)
-sha256sums=('94cd09fa065b819dcc40de329441d53710cf51f6857b39ce20840bb2b5d3ec78')
+sha256sums=('fc64c3d18fe9614fec5dddb3eff0b74c5f0a73ff244e03e129d7d8862ac00815')
 group=(dev.python)
 uses=()
 arch=('x86_64')
@@ -23,4 +23,5 @@ build(){
 
 package(){
     python -m installer --destdir="$DESTDIR" dist/*.whl
+    mv $DESTDIR/usr/lib/python3.*/site-packages $DESTDIR/usr/lib/python3
 }

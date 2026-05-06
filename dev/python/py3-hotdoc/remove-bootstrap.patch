@@ -1,0 +1,18 @@
+index 29108c1..087a2ba 100755
+--- a/hotdoc/meson.build
++++ b/hotdoc/meson.build
+@@ -26,13 +26,6 @@ py.install_sources(
+     preserve_path: true,
+ )
+ 
+-bootstrap_theme = subproject('hotdoc_bootstrap_theme',
+-    default_options: [
+-        'less_include_path=@0@'.format(meson.current_source_dir() / 'less'),
+-        'install=true',
+-    ]
+-)
+-
+-theme_dist_dir = bootstrap_theme.get_variable ('theme_dir')
++theme_dist_dir = ''
+ 
+ subdir('core')

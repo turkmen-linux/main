@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 name='py3-sass'
-release='1'
+release='2'
 version='0.23.0'
 url='https://github.com/sass/libsass-python'
 description='Python sass library'
@@ -25,5 +25,7 @@ build(){
 
 package(){
     python -m installer --destdir="${DESTDIR}" dist/*.whl
+    mv $DESTDIR/usr/lib/python3.*/site-packages $DESTDIR/usr/lib/python3
+
 }
 

@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='py3-lxml'
-release='2'
-version='5.4.0'
+release='3'
+version='6.1.0'
 url='https://pypi.org/project/lxml/'
 description='Powerful and Pythonic XML processing library combining libxml2/libxslt with the ElementTree API.'
 email='bayramk@gmail.com'
@@ -10,7 +10,7 @@ license=('GPLv3')
 source=("https://github.com/lxml/lxml/archive/refs/tags/lxml-$version.tar.gz")
 depends=(python libxml2 libxslt py3-cython)
 makedepends=()
-sha256sums=('12ed971a99bd07977e236bf59314cfd53fbf5d59f39d4a13caad901c7fceb0a2')
+sha256sums=('d62d3f15631982e884920d20a89d89ff059b33b373314f9e1973f4e18129898a')
 group=(dev.python)
 uses=()
 arch=('x86_64')

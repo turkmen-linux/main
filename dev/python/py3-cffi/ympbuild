@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='py3-cffi'
-release='4'
-version='1.17.1'
+release='5'
+version='2.0.0'
 url='https://pypi.org/project/cffi/'
 description='Foreign Function Interface for Python calling C code.'
 email='parduscix@yandex.ru'
@@ -11,7 +11,7 @@ source=("https://github.com/python-cffi/cffi/archive/refs/tags/v${version}.tar.g
 #source=("https://files.pythonhosted.org/packages/2b/a8/050ab4f0c3d4c1b8aaa805f70e26e84d0e27004907c5b8ecc1d31815f92a/cffi-1.15.1.tar.gz")
 depends=(python py3-cparser libffi)
 makedepends=(py3-build py3-installer py3-wheel py3-setuptools)
-sha256sums=('5aff2444731a1fc55c67080ded66d27cc4a0151e0bd37a7d02ca2a0c0edd895d')
+sha256sums=('e32bea840b50779a43dcaff13dcf6fa8bc29aa1b071c2cb4e27c1bd79114a202')
 group=(dev.python)
 uses=()
 arch=('x86_64')

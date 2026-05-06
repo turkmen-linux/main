@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='libsass'
-release='1'
-version='3.6.5'
+release='2'
+version='3.6.6'
 url='https://sass-lang.com/libsass'
 description='C/C++ implementation of a Sass compiler'
 email='akarsu@protonmail.com'
@@ -10,7 +10,7 @@ license=('MIT')
 source=("https://github.com/sass/libsass/archive/${version}.tar.gz")
 depends=()
 makedepends=()
-md5sums=('c49765b9b3824dcd4a7423225ca28bad')
+sha256sums=('11f0bb3709a4f20285507419d7618f3877a425c0131ea8df40fe6196129df15d')
 group=(dev.libs)
 uses=()
 arch=('x86_64')

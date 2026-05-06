@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='libblockdev'
-release='4'
-version='3.4.0'
+release='5'
+version='3.5.0'
 url='https://github.com/storaged-project/libblockdev'
 description='A library for manipulating block devices'
 email='bayramk@gmail.com'
@@ -11,7 +11,7 @@ source=("https://github.com/storaged-project/libblockdev/releases/download/$vers
 depends=(gawk parted kmod libyaml btrfs-progs dosfstools gptfdisk
          libbytesize ndctl xfsprogs lvm2 volume_key dmraid libnvme)
 makedepends=()
-sha256sums=('65ef9a37babd44b85b8ff9b273f90f9f7d5f8ff7b0c76a8edb69240325fd83f4')
+sha256sums=('bccd30e6b5d11504de60d9889ff6a2a25b07a4ec8f04070f2387e168301b3e3a')
 group=(sys.libs)
 uses=()
 arch=('x86_64')
@@ -41,5 +41,6 @@ build(){
 
 package(){
     make install
+    mv $DESTDIR/usr/lib/python3.*/site-packages $DESTDIR/usr/lib/python3
 }
 

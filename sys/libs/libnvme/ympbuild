@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 name='libnvme'
-release='6'
+release='7'
 version='1.16.1'
 url='https://example.org'
 description='C Library for NVM Express on Linux'

@@ -1,18 +1,16 @@
 #!/usr/bin/env bash
 name='ibus'
-release='1'
-version='1.5.33'
+release='2'
+version='1.5.34'
 url='https://github.com/ibus/ibus/wiki'
 description='Intelligent Input Bus'
 email='aliriza.keskin@pardus.org.tr'
 maintainer='aliriza'
 license=('GPLv3')
-source=("https://github.com/ibus/ibus/archive/refs/tags/$version.tar.gz"
-        "fix.patch")
+source=("https://github.com/ibus/ibus/archive/refs/tags/$version.tar.gz")
 depends=(gtk3)
 makedepends=()
-sha256sums=('a777068caba4ba7599a3214e2966f564daec01bba94cd7f2ca63062107e0604f'
-            'SKIP')
+sha256sums=('ff8f511770844203108119727dc8686c29afb286e9cb535e0870f18d40fddbbb')
 group=(app.i18n)
 uses=()
 arch=('x86_64')
@@ -20,11 +18,6 @@ arch=('x86_64')
 cd $name-$version
 
 export CFLAGS="-Wno-all"
-
-prepare(){
-    # https://github.com/ibus/ibus/pull/2833
-    patch -Np1 -i ../fix.patch
-}
 
 setup () {
     autoreconf -fvi
