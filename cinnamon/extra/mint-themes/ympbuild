@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+name='mint-themes'
+release='1'
+version='2.3.9'
+url='https://github.com/linuxmint/mint-themes'
+description='Linux mint themes'
+email='aliriza.keskin@pardus.org.tr'
+maintainer='aliriza'
+license=('GPLv3')
+source=("https://github.com/linuxmint/mint-themes/archive/refs/tags/$version.tar.gz")
+depends=()
+makedepends=()
+sha256sums=('313c10ec5cb776eb10068079e9ff384fb1de4351f23a13ee2452592957bc01de')
+group=(cinnamon.extra)
+uses=()
+arch=('x86_64')
+
+cd $name-$version
+
+build () {
+    make $jobs
+}
+
+package () {
+    mkdir -p $DESTDIR
+    mv usr $DESTDIR/usr
+}
+
