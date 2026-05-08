@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='flatpak'
-release='4'
-version='1.16.2'
+release='5'
+version='1.17.6'
 url='https://github.com/flatpak/flatpak'
 description='Linux application sandboxing and distribution framework'
 email='aliriza.keskin@pardus.org.tr'
@@ -11,7 +11,7 @@ source=("https://salsa.debian.org/debian/flatpak/-/archive/debian/$version-1/fla
         "flatpak.env")
 depends=(ostree desktop-file-utils shared-mime-info curl libX11 json-glib appstream py3-parsing libseccomp)
 makedepends=()
-sha256sums=('38a71f4c1954ed9b2fab5fc645c9bd9a201288ae07be40549f82d4fa3406ca18'
+sha256sums=('6cf4d36a3a772f87a083925766e5657a99b2abca37121471ff31a97ba6b7cc00'
             'SKIP')
 group=(sys.apps)
 uses=()
