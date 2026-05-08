@@ -21,6 +21,3 @@ if [ "$current" != "$last" ] ; then
     date +%s -r /etc/pam.d/system-auth.d/ > /var/lib/ymp/sysconf/shadow/update.date
 fi
 
-if ! ls -la /usr/bin/su | grep "^...s" >/dev/null ; then
-    chmod 4755 /usr/bin/su
-fi

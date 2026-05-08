@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+name='suidless-su'
+release='1'
+version='1.0.0'
+url='https://gitlab.com/turkmen-linux/devel/sources/suidless-su'
+description='su command replacement. No suid bit required.'
+email='aliriza.keskin@pardus.org.tr'
+maintainer='aliriza'
+license=('GPLv3')
+source=("https://gitlab.com/turkmen-linux/devel/sources/suidless-su/-/archive/$version/suidless-su-$version.tar.gz")
+depends=()
+makedepends=()
+sha256sums=('9509c98796197e8d44e397d8198080313080010581a6038be4692b951a007864')
+group=(sys.auth)
+uses=()
+arch=('x86_64')
+
+cd $name-$version
+
+setup () {
+    meson setup build \
+      --prefix=/usr
+}
+
+build () {
+    ninja -C build $jobs
+}
+
+package () {
+    ninja -C build install $jobs
+}
+
