@@ -33,6 +33,6 @@ build(){
 
 package(){
     make install DESTDIR=$DESTDIR $jobs
-    ln -s libgpgme.so /usr/lib64/libgpgme.so.11
+    ln -s libgpgme.so $DESTDIR/usr/lib64/libgpgme.so.11
 }
 
