@@ -1,16 +1,18 @@
 #!/usr/bin/env bash
 name='xapp'
-release='3'
-version='2.8.0'
+release='4'
+version='3.2.2'
 url='https://github.com/linuxmint/xapp'
 description='Common library for X-Apps project'
 email='akarsu@protonmail.com'
 maintainer='akarsu'
 license=('GPL')
-source=("https://github.com/linuxmint/xapp/archive/$version/xapp-${version}.tar.gz")
+source=("https://github.com/linuxmint/xapp/archive/$version/xapp-${version}.tar.gz"
+        "https://github.com/xapp-project/xapp-symbolic-icons/archive/refs/tags/1.0.9.tar.gz")
 depends=(libdbusmenu libgnomekbd)
 makedepends=(vala py3-pygobject make gobject-introspection)
-md5sums=('d987bbe17224a157d1bc1a7b30460c27')
+sha256sums=('d0ea664053e6f35cc556e060b161905004f03d0695473772d2fb8a37cf445591'
+            '0ebb603eaa34f34d44bc419119595c91785caf0e29a2ad2adaa7fea9cc2e6ebb')
 group=(x11.libs)
 uses=()
 arch=('x86_64')
@@ -20,14 +22,19 @@ cd $name-$version
 setup(){
     meson setup build --prefix=/usr \
         --libdir=/usr/lib64/
+    cd ../xapp-symbolic-icons-1.0.9
+    meson setup build --prefix=/usr \
+        --libdir=/usr/lib64/
 }
 
 
 build(){
     ninja -C build
+    ninja -C ../xapp-symbolic-icons-1.0.9/build
 }
 
 package(){
-    DESTDIR="${DESTDIR}" ninja -C build install
+    ninja -C build install
+    ninja -C ../xapp-symbolic-icons-1.0.9/build install
 }
 
