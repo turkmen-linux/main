@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='lsl'
-release='3'
-version='1.0.4'
+release='4'
+version='1.0.5'
 url='https://sulincix/debian-subsystem'
 description='Linux subsystem for linux'
 email='parduscix@yandex.ru'
@@ -11,7 +11,7 @@ source=("https://gitlab.com/sulincix/debian-subsystem/-/archive/$version/debian-
         "lsl.sysconf")
 depends=(pam make perl)
 makedepends=()
-sha256sums=('b4244039861c67a982e2f7a32c0ee6602012ee994c6d9cfa6646f44c939a4a0d'
+sha256sums=('33c967d2854698d14daa300fa0816c3a08bba2a5f39d0e4d65cfaa15b8675bd2'
             'SKIP')
 group=(app.container)
 uses=()
