@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='linux-tools'
-release='2'
-version='7.0.3'
+release='3'
+version='7.0.5'
 url='https://cdn.kernel.org/pub/linux/kernel/'
 description='Linux kernel'
 email='aliriza.keskin@pardus.org.tr'
