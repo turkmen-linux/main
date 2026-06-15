@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='qt6-sensors'
-release='4'
-version='6.9.1'
+release='5'
+version='6.11.1'
 url='https://www.qt.io/'
 description='The Qt Sensors API provides access to sensor hardware via QML and C++'
 email='brkt8khn@gmail.com'
@@ -10,7 +10,7 @@ license=('FDL' 'GPL3' 'LGPL3' 'custom')
 source=("https://download.qt.io/archive/qt/${version%.*}/${version}/submodules/qtsensors-everywhere-src-${version}.tar.xz")
 depends=(qt6-base)
 makedepends=(qt6-declarative)
-sha256sums=('f04b131acacfd42dfe056bd5861ff1e12e2ab57b3e20332becefa3644a409c6c')
+sha256sums=('23617062da7be526d023dec7f9b76231001a1098a7e5f94c646f2e4f87cfcf8f')
 group=(dev.qt)
 uses=()
 arch=('x86_64')

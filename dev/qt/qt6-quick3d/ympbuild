@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='qt6-quick3d'
-release='4'
-version='6.9.1'
+release='5'
+version='6.11.1'
 url='https://www.qt.io/developers'
 description='Qt module and API for defining 3D content in Qt Quick'
 email='brkt8khn@gmail.com'
@@ -10,7 +10,7 @@ license=(GPLv3)
 source=("https://download.qt.io/archive/qt/${version%.*}/${version}/submodules/qtquick3d-everywhere-src-${version}.tar.xz")
 depends=(qt6-base qt6-declarative qt6-quicktimeline qt6-shadertools zlib)
 makedepends=(cmake ninja)
-sha256sums=('f61600da8fbfd51b7d6b5c431cef453d7c24015c374ae25756c0faf0db2c9977')
+sha256sums=('c76b85de3f8aa2a4bee64987acfef560675c1b378b92076c7c6264613e5b456f')
 group=(dev.qt)
 uses=()
 arch=('x86_64')

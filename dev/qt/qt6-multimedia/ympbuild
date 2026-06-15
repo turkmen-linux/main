@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='qt6-multimedia'
-release='4'
-version='6.9.1'
+release='5'
+version='6.11.1'
 url='https://www.qt.io/'
 description='Qt6 - Multimedia support'
 email='brkt8khn@gmail.com'
@@ -10,7 +10,7 @@ license=('FDL' 'GPL3' 'LGPL3' 'custom')
 source=("https://download.qt.io/archive/qt/${version%.*}/${version}/submodules/qtmultimedia-everywhere-src-${version}.tar.xz")
 depends=(qt6-base alsa-lib ffmpeg libpulse gst-plugins-base gst-plugins-bad libXrandr qt6-declarative qt6-quick3d)
 makedepends=(cmake perl qt6-declarative)
-sha256sums=('955e36459518ee55f8e2bb79defc6e44aa94dc1edf5ac58a22d7734b2e07391d')
+sha256sums=('390f8e52ddee3aca5c4de7eead900c84c4fa61ff6d1f0ebea9c7543365c09b0a')
 group=(dev.qt)
 uses=()
 arch=('x86_64')

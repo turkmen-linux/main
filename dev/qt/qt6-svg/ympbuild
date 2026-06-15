@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='qt6-svg'
-release='4'
-version='6.9.1'
+release='5'
+version='6.11.1'
 url='https://www.qt.io/'
 description='Classes for displaying the contents of SVG files'
 email='brkt8khn@gmail.com'
@@ -10,7 +10,7 @@ license=('GPLv3')
 source=("https://download.qt.io/archive/qt/${version%.*}/${version}/submodules/qtsvg-everywhere-src-${version}.tar.xz")
 depends=(qt6-base)
 makedepends=(cmake)
-sha256sums=('2dfc5de5fd891ff2afd9861e519bf1a26e6deb729b3133f68a28ba763c9abbd5')
+sha256sums=('7f3cf02f4824bf03c2c5859ea6db173bf1482a1daf24e6cdf7bc78cfa26a8a94')
 group=(dev.qt)
 uses=()
 arch=('x86_64')

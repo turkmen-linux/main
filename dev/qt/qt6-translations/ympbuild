@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='qt6-translations'
-release='4'
-version='6.9.1'
+release='5'
+version='6.11.1'
 url='https://www.qt.io/'
 description='A cross-platform application and UI framework (Translations)'
 email='brkt8khn@gmail.com'
@@ -10,7 +10,7 @@ license=('FDL' 'GPL3' 'LGPL3' 'custom')
 source=("https://download.qt.io/archive/qt/${version%.*}/${version}/submodules/qttranslations-everywhere-src-${version}.tar.xz")
 depends=(qt6-base qt6-tools)
 makedepends=(cmake)
-sha256sums=('9761a1a555f447cdeba79fdec6a705dee8a7882ac10c12e85f49467ddd01a741')
+sha256sums=('37c02c81206594c7bb4edca85ac93e8e55a9836b70c960fde6cb0f8623ec5677')
 group=(dev.qt)
 uses=()
 arch=('x86_64')

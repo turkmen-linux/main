@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='qt6-speech'
-release='4'
-version='6.9.1'
+release='5'
+version='6.11.1'
 url='https://www.qt.io/'
 description='Qt module to make text to speech and speech recognition easy'
 email='brkt8khn@gmail.com'
@@ -10,7 +10,7 @@ license=('FDL' 'GPL3' 'LGPL3' 'custom')
 source=("https://download.qt.io/archive/qt/${version%.*}/${version}/submodules/qtspeech-everywhere-src-${version}.tar.xz")
 depends=(qt6-base qt6-multimedia)
 makedepends=(speech-dispatcher qt6-declarative cmake)
-sha256sums=('6807f59fcae2ef8f1f64210cfbfc8bcee1a40ed2d21eaee6673aba36bb7c1428')
+sha256sums=('c035c318012025875a653245701a23d3807e8e46b8bf7987877842219c273f14')
 group=(dev.qt)
 uses=()
 arch=('x86_64')

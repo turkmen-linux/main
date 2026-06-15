@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='qt6-base'
-release='4'
-version='6.9.1'
+release='5'
+version='6.11.1'
 url='https://qt.io/developers/'
 description='A cross-platform application and UI framework'
 email='brkt8khn@gmail.com'
@@ -12,7 +12,7 @@ source=("https://download.qt.io/archive/qt/${version%.*}/${version}/submodules/q
 depends=(sqlite libX11 fontconfig mesa harfbuzz libXi openssl double-conversion libproxy
          xcb-util-cursor xcb-util-wm xcb-util-keysyms)
 makedepends=(vulkan-headers)
-sha256sums=('40caedbf83cc9a1959610830563565889878bc95f115868bbf545d1914acf28e')
+sha256sums=('d9594a31228aa23ad6b531719a29b45f0f3989fe6c136d45767ea179f233c1ac')
 group=(dev.qt)
 uses=()
 arch=('x86_64')
@@ -54,10 +54,6 @@ build () {
 
 package () {
     ninja -C build install $jobs
-    install -d -m755 "$DESTDIR"/usr/include/qt6xcb-private/{gl_integrations,nativepainting}
-    cp -r src/plugins/platforms/xcb/*.h "$DESTDIR"/usr/include/qt6xcb-private/
-    cp -r src/plugins/platforms/xcb/gl_integrations/*.h "$DESTDIR"/usr/include/qt6xcb-private/gl_integrations/
-    cp -r src/plugins/platforms/xcb/nativepainting/*.h "$DESTDIR"/usr/include/qt6xcb-private/nativepainting/
 
 }
 

@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='qt6-3d'
-release='4'
-version='6.9.1'
+release='5'
+version='6.11.1'
 url='https://www.qt.io/'
 description='Package description missing'
 email='brkt8khn@gmailmail.com'

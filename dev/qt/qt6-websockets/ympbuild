@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='qt6-websockets'
-release='4'
-version='6.9.1'
+release='5'
+version='6.11.1'
 url='https://www.qt.io/'
 description='Provides WebSocket communication compliant with RFC 6455'
 email='brkt8khn@gmail.com'
@@ -10,7 +10,7 @@ license=('GPLv3')
 source=("https://download.qt.io/archive/qt/${version%.*}/${version}/submodules/qtwebsockets-everywhere-src-${version}.tar.xz")
 depends=(qt6-base qt6-declarative)
 makedepends=(cmake)
-sha256sums=('98be8c863b7f02cc98eedc0b6eac07544c10a9d2fa11c685fd61f6b243f748f5')
+sha256sums=('243e3aa11924c8c5c1645e892f62d013caa3766c57512ca926d5b58146646fbf')
 group=(dev.qt)
 uses=()
 arch=('x86_64')

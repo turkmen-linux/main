@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='qt6-lottie'
-release='4'
-version='6.9.1'
+release='5'
+version='6.11.1'
 url='https://www.qt.io/'
 description='A family of player software for a certain json-based file format for describing 2d vector graphics animations'
 email='brkt8khn@gmailmail.com'
@@ -10,7 +10,7 @@ license=('FDL' 'GPL3' 'LGPL3' 'custom')
 source=("https://download.qt.io/archive/qt/${version%.*}/${version}/submodules/qtlottie-everywhere-src-${version}.tar.xz")
 depends=(qt6-base)
 makedepends=(qt6-declarative cmake ninja)
-sha256sums=('8ee88c2e0773c96109c179d7e75a46ba7bc548b5bc8be409a23cbaddafa18ba2')
+sha256sums=('e0d0fadbdc33e97c8241c56273b54b6a7b1139e076fdd21281bc4662ee4b2679')
 group=(dev.qt)
 uses=()
 arch=('x86_64')

@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='qt6-serialbus'
-release='4'
-version='6.9.1'
+release='5'
+version='6.11.1'
 url='https://www.qt.io/'
 description='Qt module for general purpose serial bus access'
 email='brkt8khn@gmailmail.com'
@@ -10,7 +10,7 @@ license=('FDL' 'GPL3' 'LGPL3' 'custom')
 source=("https://download.qt.io/archive/qt/${version%.*}/${version}/submodules/qtserialbus-everywhere-src-${version}.tar.xz")
 depends=(qt6-base qt6-serialport)
 makedepends=(cmake ninja)
-sha256sums=('491ece4583565f5d809ea9dd8caa2779a97c23a7d4d8352ba8a7a660e1ab04d7')
+sha256sums=('c46c9c0c8d6815301a669cdbd5866c10bcfb9e56889f5d7da14e11d6ad24f20a')
 group=(dev.qt)
 uses=()
 arch=('x86_64')

@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='qt6-connectivity'
-release='4'
-version='6.9.1'
+release='5'
+version='6.11.1'
 url='https://www.qt.io/'
 description='Provides access to Bluetooth hardware'
 email='brkt8khn@gmailmail.com'
@@ -10,7 +10,7 @@ license=('FDL' 'GPL3' 'LGPL3' 'custom')
 source=("https://download.qt.io/archive/qt/${version%.*}/${version}/submodules/qtconnectivity-everywhere-src-${version}.tar.xz")
 depends=(qt6-base bluez pcsc-lite)
 makedepends=(cmake ninja)
-sha256sums=('4988e50112104d5ad85e5b3cef66036ca445f18c22cf375d3dac9dcca95e0a17')
+sha256sums=('2105289ea414b46ed5fa53ba8782230045b9e47cc8156b5940c9e31e3980e591')
 group=(dev.qt)
 uses=()
 arch=('x86_64')
@@ -21,7 +21,7 @@ export PATH=/usr/bin/qt6:$PATH
 setup() {
 	cmake -B build -G Ninja \
 		-DCMAKE_BUILD_TYPE=RelWithDebInfo \
-		-DCMAKE_INSTALL_PREFIX=/usr 
+		-DCMAKE_INSTALL_PREFIX=/usr
 
 }
 
@@ -32,4 +32,8 @@ build () {
 
 package () {
    DESTDIR="$DESTDIR" cmake --install build
+   # remove broken symlink and relink
+   rm -rf $DESTDIR/usr/usr
+   mkdir $DESTDIR/usr/bin/qt6 -p
+   ln -s ../../lib64/qt6/libexec/sdpscanner $DESTDIR/usr/bin/qt6/sdpscanner6
 }

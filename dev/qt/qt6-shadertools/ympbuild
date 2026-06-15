@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='qt6-shadertools'
-release='4'
-version='6.9.1'
+release='5'
+version='6.11.1'
 url='https://www.qt.io/'
 description='Package description missing'
 email='brkt8khn@gmailmail.com'
@@ -10,7 +10,7 @@ license=('GPLv3')
 source=("https://download.qt.io/archive/qt/${version%.*}/${version}/submodules/qtshadertools-everywhere-src-${version}.tar.xz")
 depends=(qt6-base)
 makedepends=(cmake perl)
-sha256sums=('4e1ed24cce0887fb4b6c7be4f150239853a29c330c9717f6bacfb6376f3b4b74')
+sha256sums=('2075052f9b23bcf9de045bbd180037084942f82cce870aab14a1454902c982fc')
 group=(dev.qt)
 uses=()
 arch=('x86_64')

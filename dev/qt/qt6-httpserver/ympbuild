@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='qt6-httpserver'
-release='4'
-version='6.9.1'
+release='5'
+version='6.11.1'
 url='https://www.qt.io/'
 description='Qt6 HTTP Server'
 email='brkt8khn@gmailmail.com'
@@ -10,7 +10,7 @@ license=('FDL' 'GPL3' 'LGPL3' 'custom')
 source=("https://download.qt.io/archive/qt/${version%.*}/${version}/submodules/qthttpserver-everywhere-src-${version}.tar.xz")
 depends=(qt6-base qt6-websockets)
 makedepends=(cmake ninja)
-sha256sums=('bfc7b511e2bbc365f11027ae8d7d2e33f3ff63591b866df9a880c51363f02b53')
+sha256sums=('04bf70fcf76861f9b6870c728085f2375a6b6d923cb5d1a116dff2ed52a4e706')
 group=(dev.qt)
 uses=()
 arch=('x86_64')

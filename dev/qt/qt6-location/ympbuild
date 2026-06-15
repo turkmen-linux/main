@@ -1,16 +1,16 @@
 #!/usr/bin/env bash
 name='qt6-location'
-release='4'
-version='6.9.1'
+release='5'
+version='6.11.1'
 url='https://www.qt.io/'
 description='Helps you create viable mapping solutions using the data available from some of the popular location services'
 email='brkt8khn@gmailmail.com'
 maintainer='brkt8khn'
 license=('FDL' 'GPL3' 'LGPL3' 'custom')
 source=("https://download.qt.io/archive/qt/${version%.*}/${version}/submodules/qtlocation-everywhere-src-${version}.tar.xz")
-depends=(qt6-base qt6-declarative qt6-positioning)
+depends=(qt6-base qt6-declarative qt6-positioning qt6-shadertools)
 makedepends=(cmake ninja)
-sha256sums=('c0e8e8907e047ede59f5800f4f9bfd54286239aab1abe7df6723a8fcc127ef57')
+sha256sums=('3791ce77299e6f600a593d0fbfa5bd32fbcfc2d16104782b84acc489e382e41b')
 group=(dev.qt)
 uses=()
 arch=('x86_64')

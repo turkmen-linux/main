@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='qt6-5compat'
-release='4'
-version='6.9.1'
+release='5'
+version='6.11.1'
 url='https://www.qt.io'
 description='Module that contains unsupported Qt 5 APIs'
 email='brkt8khn@gmailmail.com'
@@ -10,7 +10,7 @@ license=('GPLv3')
 source=("https://download.qt.io/archive/qt/${version%.*}/${version}/submodules/qt5compat-everywhere-src-${version}.tar.xz")
 depends=(icu qt6-base qt6-shadertools)
 makedepends=(ninja qt6-declarative)
-sha256sums=('96c726ac3f0d5c40570e75196e4ab5c95d3de7c85d15604fe97ac2a6573d917a')
+sha256sums=('cfcb9fdaa051aad54b0e61b24ac5693b4887a86e07609f665fea67328a6f161b')
 group=(dev.qt)
 uses=()
 arch=('x86_64')

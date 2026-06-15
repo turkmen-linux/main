@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='qt6-virtualkeyboard'
-release='4'
-version='6.9.1'
+release='5'
+version='6.11.1'
 url='https://www.qt.io/'
 description='Virtual keyboard framework'
 email='brkt8khn@gmail.com'
@@ -10,7 +10,7 @@ license=('GPLv3')
 source=("https://download.qt.io/archive/qt/${version%.*}/${version}/submodules/qtvirtualkeyboard-everywhere-src-${version}.tar.xz")
 depends=(qt6-base qt6-svg qt6-declarative)
 makedepends=(cmake ninja)
-sha256sums=('80059a38bdb836f0785292396970edc108f477a68d9a35bed8393750de3d281f')
+sha256sums=('a1c6967b326243b2ca8d50bc7b7f7852c3975d9aa6ce4b186ebdf35bb1007e1c')
 group=(dev.qt)
 uses=()
 arch=('x86_64')

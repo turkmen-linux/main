@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='qt6-serialport'
-release='4'
-version='6.9.1'
+release='5'
+version='6.11.1'
 url='https://www.qt.io/'
 description='Provides access to hardware and virtual serial ports'
 email='brkt8khn@gmailmail.com'
@@ -10,7 +10,7 @@ license=('FDL' 'GPL3' 'LGPL3' 'custom')
 source=("https://download.qt.io/archive/qt/${version%.*}/${version}/submodules/qtserialport-everywhere-src-${version}.tar.xz")
 depends=(qt6-base)
 makedepends=(cmake ninja)
-sha256sums=('808fed52380c74ae89268306ce4d04b00f8f6b81f8c442489c390006d93eff10')
+sha256sums=('9af31a898ffd9a7e4faf6fed845d29e783c716885789055cbe319f3e072d3974')
 group=(dev.qt)
 uses=()
 arch=('x86_64')
