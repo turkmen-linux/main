@@ -9,7 +9,8 @@ maintainer='aliriza'
 license=('GPLv3')
 source=("https://download.kde.org/stable/plasma/$version/plasma-nm-$version.tar.xz")
 depends=(kcmutils kcolorscheme kcompletion kconfig kcoreaddons kdbusaddons kdeclarative ki18n kio kirigami knotifications kquickcharts
-         ksvg kwidgetsaddons kwindowsystem libplasma modemmanager-qt networkmanager-qt prison qca qcoro-qt6 qt6-base qt6-declarative solid)
+         ksvg kwidgetsaddons kwindowsystem libplasma modemmanager-qt networkmanager-qt prison qca qcoro-qt6 qt6-base qt6-declarative solid
+        qt6-qtkeychain)
 makedepends=(extra-cmake-modules)
 sha256sums=( 'b29680cc17c4bbe52e3b988d5be437ec4b524b554fa180ead13bc8910144cf98' )
 group=(kde.plasma)

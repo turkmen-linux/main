@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='kirigami-addons'
-release='4'
-version='1.10.0'
+release='5'
+version='1.12.1'
 url='https://invent.kde.org/libraries/kirigami-addons'
 description='Add-ons for the Kirigami framework'
 email='brkt8khn@gmail.com'
@@ -10,7 +10,7 @@ license=('LGPL')
 source=("https://download.kde.org/stable/kirigami-addons/kirigami-addons-$version.tar.xz")
 depends=(kirigami qt6-multimedia)
 makedepends=(extra-cmake-modules ki18n)
-sha256sums=('c98f92bf7c452e12f6dc403404215413db3959fe904ad830ead0db6bb09b3d11')
+sha256sums=('c543a493ce5875f405fb1c9ff6d531060ed082cc6d710e56d46ac42d164207bb')
 group=(kde.extra)
 uses=()
 arch=('x86_64')

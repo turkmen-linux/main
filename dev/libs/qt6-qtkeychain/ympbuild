@@ -1,0 +1,37 @@
+#!/usr/bin/env bash
+name='qt6-qtkeychain'
+release='1'
+version='0.16.0'
+url='https://www.qt.io'
+description='Platform-independent Qt API for storing passwords securely.'
+email='aliriza.keskin@pardus.org.tr'
+maintainer='sulincix'
+license=('GPLv3')
+source=("https://github.com/frankosterfeld/qtkeychain/archive/refs/tags/$version.tar.gz")
+depends=(qt6-base)
+makedepends=(ninja)
+sha256sums=('3be26ec4ae30eecf0c2ff7572ba83799791b157c76e15a05ef35f23dc25e4054')
+group=(dev.libs)
+uses=()
+arch=('x86_64')
+
+cd qtkeychain-$version
+
+export PATH=/usr/bin/qt6:$PATH
+
+setup() {
+	cmake -B build -G Ninja \
+		-DCMAKE_BUILD_TYPE=RelWithDebInfo \
+		-DCMAKE_INSTALL_PREFIX=/usr \
+    -DBUILD_WITH_QT6=true
+
+}
+
+
+build () {
+	cmake --build build
+}
+
+package () {
+   DESTDIR="$DESTDIR" cmake --install build
+}

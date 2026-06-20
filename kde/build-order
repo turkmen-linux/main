@@ -145,10 +145,6 @@ plasma5support
 plasma-activities-stats
 kpipewire
 plasma-workspace
-plasma-disks
-bluedevil
-kde-gtk-config
-kmenuedit
 kscreen
 kwrited
 plasma-nm
@@ -161,8 +157,6 @@ kactivitymanagerd
 plasma-integration
 kde-cli-tools
 systemsettings
-plasma-firewall
-plasma-systemmonitor
 kdeplasma-addons
 ocean-sound-theme
 print-manager
