@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='plasma5support'
-release='5'
-version='6.4.5'
+release='6'
+version='6.7.0'
 url='https://kde.org/plasma-desktop'
 description='Support components for porting from KF5/Qt5 to KF6/Qt6'
 email='brkt8khn@gmailmail.com'
@@ -10,7 +10,7 @@ license=('GPLv2')
 source=("https://download.kde.org/stable/plasma/${version}/plasma5support-${version}.tar.xz")
 depends=(kconfig kcoreaddons ki18n qt6-base qt6-declarative)
 makedepends=(extra-cmake-modules plasma-wayland-protocols qt6-tools)
-sha256sums=('acfdfbc82f8e3af7bd35d514b1e3cbb5daba8da7ba790cecb68f925a0f4df942')
+sha256sums=( 'e60e1e47a3dee93518647d66393c21e2406f7779e9e9e4382d7cea68cebbfb7b' )
 group=(kde.plasma)
 uses=()
 arch=('x86_64')

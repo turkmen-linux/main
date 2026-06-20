@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='kscreen'
-release='5'
-version='6.4.5'
+release='6'
+version='6.7.0'
 url='https://kde.org/plasma-desktop'
 description='KDE screen management software'
 email='brkt8khn@gmail.com'
@@ -10,7 +10,7 @@ license=('GPLv2')
 source=("https://download.kde.org/stable/plasma/${version}/kscreen-${version}.tar.xz")
 depends=(kcmutils kconfig kcoreaddons kdbusaddons kdeclarative ki18n kirigami ksvg kwindowsystem libplasma libkscreen libX11 libxcb libXi qt6-base qt6-declarative qt6-sensors layer-shell-qt)
 makedepends=(extra-cmake-modules )
-sha256sums=('b92bde8238b1e7f3d6521cc4b1ba8bba60047a64fff129b2011dff5ff3431037')
+sha256sums=( 'ad57a4326a64979a68aa5068a7151702d9b02db0720670e4be3e178905beda56' )
 group=(kde.plasma)
 uses=()
 arch=('x86_64')

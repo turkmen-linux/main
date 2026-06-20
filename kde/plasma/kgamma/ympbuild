@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='kgamma'
-release='5'
-version='6.4.5'
+release='6'
+version='6.7.0'
 url='https://kde.org/plasma-desktop'
 description="Adjust your monitor's gamma settings"
 email='brkt8khn@gmail.com'
@@ -10,7 +10,7 @@ license=('GPLv2')
 source=("https://download.kde.org/stable/plasma/${version}/kgamma-${version}.tar.xz")
 depends=(kcmutils kconfig kcoreaddons ki18n libX11 libXxf86vm qt6-base)
 makedepends=(extra-cmake-modules kdoctools)
-sha256sums=('996ebd60bf508248edc293d9ec9da4c9b838b3fb1bccd82a4db3059ef27abb16')
+sha256sums=( 'e8c33dba47da3ea0f89053e9402982ab1fbdb69c259bf08b1047a0504b07dd92' )
 group=(kde.plasma)
 uses=()
 arch=('x86_64')

@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='solid'
-release='5'
-version='6.18.0'
+release='6'
+version='6.27.0'
 url='https://community.kde.org/Frameworks'
 description='Hardware integration and detection'
 email='brkt8khn@gmail.com'
@@ -10,7 +10,7 @@ license=('LGPL')
 source=("https://download.kde.org/stable/frameworks/${version%.*}/solid-${version}.tar.xz")
 depends=(qt6-base udisks2 upower)
 makedepends=(qt6-tools qt6-declarative doxygen extra-cmake-modules)
-sha256sums=('7768c1da7ee34a9e37cfb6b5b727e690c80134ca424b5262e403e48ccf812ddf')
+sha256sums=( '70a9ee69b4357ebf83cc87aa61db6fdff8c96a59e24f9572e51716f1d3c579fe' )
 group=(kde.frameworks)
 uses=()
 arch=('x86_64')

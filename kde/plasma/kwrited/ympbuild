@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='kwrited'
-release='5'
-version='6.4.5'
+release='6'
+version='6.7.0'
 url='https://kde.org/plasma-desktop'
 description='KDE daemon listening for wall and write messages'
 email='brkt8khn@gmail.com'
@@ -10,7 +10,7 @@ license=('GPLv2')
 source=("https://download.kde.org/stable/plasma/${version}/kwrited-${version}.tar.xz")
 depends=(kcoreaddons kpty knotifications kdbusaddons qt6-base)
 makedepends=(extra-cmake-modules kdoctools)
-sha256sums=('434b83b115a480f542c97d519c27f2eb5dd4d333cfbdda28ed994813892a00d1')
+sha256sums=( '75439a92561f6c332804d1d27dae15bc5755b8c9af28da79d16c032d50903b10' )
 group=(kde.plasma)
 uses=()
 arch=('x86_64')

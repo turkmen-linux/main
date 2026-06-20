@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='kfilemetadata'
-release='5'
-version='6.18.0'
+release='6'
+version='6.27.0'
 url='https://community.kde.org/Frameworks'
 description='A library for extracting file metadata'
 email='brkt8khn@gmail.com'
@@ -10,7 +10,7 @@ license=('LGPL')
 source=("https://download.kde.org/stable/frameworks/${version%.*}/kfilemetadata-${version}.tar.xz")
 depends=(attr exiv2 karchive kconfig kcoreaddons ki18n qt6-base taglib)
 makedepends=(doxygen extra-cmake-modules ffmpeg qt6-tools)
-sha256sums=('05c4b0955885b46fed6dc23998760fdae59599a960159ec44f779d7498a08834')
+sha256sums=( '27f68558259394ad84d357aa316821672ee66481fa851ddf2a6109f668a6c6a3' )
 group=(kde.frameworks)
 uses=()
 arch=('x86_64')

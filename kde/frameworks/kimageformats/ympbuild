@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='kimageformats'
-release='5'
-version='6.18.0'
+release='6'
+version='6.27.0'
 url='https://community.kde.org/Frameworks'
 description='Image format plugins for Qt5'
 email='brkt8khn@gmail.com'
@@ -10,7 +10,7 @@ license=('GPLv3')
 source=("https://download.kde.org/stable/frameworks/${version%.*}/kimageformats-${version}.tar.xz")
 depends=(qt6-base)
 makedepends=(extra-cmake-modules karchive libavif libheif libraw libjxl openexr)
-sha256sums=('9d373ef5362aa8d71541cec2895415c95ca914626dcb0dd6b0ceef491dcbae46')
+sha256sums=( '6a9f40936ba946279063cbdaea473b9eb735b53047b0124c88aca7db17ccabac' )
 group=(kde.frameworks)
 uses=()
 arch=('x86_64')

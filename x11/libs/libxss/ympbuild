@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='libxss'
-release='2'
-version='1.2.4'
+release='3'
+version='1.2.5'
 url='https://gitlab.freedesktop.org/xorg/lib/libxscrnsaver'
 description='X11 Screen Saver extension library'
 email='akarsu@protonmail.com'
@@ -11,7 +11,7 @@ license=('GPLv3')
 source=("https://xorg.freedesktop.org/releases/individual/lib/libXScrnSaver-${version}.tar.xz")
 depends=(libXext util-macros xorgproto)
 makedepends=()
-md5sums=('e613751d38e13aa0d0fd8e0149cec057')
+sha256sums=('5057365f847253e0e275871441e10ff7846c8322a5d88e1e187d326de1cd8d00')
 group=(x11.libs)
 uses=()
 arch=('x86_64')

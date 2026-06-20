@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='kdesrc-build'
-release='1'
-version='22.07'
+release='2'
+version='6.27.0'
 url='https://invent.kde.org/sdk/kdesrc-build'
 description='Script to streamline setting up and maintaining KDE software development environment'
 email='akarsu@protonmail.com'
@@ -10,7 +10,7 @@ license=('GPLv3')
 source=("https://invent.kde.org/sdk/kdesrc-build/-/archive/v${version}/kdesrc-build-v${version}.tar.gz")
 depends=(dialog git)
 makedepends=(extra-cmake-modules cmake)
-md5sums=('af0f072c6a4c47efb7e64be47829b7e3')
+md5sums=( 'SKIP' )
 group=(kde.frameworks)
 uses=()
 arch=('x86_64')

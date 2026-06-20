@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='ki18n'
-release='5'
-version='6.18.0'
+release='6'
+version='6.27.0'
 url='https://community.kde.org/Frameworks'
 description='Advanced internationalization framework'
 email='brkt8khn@gmail.com'
@@ -10,7 +10,7 @@ license=('LGPL')
 source=("https://download.kde.org/stable/frameworks/${version%.*}/ki18n-${version}.tar.xz")
 depends=(qt6-base qt6-declarative)
 makedepends=(doxygen extra-cmake-modules python)
-sha256sums=('d0cbfbf3427c0368daa23f9f68b3cb5b03ad37b6820591491b3ea8a0a28bea61')
+sha256sums=( 'cd812ae95b0e95b40e46a50b9dea6d188eec001be96b1e1a5d962730e5f9bc58' )
 group=(kde.frameworks)
 uses=()
 arch=('x86_64')

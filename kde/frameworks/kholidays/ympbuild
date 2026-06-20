@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='kholidays'
-release='5'
-version='6.18.0'
+release='6'
+version='6.27.0'
 url='https://community.kde.org/Frameworks'
 description='KDE library for regional holiday information'
 email='brkt8khn@gmail.com'
@@ -10,7 +10,7 @@ license=('LGPL')
 source=("https://download.kde.org/stable/frameworks/${version%.*}/kholidays-${version}.tar.xz")
 depends=(qt6-base)
 makedepends=(extra-cmake-modules qt6-declarative qt6-tools doxygen)
-sha256sums=('49dc892d98ee493a696dd730f5a0e1624b46ca7d746a2877f057007abe9f2151')
+sha256sums=( '84ce2acd5565a9510d74945ea2311f8c099cb031393255d1c8d399665d57b914' )
 group=(kde.frameworks)
 uses=()
 arch=('x86_64')

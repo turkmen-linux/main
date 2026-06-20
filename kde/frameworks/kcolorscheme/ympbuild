@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='kcolorscheme'
-release='5'
-version='6.18.0'
+release='6'
+version='6.27.0'
 url='https://community.kde.org/Frameworks'
 description='Classes to read and interact with KColorScheme'
 email='brkt8khn@gmail.com'
@@ -10,7 +10,7 @@ license=('LGPL')
 source=("https://download.kde.org/stable/frameworks/${version%.*}/kcolorscheme-${version}.tar.xz")
 depends=(qt6-base kconfig kguiaddons ki18n)
 makedepends=(extra-cmake-modules qt6-tools)
-sha256sums=('14e99e74cc636640ac8d705f2878d72d0379fff671e75c0f138302489898d651')
+sha256sums=( '574e12350ea1adf248c5263cf18d145476d368664a302514d1065aa2563e1efd' )
 group=(kde.frameworks)
 uses=()
 arch=('x86_64')

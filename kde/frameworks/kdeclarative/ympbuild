@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='kdeclarative'
-release='5'
-version='6.18.0'
+release='6'
+version='6.27.0'
 url='https://community.kde.org/Frameworks'
 description='Provides integration of QML and KDE Frameworks'
 email='brkt8khn@gmail.com'
@@ -10,7 +10,7 @@ license=('LGPL')
 source=("https://download.kde.org/stable/frameworks/${version%.*}/kdeclarative-${version}.tar.xz")
 depends=(ki18n kconfig kwidgetsaddons kguiaddons kglobalaccel qt6-base qt6-declarative)
 makedepends=(extra-cmake-modules doxygen qt6-tools)
-sha256sums=('dc42a74c64281e6798d07cd9ed5326f6f3d82247f2e29e7ca9855a36cb3a1e6c')
+sha256sums=( 'b14e81143aed25ee62413f9c2b3742c558f5b6a1da6c5b92ca9a95bb6341e964' )
 group=(kde.frameworks)
 uses=()
 arch=('x86_64')

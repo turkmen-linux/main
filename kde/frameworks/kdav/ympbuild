@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='kdav'
-release='5'
-version='6.18.0'
+release='6'
+version='6.27.0'
 url='https://community.kde.org/Frameworks'
 description='A DAV protocol implemention with KJobs'
 email='brkt8khn@gmail.com'
@@ -10,7 +10,7 @@ license=('LGPL')
 source=("https://download.kde.org/stable/frameworks/${version%.*}/kdav-${version}.tar.xz")
 depends=(ki18n kcoreaddons kio qt6-base)
 makedepends=(extra-cmake-modules doxygen qt6-tools)
-sha256sums=('c3f048d7ca9f094647bb687f1ea218ba00bf3ab3b07a3d1abbc29dad677c5526')
+sha256sums=( 'e0af4190960d65f5c8475f01213ea4e68a07763ffeaa6766de4b7f50529e0498' )
 group=(kde.frameworks)
 uses=()
 arch=('x86_64')

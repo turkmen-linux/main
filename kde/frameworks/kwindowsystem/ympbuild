@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='kwindowsystem'
-release='5'
-version='6.18.0'
+release='6'
+version='6.27.0'
 url='https://community.kde.org/Frameworks'
 description='Access to the windowing system'
 email='brkt8khn@gmail.com'
@@ -10,7 +10,7 @@ license=('LGPL')
 source=("https://download.kde.org/stable/frameworks/${version%.*}/kwindowsystem-${version}.tar.xz")
 depends=(libX11 libxcb qt6-base qt6-wayland wayland xcb-util-keysyms libXfixes libSM libXext qt6-declarative)
 makedepends=(extra-cmake-modules qt6-tools doxygen qt6-declarative wayland-protocols)
-sha256sums=('a0a046039a11baebacd96d836e5765b981426f60d2cea9ff9a99ba8dbe56178e')
+sha256sums=( '401e5700ab36530a605410464268bf726c898da42c6f7d7bf05a9db00ccfe172' )
 group=(kde.frameworks)
 uses=()
 arch=('x86_64')

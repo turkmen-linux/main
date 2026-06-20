@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='kdoctools'
-release='5'
-version='6.18.0'
+release='6'
+version='6.27.0'
 url='https://community.kde.org/Frameworks'
 description='Documentation generation from docbook'
 email='brkt8khn@gmail.com'
@@ -10,7 +10,7 @@ license=('LGPL')
 source=("https://download.kde.org/stable/frameworks/${version%.*}/kdoctools-${version}.tar.xz")
 depends=(docbook-xml docbook-xsl karchive)
 makedepends=(karchive ki18n libxml2 libxslt qt6-base perl-uri)
-sha256sums=('e73ddb2dfb1b061e02d37861ef58c2d58daf1817e1ce543737ff7abf284bc984')
+sha256sums=( '69026ef8607cb6257e4d1f0e46e451130ef7ba67994a83e4f9a6c46eefd5a3f3' )
 group=(kde.frameworks)
 uses=()
 arch=('x86_64')

@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='kstatusnotifieritem'
-release='5'
-version='6.18.0'
+release='6'
+version='6.27.0'
 url='https://community.kde.org/Frameworks'
 description='Implementation of Status Notifier Items'
 email='brkt8khn@gmailmail.com'
@@ -10,7 +10,7 @@ license=('LGPL')
 source=("https://download.kde.org/stable/frameworks/${version%.*}/kstatusnotifieritem-${version}.tar.xz")
 depends=(kwindowsystem qt6-base)
 makedepends=(extra-cmake-modules doxygen qt6-tools)
-sha256sums=('d78aa20e1858f700478eecedb49714160d5e04b4a0d177bca4355aa1a0f7d730')
+sha256sums=( 'a2eec2a981ed9da6cffc955cc21a50dcbc77141cbb840d915f92d1897442d239' )
 group=(kde.frameworks)
 uses=()
 arch=('x86_64')

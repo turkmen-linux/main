@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='kdecoration'
-release='5'
-version='6.4.5'
+release='6'
+version='6.7.0'
 url='https://kde.org/plasma-desktop'
 description='Plugin based library to create window decorations'
 email='brkt8khn@gmail.com'
@@ -10,7 +10,7 @@ license=('GPLv2')
 source=("https://download.kde.org/stable/plasma/${version}/kdecoration-${version}.tar.xz")
 depends=(ki18n qt6-base)
 makedepends=(extra-cmake-modules)
-sha256sums=('f9d3ec4256cf7125a3b0bc08c7737af715235d5c22b69ba29797bb06c5ef4a4c')
+sha256sums=( 'acfe5657d889bf0dd5b8b50132bbe9c62f48b5074fcba8265a1cb84d6c227b5d' )
 group=(kde.plasma)
 uses=()
 arch=('x86_64')

@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='breeze'
-release='5'
-version='6.2.4'
+release='6'
+version='6.7.0'
 url='https://kde.org/plasma-desktop'
 description='Artwork, styles and assets for the Breeze visual style for the Plasma Desktop'
 email='brkt8khn@gmail.com'
@@ -11,7 +11,7 @@ source=("https://download.kde.org/stable/plasma/${version}/breeze-${version}.tar
 depends=(breeze-icons frameworkintegration kcmutils kcolorscheme kconfig kcoreaddons kguiaddons ki18n kiconthemes kirigami
          kwidgetsaddons kwindowsystem qt6-base qt6-declarative kdecoration hicolor-icon-theme aurorae)
 makedepends=(extra-cmake-modules)
-sha256sums=('4d9613896082f336413abb24ef8f8d86513f7e99a4c0bcdf2f45cd7c5bbd7c20')
+sha256sums=( 'cf375bbaaa45f5ba1b3df036bf0c40b7edfd789eb26f6e46f9dd1d325769cbd5' )
 group=(kde.plasma)
 uses=()
 arch=('x86_64')

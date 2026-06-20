@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='kcodecs'
-release='5'
-version='6.18.0'
+release='6'
+version='6.27.0'
 url='https://community.kde.org/Frameworks'
 description='Provide a collection of methods to manipulate strings using various encodings'
 email='brkt8khn@gmail.com'
@@ -10,7 +10,7 @@ license=('LGPL')
 source=("https://download.kde.org/stable/frameworks/${version%.*}/kcodecs-${version}.tar.xz")
 depends=(qt6-base)
 makedepends=(extra-cmake-modules doxygen qt6-tools gperf)
-sha256sums=('247eda9ade502699062c7baaca7bb93691a308f202c165954652875ebe777426')
+sha256sums=( '77f51f7586e8b457534d95dd241280e8b7475915c656e661dc37b1e8a773c595' )
 group=(kde.frameworks)
 uses=()
 arch=('x86_64')

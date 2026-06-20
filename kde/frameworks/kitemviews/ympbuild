@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='kitemviews'
-release='5'
-version='6.18.0'
+release='6'
+version='6.27.0'
 url='https://community.kde.org/Frameworks'
 description='Widget addons for Qt Model/View'
 email='brkt8khn@gmail.com'
@@ -10,7 +10,7 @@ license=('LGPL')
 source=("https://download.kde.org/stable/frameworks/${version%.*}/kitemviews-${version}.tar.xz")
 depends=(qt6-base)
 makedepends=(extra-cmake-modules qt6-tools doxygen)
-sha256sums=('f74c03e2ec367238ec395b1f2438878999c2be3e29b41b6bd4a3ccd04440e29a')
+sha256sums=( '7a286f147144714aa9e8f567dd5a0638a8fb81df97a34a0112f725b72aa36979' )
 group=(kde.frameworks)
 uses=()
 arch=('x86_64')

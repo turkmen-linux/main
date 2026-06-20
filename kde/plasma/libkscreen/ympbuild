@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='libkscreen'
-release='5'
-version='6.4.5'
+release='6'
+version='6.7.0'
 url='https://kde.org/plasma-desktop'
 description='KDE screen management software'
 email='brkt8khn@gmail.com'
@@ -10,7 +10,7 @@ license=('GPLv2')
 source=("https://download.kde.org/stable/plasma/${version}/libkscreen-${version}.tar.xz")
 depends=(qt6-base qt6-wayland wayland libxcb)
 makedepends=(extra-cmake-modules doxygen qt6-tools plasma-wayland-protocols)
-sha256sums=('68d26e27656b450f15a78f44784c50a22034e57c14f96a402019d52bc5b3e2b4')
+sha256sums=( '6efba58057a2635da6f1855ba6b08e57e636c976421ba5e3f5f667e6a57b0ce1' )
 group=(kde.plasma)
 uses=()
 arch=('x86_64')

@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='kpeople'
-release='5'
-version='6.18.0'
+release='6'
+version='6.27.0'
 url='https://community.kde.org/Frameworks'
 description='A library that provides access to all contacts and the people who hold them'
 email='brkt8khn@gmail.com'
@@ -10,7 +10,7 @@ license=('LGPL')
 source=("https://download.kde.org/stable/frameworks/${version%.*}/kpeople-${version}.tar.xz")
 depends=(kcontacts kcoreaddons ki18n kwidgetsaddons kitemviews qt6-base)
 makedepends=(extra-cmake-modules doxygen qt6-tools qt6-declarative)
-sha256sums=('09ba29efeb612eef4e54814f1f91e2d07c8942e6cf2c23176d9f306d68544d2b')
+sha256sums=( '586407310370f9a7fe88773c90e83e227bec7f5f6f860df6540d69db425581d6' )
 group=(kde.frameworks)
 uses=()
 arch=('x86_64')

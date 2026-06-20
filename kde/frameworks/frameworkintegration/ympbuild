@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='frameworkintegration'
-release='5'
-version='6.18.0'
+release='6'
+version='6.27.0'
 url='https://community.kde.org/Frameworks'
 description='Framework providing components to allow applications to integrate with a KDE Workspace'
 email='brkt8khn@gmail.com'
@@ -10,7 +10,7 @@ license=('LGPL')
 source=("https://download.kde.org/stable/frameworks/${version%.*}/frameworkintegration-${version}.tar.xz")
 depends=(appstream ki18n kiconthemes knewstuff knotifications kwidgetsaddons qt6-base)
 makedepends=(extra-cmake-modules)
-sha256sums=('cc5336f8ed19da061f766d4854d76e9cd424ac4082cb44dfb4e7cf136aeab454')
+sha256sums=( '55eefe8ebc67a040e64c75482276c29a69d0c5877b7b3674f4c7a40238c6d44c' )
 group=(kde.frameworks)
 uses=()
 arch=('x86_64')

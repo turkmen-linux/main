@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='extra-cmake-modules'
-release='8'
-version='6.18.0'
+release='9'
+version='6.27.0'
 url='https://community.kde.org/Frameworks'
 description='Extra modules and scripts for CMake'
 email='brkt8khn@gmail.com'
@@ -10,7 +10,7 @@ license=('LGPL')
 source=("https://download.kde.org/stable/frameworks/${version%.*}/extra-cmake-modules-${version}.tar.xz")
 depends=(cmake qt6-tools)
 makedepends=(py3-sphinx)
-sha256sums=('b2d2222cfe5ace502c60bd8a77a79bc0230f48cee83265c89dcc2618b960e293')
+sha256sums=( 'f3b5af578017a6a0f127fb1c31609db2e4f016e99b900d5a11f6ffb6c55006a3' )
 group=(kde.frameworks)
 uses=()
 arch=('x86_64')

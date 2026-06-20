@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='attica'
-release='6'
-version='6.18.0'
+release='7'
+version='6.27.0'
 url='https://community.kde.org/Frameworks'
 description='Qt library that implements the Open Collaboration Services API'
 email='brkt8khn@gmail.com'
@@ -10,7 +10,7 @@ license=('LGPL')
 source=("https://download.kde.org/stable/frameworks/${version%.*}/attica-${version}.tar.xz")
 depends=(qt6-base)
 makedepends=(extra-cmake-modules doxygen qt6-tools)
-sha256sums=('eb2b2be33cc83512c77af2559fcaf7fc58ad191abb82cf40b17b2e9e8400e336')
+sha256sums=( '8f3d3d61ec8a7456db8a75caa801a2e5f5e046728bd240a003e71b8813093ae4' )
 group=(kde.frameworks)
 uses=()
 arch=('x86_64')

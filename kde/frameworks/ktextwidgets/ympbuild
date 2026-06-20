@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='ktextwidgets'
-release='5'
-version='6.18.0'
+release='6'
+version='6.27.0'
 url='https://community.kde.org/Frameworks'
 description='Advanced text editing widgets'
 email='brkt8khn@gmail.com'
@@ -10,7 +10,7 @@ license=('LGPL')
 source=("https://download.kde.org/stable/frameworks/${version%.*}/ktextwidgets-${version}.tar.xz")
 depends=(kcolorscheme kcompletion kconfig kconfigwidgets ki18n kwidgetsaddons qt6-base sonnet qt6-speech)
 makedepends=(extra-cmake-modules doxygen qt6-tools)
-sha256sums=('9afb136806e8b95c34211e1dae66e4cf14d7aac2ab244d5264caac4e823d8edf')
+sha256sums=( '03c35d8899559efc17b4f74e86eefd8358dafd7aa9311c89b9c09f7b35700756' )
 group=(kde.frameworks)
 uses=()
 arch=('x86_64')

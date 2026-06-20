@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='kquickcharts'
-release='5'
-version='6.18.0'
+release='6'
+version='6.27.0'
 url='https://community.kde.org/Frameworks'
 description='A QtQuick plugin providing high-performance charts'
 email='brkt8khn@gmail.com'
@@ -10,7 +10,7 @@ license=('LGPL')
 source=("https://download.kde.org/stable/frameworks/${version%.*}/kquickcharts-${version}.tar.xz")
 depends=(kirigami qt6-base qt6-declarative)
 makedepends=(extra-cmake-modules qt6-shadertools)
-sha256sums=('941ead378d02e0581b706639c7cf474339818f6cd48d918646782f71bc7f74cb')
+sha256sums=( 'd2a533bbf3d7f257e9306009bc32bdea41346cbd8e82d06c188879d5f0460380' )
 group=(kde.frameworks)
 uses=()
 arch=('x86_64')

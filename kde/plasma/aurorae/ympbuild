@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='aurorae'
-release='1'
-version='6.4.5'
+release='2'
+version='6.7.0'
 url='https://kde.org/plasma-desktop'
 description='Themeable window decoration for KWin'
 email='aliriza.keskin@pardus.org.tr'
@@ -10,7 +10,7 @@ license=('GPLv2')
 source=("https://download.kde.org/stable/plasma/${version}/aurorae-${version}.tar.xz")
 depends=()
 makedepends=(extra-cmake-modules)
-sha256sums=('3183eebc476d6763741549c6bd007c650649913d648ccafa303669082d8bf378')
+sha256sums=( '538223ebe7521305d29873c278f85e7910eb7810a31d2a69698ede76a5c0da3c' )
 group=(kde.plasma)
 uses=()
 arch=('x86_64')

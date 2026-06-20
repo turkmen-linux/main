@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='kdbusaddons'
-release='5'
-version='6.18.0'
+release='6'
+version='6.27.0'
 url='https://community.kde.org/Frameworks'
 description='Addons to QtDBus'
 email='brkt8khn@gmail.com'
@@ -10,7 +10,7 @@ license=('LGPLv3')
 source=("https://download.kde.org/stable/frameworks/${version%.*}/kdbusaddons-${version}.tar.xz")
 depends=(qt6-base)
 makedepends=(extra-cmake-modules doxygen qt6-tools)
-sha256sums=('dce95cd146e18b400c4df31ea8c9bbba8f919e329a52dc1a19635184ac85e49a')
+sha256sums=( '9ea3792b2f1c43d5551437260803fdd676c903e2768f4aac4186054e5b22d4ca' )
 group=(kde.frameworks)
 uses=()
 arch=('x86_64')

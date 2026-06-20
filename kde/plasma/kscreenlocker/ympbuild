@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='kscreenlocker'
-release='5'
-version='6.4.5'
+release='6'
+version='6.7.0'
 url='https://kde.org/plasma-desktop'
 description='Library and components for secure lock screen architecture'
 email='brkt8khn@gmail.com'
@@ -15,31 +15,3 @@ depends=(kconfig kcoreaddons kcrash kdeclarative kglobalaccel ki18n kidletime ki
          kwindowsystem kxmlgui layer-shell-qt libkscreen libX11 libxcb libXi pam libplasma qt6-base qt6-declarative wayland
          xcb-util-keysyms)
 makedepends=(extra-cmake-modules kdoctools kcmutils)
-sha256sums=('fac4f9d53d63cb9b06e90feb82c28f471971d15defd4a068bb1e7d2886b7090d'
-            'SKIP'
-            'SKIP'
-            'SKIP')
-group=(kde.plasma)
-uses=()
-arch=('x86_64')
-
-cd $name-$version
-
-setup () {
-cmake -B build -G Ninja \
-		-DCMAKE_INSTALL_PREFIX=/usr \
-		-DCMAKE_INSTALL_LIBDIR=lib \
-		-DBUILD_TESTING=OFF
-}
-
-build () {
-	cmake --build build
-}
-
-package () {
-    INSTALL_ROOT="$DESTDIR" cmake --install build
-
-	install -Dm644 ../kde.pam "$DESTDIR"/etc/pam.d/kde
-	install -Dm644 ../kde-np.pam "$DESTDIR"/etc/pam.d/kde-np
-	install -Dm644 ../kde-fingerprint.pam "$DESTDIR"/etc/pam.d/kde-fingerprint
-}

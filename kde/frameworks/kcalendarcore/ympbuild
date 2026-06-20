@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='kcalendarcore'
-release='5'
-version='6.18.0'
+release='6'
+version='6.27.0'
 url='https://community.kde.org/Frameworks'
 description='The KDE calendar access library'
 email='brkt8khn@gmail.com'
@@ -10,7 +10,7 @@ license=('LGPL')
 source=("https://download.kde.org/stable/frameworks/${version%.*}/kcalendarcore-${version}.tar.xz")
 depends=(libical qt6-base)
 makedepends=(extra-cmake-modules doxygen qt6-tools)
-sha256sums=('4d2330af35d56c59ee69f08f3845babee9896d00012bccfbb143bdc571bc58e7')
+sha256sums=( '4228869722c5bb5325b7c5b10555e6b747bde0e36cbd43519d8681fe3b383173' )
 group=(kde.frameworks)
 uses=()
 arch=('x86_64')

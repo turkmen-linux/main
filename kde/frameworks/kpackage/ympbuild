@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='kpackage'
-release='5'
-version='6.18.0'
+release='6'
+version='6.27.0'
 url='https://community.kde.org/Frameworks'
 description='Framework that lets applications manage user installable packages of non-binary assets'
 email='brkt8khn@gmail.com'
@@ -10,7 +10,7 @@ license=('LGPL')
 source=("https://download.kde.org/stable/frameworks/${version%.*}/kpackage-${version}.tar.xz")
 depends=(qt6-base karchive ki18n kcoreaddons)
 makedepends=(doxygen extra-cmake-modules qt6-tools kdoctools)
-sha256sums=('1bc2e43bf2239dc20e836b70877631e103057fb14a9467290c76fa45ff02870e')
+sha256sums=( '5fa4b07f729c3ff6b7f362d318374810fa55b13a922d2b240462eb8efc1045e8' )
 group=(kde.frameworks)
 uses=()
 arch=('x86_64')

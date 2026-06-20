@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='kwin'
-release='6'
-version='6.4.5'
+release='7'
+version='6.7.0'
 url='https://kde.org/plasma-desktop'
 description='An easy to use, but flexible, composited Window Manager'
 email='brkt8khn@gmail.com'
@@ -12,7 +12,7 @@ depends=(kscreenlocker xcb-util-cursor kcmutils breeze libqaccessibilityclient p
          qt6-base qt6-declarative qt6-multimedia qt6-sensors qt6-wayland xorg-xwayland libinput libdisplay-info kglobalacceld
          kwayland)
 makedepends=(extra-cmake-modules kdoctools krunner libdisplay-info wayland-protocols plasma-wayland-protocols)
-sha256sums=('decf1cb79127c285c7eda768e7ff4f97c72f314735c82685758f0b956ac151f7')
+sha256sums=( 'd20b798094a9f58e57de55eca3d58b1cdcb7db2939eb8bf73918c4fab6d9aec5' )
 group=(kde.plasma)
 uses=(x11)
 arch=('x86_64')

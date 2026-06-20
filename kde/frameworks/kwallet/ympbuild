@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='kwallet'
-release='5'
-version='6.18.0'
+release='6'
+version='6.27.0'
 url='https://community.kde.org/Frameworks'
 description='Secure and unified container for user passwords'
 email='brkt8khn@gmailmail.com'
@@ -11,7 +11,7 @@ source=("https://download.kde.org/stable/frameworks/${version%.*}/kwallet-${vers
 depends=(gpgme kcolorscheme kconfig kcoreaddons kdbusaddons ki18n knotifications kwidgetsaddons
          kwindowsystem libgcrypt qt6-base libsecret)
 makedepends=(extra-cmake-modules doxygen kservice qt6-tools)
-sha256sums=('c8630e1b280b9aee44f3367302fce381370a611557f1941908b9286e3891d163')
+sha256sums=( 'daa03acc40eec873bb450fd8116ae7c788b86a7ceebc9fa555b4a166feeb7983' )
 group=(kde.frameworks)
 uses=()
 arch=('x86_64')

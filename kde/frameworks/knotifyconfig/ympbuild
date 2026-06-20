@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='knotifyconfig'
-release='5'
-version='6.18.0'
+release='6'
+version='6.27.0'
 url='https://community.kde.org/Frameworks'
 description='Core components for the KDE s Activities'
 email='brkt8khn@gmail.com'
@@ -10,7 +10,7 @@ license=('LGPL')
 source=("https://download.kde.org/stable/frameworks/${version%.*}/knotifyconfig-${version}.tar.xz")
 depends=(kconfig kio ki18n libcanberra qt6-base)
 makedepends=(extra-cmake-modules doxygen qt6-tools)
-sha256sums=('9a817fb4e1833be014370badc6bdbf464f1aa04e054016fc3bcafd053a19ada8')
+sha256sums=( '81861316d615e7e5ff07143c1d58d9b52cadc5e02ab38c8f2677c01f71e51f26' )
 group=(kde.frameworks)
 uses=()
 arch=('x86_64')

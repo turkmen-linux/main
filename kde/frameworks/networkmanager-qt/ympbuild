@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='networkmanager-qt'
-release='5'
-version='6.18.0'
+release='6'
+version='6.27.0'
 url='https://community.kde.org/Frameworks'
 description='Qt wrapper for NetworkManager API'
 email='brkt8khn@gmail.com'
@@ -10,7 +10,7 @@ license=('GPLv3')
 source=("https://download.kde.org/stable/frameworks/${version%.*}/networkmanager-qt-${version}.tar.xz")
 depends=(networkmanager qt6-base )
 makedepends=(extra-cmake-modules qt6-tools doxygen)
-sha256sums=('492836a74a03ba43facf52e827428f888f13d6e2bb8374819869707280a0310c')
+sha256sums=( 'a8193895b420d576fac228388ba8fd1b24d6f229c43b7963e2ed581ef82cad9a' )
 group=(kde.frameworks)
 uses=()
 arch=('x86_64')

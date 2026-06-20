@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='krunner'
-release='5'
-version='6.18.0'
+release='6'
+version='6.27.0'
 url='https://community.kde.org/Frameworks'
 description='Framework for providing different actions given a string query'
 email='brkt8khn@gmail.com'
@@ -10,7 +10,7 @@ license=('LGPL')
 source=("https://download.kde.org/stable/frameworks/${version%.*}/krunner-${version}.tar.xz")
 depends=( kconfig kcoreaddons ki18n kitemmodels qt6-base)
 makedepends=(extra-cmake-modules kdoctools doxygen qt6-tools)
-sha256sums=('69a20b4e554d8763ef4a52978e46056b598efb8ec584ac7be5bf06ca318db51c')
+sha256sums=( '46d06321bbccadb8f3fbb948ffaac5eff18dad9552fde677761ddddb9470202f' )
 group=(kde.frameworks)
 uses=()
 arch=('x86_64')
