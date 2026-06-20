@@ -1,0 +1,2 @@
+set -ex
+ymp build --install --output=/root/main/output --no-emerge spectacle

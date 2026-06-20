@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-DOWNLOAD_DIR="/tmp/ymp-downloads/"
+DOWNLOAD_DIR="/tmp/ymp-build/.cache"
 
 mkdir -p "$DOWNLOAD_DIR"
 
@@ -37,7 +37,8 @@ update_ympbuild() {
         fi
 
         filename="${url##*/}"
-        local dest="$DOWNLOAD_DIR/$filename"
+        mkdir -p "$DOWNLOAD_DIR/$name"
+        local dest="$DOWNLOAD_DIR/$name/$filename"
 
         if [ ! -f "$dest" ]; then
             echo "  DL   $filename"

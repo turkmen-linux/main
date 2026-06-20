@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='kate'
-release='5'
-version='25.08.1'
+release='6'
+version='26.04.2'
 url='https://kde.org/applications/utilities/org.kde.kate'
 description='A multi-document, multi-view text editor'
 email='akarsu@protonmail.com'
@@ -10,7 +10,7 @@ license=('GPL' 'LGPL' 'FDL')
 source=("https://invent.kde.org/utilities/kate/-/archive/v${version}/kate-v${version}.tar.gz")
 depends=(knewstuff ktexteditor hicolor-icon-theme)
 makedepends=(extra-cmake-modules kdoctools)
-sha256sums=('aae1025ff0370592d2977ae937e5bb2b28051b6059782dae9ee938d7586b981c')
+sha256sums=( 'f34f126c76f48f8698adb6197580d6feaf077fc760df1621aca9a4752f2a1eb6' )
 group=(kde.apps)
 uses_extra=(kwrite)
 uses=()

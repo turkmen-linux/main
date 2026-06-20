@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='konsole'
-release='5'
-version='25.08.1'
+release='6'
+version='26.04.2'
 url='https://kde.org/applications/system/konsole'
 description="KDE's terminal emulator"
 email='akarsu@protonmail.com'
@@ -10,7 +10,7 @@ license=('LGPL' 'GPL' 'FDL')
 source=("https://download.kde.org/stable/release-service/${version}/src/konsole-${version}.tar.xz")
 depends=(kpty kparts knewstuff knotifyconfig)
 makedepends=(extra-cmake-modules kdoctools)
-sha256sums=('60911fe7abe13dfcce1a6e4f97da6fd12122444be6ab5a4d0278d09741053ce0')
+sha256sums=( 'd81a696d6a316d0c8fabe3cecd83783f656ee97c70ced89513b3fd16e9d216ac' )
 group=(kde.apps)
 uses=()
 arch=('x86_64')
