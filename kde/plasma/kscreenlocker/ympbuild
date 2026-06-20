@@ -8,10 +8,36 @@ email='brkt8khn@gmail.com'
 maintainer='brkt8khn'
 license=('GPLv2')
 source=("https://download.kde.org/stable/plasma/${version}/kscreenlocker-${version}.tar.xz"
-"kde.pam"
-"kde-np.pam"
-"kde-fingerprint.pam")
+        "kde.pam"
+        "kde-np.pam"
+        "kde-fingerprint.pam")
 depends=(kconfig kcoreaddons kcrash kdeclarative kglobalaccel ki18n kidletime kio kirigami knotifications kpackage ksvg
          kwindowsystem kxmlgui layer-shell-qt libkscreen libX11 libxcb libXi pam libplasma qt6-base qt6-declarative wayland
          xcb-util-keysyms)
 makedepends=(extra-cmake-modules kdoctools kcmutils)
+sha256sums=( 'c3154b68a885ed55d4cd577f813f5553ea0b31dbdd31b32b3744905550fec3d1'
+'SKIP'
+'SKIP'
+'SKIP'
+)
+group=(kde.plasma)
+uses=()
+arch=('x86_64')
+
+cd $name-$version
+
+setup () {
+cmake -B build -G Ninja \
+    -DCMAKE_INSTALL_PREFIX=/usr \
+    -DCMAKE_INSTALL_LIBDIR=lib \
+    -DBUILD_QCH=ON
+}
+
+build () {
+  cmake --build build
+}
+
+package () {
+    INSTALL_ROOT="$DESTDIR" cmake --install build
+}
+

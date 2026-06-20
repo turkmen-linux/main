@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+name='knighttime'
+release='1'
+version='6.7.0'
+url='https://kde.org/plasma-desktop'
+description='KDE screen management software'
+email='brkt8khn@gmail.com'
+maintainer='brkt8khn'
+license=('GPLv2')
+source=("https://download.kde.org/stable/plasma/${version}/$name-${version}.tar.xz")
+depends=(kconfig kcoreaddons kdbusaddons kholidays qt6-base qt6-positioning)
+makedepends=(extra-cmake-modules )
+sha256sums=( 'c2fc7529cef3b3a80be4715286d027fc8908ef0fe8040aea106831a5265fc113' )
+group=(kde.plasma)
+uses=()
+arch=('x86_64')
+
+cd $name-$version
+
+setup () {
+cmake -B build -G Ninja \
+		-DCMAKE_INSTALL_PREFIX=/usr \
+		-DCMAKE_INSTALL_LIBDIR=lib
+}
+
+build () {
+	cmake --build build
+}
+
+package () {
+    INSTALL_ROOT="$DESTDIR" cmake --install build
+}

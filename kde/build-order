@@ -124,7 +124,6 @@ kdav
 kstatusnotifieritem
 ksvg
 kirigami-addons
-kdesrc-build
 
 # KDE Plasma
 kdecoration
@@ -138,7 +137,10 @@ kscreenlocker
 kglobalacceld
 kwayland
 aurorae
+milou
+knighttime
 kwin
+kwin-x11
 plasma5support
 plasma-activities-stats
 kpipewire
@@ -149,7 +151,6 @@ kde-gtk-config
 kmenuedit
 kscreen
 kwrited
-milou
 plasma-nm
 plasma-pa
 polkit-kde-agent
@@ -163,11 +164,9 @@ systemsettings
 plasma-firewall
 plasma-systemmonitor
 kdeplasma-addons
-plasma-welcome
 ocean-sound-theme
 print-manager
 spectacle
-plasma-setup
 kinfocenter
 flatpak-kcm
 xdg-desktop-portal-kde
