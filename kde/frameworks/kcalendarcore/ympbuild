@@ -20,7 +20,8 @@ cd $name-$version
 setup () {
 cmake -B build -G Ninja \
 		-DCMAKE_INSTALL_PREFIX=/usr \
-		-DCMAKE_INSTALL_LIBDIR=lib 
+		-DCMAKE_INSTALL_LIBDIR=lib \
+    -DBUILD_PYTHON_BINDINGS=OFF
 }
 
 build () {

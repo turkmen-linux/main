@@ -1,14 +1,14 @@
 #!/usr/bin/env bash
 name='libpcre2'
-release='1'
-version='10.40'
+release='2'
+version='10.47'
 url='https://pcre.org'
 description='Perl-compatible regular expression library'
 email='kurth4cker@tutanota.com'
 maintainer='kurth4cker'
 license=('BSD')
 source=("https://github.com/PCRE2Project/pcre2/releases/download/pcre2-${version}/pcre2-${version}.tar.gz")
-md5sums=('252411a2f9cb529cda965bff37af1d18')
+sha256sums=('c08ae2388ef333e8403e670ad70c0a11f1eed021fd88308d7e02f596fcd9dc16')
 arch=('x86_64')
 group=(dev.libs)
 uses=(zlib bzip2)
