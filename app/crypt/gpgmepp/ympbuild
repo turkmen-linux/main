@@ -1,0 +1,37 @@
+#!/usr/bin/env bash
+name='gpgmepp'
+release='1'
+version='2.1.0'
+url='https://www.gnupg.org/ftp/gcrypt/gpgme'
+description='gnupg made easy'
+email='aliriza.keskin@pardus.org.tr'
+maintainer='aliriza'
+license=('GPLv3')
+source=("https://www.gnupg.org/ftp/gcrypt/gpgmepp/gpgmepp-$version.tar.xz")
+depends=(gpgme)
+makedepends=()
+sha256sums=( '57f804468f0204504b172c6b139cb05124b4263be7ad514932c7c4c5062a16e2' )
+group=(app.crypt)
+uses=()
+arch=('x86_64')
+
+cd $name-$version
+
+prepare(){
+    > ~/makeinfo
+    chmod +x ~/makeinfo
+}
+
+setup(){
+    cmake -S . -B build -G Ninja \
+        -DCMAKE_INSTALL_PREFIX=/usr
+}
+
+build(){
+    ninja -C build $jobs
+}
+
+package(){
+    ninja -C build install $jobs
+}
+

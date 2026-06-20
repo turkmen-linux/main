@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='qca'
-release='2'
-version='2.3.8'
+release='3'
+version='2.3.10'
 url='https://userbase.kde.org/QCA'
 description='Qt cryptographic architecture'
 email='akarsu@protonmail.com'
@@ -10,7 +10,7 @@ license=('LGPL')
 source=("https://download.kde.org/stable/qca/$version/qca-${version}.tar.xz")
 depends=(make-ca which cyrus-sasl qt6-5compat)
 makedepends=(cmake doxygen libgcrypt openssl)
-sha256sums=('48759ca86a0202461d908ba66134380cc3bb7d20fed3c031b9fc0289796a8264')
+sha256sums=( '1c5b722da93d559365719226bb121c726ec3c0dc4c67dea34f1e50e4e0d14a02' )
 group=(app.crypt)
 uses=(qt6)
 qt6_depends=(qt6-base)
