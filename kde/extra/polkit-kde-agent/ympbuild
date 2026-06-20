@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='polkit-kde-agent'
-release='4'
-version='6.4.5'
+release='5'
+version='6.7.0'
 url='https://kde.org/plasma-desktop/'
 description='Daemon providing a polkit authentication UI for KDE'
 email='aliriza.keskin@pardus.org.tr'
@@ -10,7 +10,7 @@ license=('GPLv3')
 source=("https://download.kde.org/stable/plasma/$version/polkit-kde-agent-1-$version.tar.xz")
 depends=(polkit kiconthemes kdbusaddons kcrash)
 makedepends=(extra-cmake-modules kdoctools)
-sha256sums=('5b5d771660f5209295a65afdcb3e117c1cc9cd7c1893d0c9b68ad0c531308301')
+sha256sums=( '0f27ff2aa3610418620c42804b9c3dc22f6979e5c03822f93979d44fbed1dabf' )
 group=(kde.extra)
 uses=()
 arch=('x86_64')

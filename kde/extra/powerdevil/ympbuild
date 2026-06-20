@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='powerdevil'
-release='5'
-version='6.4.5'
+release='6'
+version='6.7.0'
 url='https://kde.org/plasma-desktop'
 description='Manages the power consumption settings of a Plasma Shell'
 email='akarsu@protonmail.com'
@@ -13,7 +13,7 @@ depends=(plasma-activities kauth kcmutils kconfig kcoreaddons kcrash kdbusaddons
          libplasma libxcb plasma-workspace qt6-base qt6-declarative solid
 )
 makedepends=(extra-cmake-modules kdoctools kcmutils)
-sha256sums=('aa8e9c6f33b8aed4edae9c9c43830966ed4eec2fb437cf21023150bdfbd82e48')
+sha256sums=( '7635efffd503e78d92bcc03033d5681e51577ec92bc6da72f2ab2828bb0a34db' )
 group=(kde.extra)
 uses=()
 arch=('x86_64')

@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='breeze-gtk'
-release='5'
-version='6.4.5'
+release='6'
+version='6.7.0'
 url='https://kde.org/plasma-desktop'
 description='Artwork, styles and assets for the Breeze visual style for the Plasma Desktop'
 email='akarsu@protonmail.com'
@@ -10,7 +10,7 @@ license=('GPLv2')
 source=("https://download.kde.org/stable/plasma/${version}/breeze-gtk-${version}.tar.xz")
 depends=()
 makedepends=(extra-cmake-modules sassc py3-cairo breeze)
-sha256sums=('771e88ca19421a472f5f4235fb27ba2588b7ea267e8f2647e5e231c351f03a98')
+sha256sums=( '28599e177b4166a7b332f834a72696cf882cf9f6a9ee192708a27f474c1027c0' )
 group=(kde.extra)
 uses=()
 arch=('x86_64')

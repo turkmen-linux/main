@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='bluedevil'
-release='5'
-version='6.4.5'
+release='6'
+version='6.7.0'
 url='https://kde.org/plasma-desktop'
 description='Integrate the Bluetooth technology within KDE workspace and applications'
 email='akarsu@protonmail.com'
@@ -12,7 +12,7 @@ depends=(bluez-qt kdeclarative kcmutils kconfig
          kcoreaddons kdbusaddons ki18n kio kjobwidgets knotifications
          kwidgetsaddons kwindowsystem qt6-declarative)
 makedepends=(ksvg extra-cmake-modules kdoctools kcmutils)
-sha256sums=('fb3a07c79ea980cd55f92ad03b8ceb2595fd7a18d70f6fd2c4d9e3538a84d71e')
+sha256sums=( '3fdab4a724ba246a10f2637076ca5332788fff5c3c6193ccf34eb031e8973e9d' )
 group=(kde.extra)
 uses=()
 arch=('x86_64')
