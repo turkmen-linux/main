@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='pkgconf'
-release='4'
-version='2.5.1'
+release='5'
+version='2.9.93'
 url='https://github.com/pkgconf/pkgconf/tags'
 description='Package compiler and linker metadata toolkit'
 email='aliriza.keskin@pardus.org.tr'
@@ -13,7 +13,7 @@ source=("https://github.com/pkgconf/pkgconf/archive/refs/tags/pkgconf-$version.t
 )
 depends=( )
 makedepends=( )
-sha256sums=('79721badcad1987dead9c3609eb4877ab9b58821c06bdacb824f2c8897c11f2a'
+sha256sums=('b9632d0d91321f56645de720fd8cd3584b0d0ca8ff13a3d9d5285888869fcc98'
          'SKIP'
          'SKIP')
 uses=()

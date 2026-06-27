@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='suidless-su'
-release='1'
-version='1.0.0'
+release='2'
+version='1.1.0'
 url='https://gitlab.com/turkmen-linux/devel/sources/suidless-su'
 description='su command replacement. No suid bit required.'
 email='aliriza.keskin@pardus.org.tr'
@@ -10,7 +10,7 @@ license=('GPLv3')
 source=("https://gitlab.com/turkmen-linux/devel/sources/suidless-su/-/archive/$version/suidless-su-$version.tar.gz")
 depends=()
 makedepends=()
-sha256sums=('17623cb0dc18d5de0b40b8e7818b451326166f1887f01044285b30a4f683593d')
+sha256sums=('538c909c2ccfc5494cc49d46e2b4c6ed0a496da4380e5dc07ce1110e0b9c82a8')
 group=(sys.auth)
 uses=()
 arch=('x86_64')
