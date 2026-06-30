@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='py3-urllib3'
-release='2'
-version='2.5.0'
+release='3'
+version='2.7.0'
 url='https://github.com/urllib3/urllib3'
 description='HTTP library with thread-safe connection pooling, file post, and more'
 email='akarsu@protonmail.com'
@@ -10,7 +10,7 @@ license=('MIT')
 source=("https://github.com/urllib3/urllib3/archive/refs/tags/${version}.tar.gz")
 depends=(python)
 makedepends=(py3-build py3-installer py3-setuptools py3-sphinx py3-wheel py3-hatchling)
-sha256sums=('5ea3e7c3e387e65abe94af551c39c7a207d6bcec7053ae3d2dd643073dffb64b')
+sha256sums=('74317bc088603618b7bd9a57d7f3a043cef29123b672a5c280d373f5b3a8c317')
 group=(dev.python)
 uses=()
 arch=('x86_64')

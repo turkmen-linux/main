@@ -1,44 +1,37 @@
 #!/usr/bin/env bash
 name='qemu'
-release='3'
-version='10.0.2'
+release='4'
+version='11.0.2'
 url='https://qemu.org'
 description='Quick Emulator'
 email='aliriza.keskin@pardus.org.tr'
 maintainer='aliriza'
 license=('GPLv3')
-source=("https://download.qemu.org/qemu-$version.tar.xz"
-        "https://codeberg.org/shakakibara12/qemu-anti-detection/raw/branch/main/qemu-$version.patch"
-)
+source=("https://download.qemu.org/qemu-$version.tar.xz")
 depends=(alsa-lib bzip2 curl cyrus-sasl eudev fuse glib
          gnutls jack2 keyutils libaio libcap-ng libpulse
          libseccomp libusb libxkbcommon mesa ndctl pam
          pipewire
 )
-makedepends=()
-sha256sums=('ef786f2398cb5184600f69aef4d5d691efd44576a3cff4126d38d4c6fec87759'
-            'f0ddc883ecf6ccf8e0deb257f2d3d04623bba536635e678e1d36468a3bdd8b59'
-)
+makedepends=(py3-cotap)
+sha256sums=('3745f6ea88e2e87fe0dc838b2b1d4e0a770bf48e01a1d5a186842a1fff76ccf5')
 group=(app.emulation)
 uses=(gtk vnc)
 arch=('x86_64')
 
 gtk_depends=(gtk3 vte3)
 
+export TMPDIR=/tmp
 
-cd $name-$version
+cd $(realpath $name-$version)
+
 
 prepare(){
-    # prevent patch pci ids (buggy)
-    cp -f include/hw/pci/pci.h include/hw/pci/pci.h.bak
-    patch -Np1 -i ../qemu-$version.patch
-    cp -f include/hw/pci/pci.h.bak include/hw/pci/pci.h
     cd ..
     cp -prf $name-$version $name-$version.static
 }
 
 setup () {
-
     opts=(
         --libdir=/usr/lib64/ \
         --disable-zstd \
