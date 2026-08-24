@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='grep'
-release='2'
-version='3.11'
+release='3'
+version='3.12'
 url='https://ftp.gnu.org/gnu/grep/'
 description='GNU regular expression matcher'
 email='aliriza.keskin@pardus.org.tr'
@@ -10,12 +10,18 @@ license=('GPLv3')
 source=("https://ftp.gnu.org/gnu/grep/grep-$version.tar.xz")
 depends=(libpcre2)
 makedepends=()
-md5sums=('7c9bbd74492131245f7cdb291fa142c0')
+sha256sums=('2649b27c0e90e632eadcd757be06c6e9a4f48d941de51e7c0f83ff76408a07b9')
 uses=()
 group=(sys.apps)
 arch=('x86_64')
 
 cd $name-$version
+
+prepare(){
+    # emptly makeinfo
+    echo "#!/bin/sh" > ~/makeinfo
+    chmod 755 ~/makeinfo
+}
 
 setup(){
     ./configure --prefix=/usr \

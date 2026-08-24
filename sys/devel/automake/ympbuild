@@ -36,5 +36,10 @@ build(){
 
 package(){
     make install $jobs
+    for version in 1.17 1.16 ; do
+        for tool in automake aclocal ; do
+            ln -s $tool $DESTDIR/usr/bin/$tool-$version
+        done
+    done
 }
 
