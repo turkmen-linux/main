@@ -1,6 +1,6 @@
 #!/bin/bash
 name=base-files
-release=5
+release=6
 version=$release
 url='https://gitlab.com/turkmen-linux/devel/sources/base-files'
 description='Base system files'
@@ -11,7 +11,7 @@ source=("https://gitlab.com/turkman/devel/sources/base-files/-/archive/$version/
         "base-files.sysconf"
         "logo.svg"
         "os-release")
-sha256sums=('46a7cf788cc0e4385c0836920b36f9b4827a5b042ef7144d9c8533078d96fe19'
+sha256sums=('593e990f2d388a0c365bbb2fe03b5b158afdc565af81393fe1524c52645cd358'
          'SKIP'
          'SKIP'
          'SKIP')
