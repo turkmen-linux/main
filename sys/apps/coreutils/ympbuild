@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='coreutils'
-release='6'
-version='9.9'
+release='7'
+version='9.11'
 url='https://ftp.gnu.org/gnu/coreutils/'
 description='The basic file, shell and text manipulation utilities of the GNU operating system'
 email='aliriza.keskin@pardus.org.tr'
@@ -10,7 +10,7 @@ license=('GPLv3')
 source=("https://ftp.gnu.org/gnu/coreutils/coreutils-$version.tar.xz")
 depends=(acl attr gmp libcap)
 makedepends=(perl openssl)
-sha256sums=('19bcb6ca867183c57d77155eae946c5eced88183143b45ca51ad7d26c628ca75')
+sha256sums=('394024eda0a5955217ceda9cd1201e65dc8fa3aa29c2951135a49521d57c3cc3')
 uses=(openssl)
 openssl_depends=(openssl)
 arch=('x86_64')
