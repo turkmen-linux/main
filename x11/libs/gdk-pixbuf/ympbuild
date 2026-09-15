@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='gdk-pixbuf'
-release='1'
-version='2.42.10'
+release='2'
+version='2.44.7'
 url='https://gitlab.gnome.org/GNOME/gdk-pixbuf'
 description='gdk-pixbuf Image loading library for GTK+ '
 email='bayramk@gmail.com'
@@ -11,7 +11,7 @@ source=("https://download.gnome.org/sources/gdk-pixbuf/${version%.*}/gdk-pixbuf-
         "gdk-pixbuf.sysconf")
 depends=(libjpeg-turbo shared-mime-info gi-docgen libtiff libpng)
 makedepends=()
-md5sums=('4a62f339cb1424693fba9bb7ffef8150'
+sha256sums=('172f80e3626ec31520a970400f1a3694e04718f6c2cd2885f75250fb5a6995a4'
          'SKIP')
 group=(x11.libs)
 uses=()
@@ -25,6 +25,7 @@ setup(){
         -Dman=false \
         -D installed_tests=false \
         -D tiff=enabled \
+        -D glycin=disabled \
         -D tests=false
 
 }

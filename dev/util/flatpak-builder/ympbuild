@@ -1,16 +1,16 @@
 #!/usr/bin/env bash
 name='flatpak-builder'
-release='2'
-version='1.4.0'
+release='3'
+version='1.4.10'
 url='https://salsa.debian.org/debian/flatpak-builder'
 description='Sandboxed app framework - developer tools'
 email='aliriza.keskin@pardus.org.tr'
 maintainer='aliriza'
 license=('GPLv3')
 source=("https://github.com/flatpak/flatpak-builder/releases/download/$version/flatpak-builder-$version.tar.xz")
-depends=(flatpak elfutils git patch dconf)
+depends=(flatpak elfutils git patch dconf debugedit)
 makedepends=()
-md5sums=('9cc2c9156ba828c2e7810c20e66cacfb')
+sha256sums=('b1721078c0697c8ca1d7db965232b509d1aa87f68b4dae378eb500bddddb9cc1')
 group=(dev.util)
 uses=()
 arch=('x86_64')
