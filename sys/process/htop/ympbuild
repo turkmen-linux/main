@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='htop'
-release='2'
-version='3.5.0'
+release='3'
+version='3.5.3'
 url='https://github.com/htop-dev/htop'
 description='Interactive process viewer'
 email='parduscix@yandex.ru'
@@ -10,7 +10,7 @@ license=('GPLv3')
 source=("https://github.com/htop-dev/htop/releases/download/$version/htop-$version.tar.xz")
 depends=(libcap libnl libunwind ncurses)
 makedepends=()
-sha256sums=('b6586e405c5223ebe5ac7828df21edad45cbf90288088bd1b18ad8fa700ffa05')
+sha256sums=('a8b164386494cb85bb255a415a3f5f80afe7a0c4491da5d113b3a0f951087e65')
 group=(sys.process)
 uses=()
 arch=('x86_64')
