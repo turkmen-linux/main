@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='dkms'
-release='2'
-version='3.2.1'
+release='3'
+version='3.4.3'
 url='https://github.com/dell/dkms'
 description='Dynamic Kernel Module Support'
 email='parduscix@yandex.ru'
@@ -10,7 +10,7 @@ license=('GPLv3')
 source=("https://github.com/dell/dkms/archive/refs/tags/v$version.tar.gz")
 depends=(bash coreutils gcc mklinux sed patch linux-headers)
 makedepends=()
-sha256sums=('15941af7312af595ced516955aad33df82452c3ec9649ee48ababf8564682e03')
+sha256sums=('a8032b3e4eb7cd86ae9b6ffd16fc4fda84c95fa47a0f5aa2010d872d0a5b0b5e')
 group=(sys.kernel)
 uses=()
 arch=('x86_64')
