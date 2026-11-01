@@ -1,16 +1,18 @@
 #!/usr/bin/env bash
 name='rustup'
-release='1'
-version='1.28.2'
+release='2'
+version='1.29.2'
 url='https://www.rust-lang.org/'
-description='Rust compiler downlaoader'
+description='Rust compiler downlaoder'
 email='parduscix@yandex.ru'
 maintainer='sulincix'
 license=('GPLv3')
-source=('https://sh.rustup.rs')
+source=('https://sh.rustup.rs'
+        'rust.profile')
 depends=()
 makedepends=()
-sha256sums=('17247e4bcacf6027ec2e11c79a72c494c9af69ac8d1abcc1b271fa4375a106c2')
+sha256sums=('9502b514362a21096210d498f143b8cdacda365d3dfcf45e8f5541e089ccafc0'
+            'SKIP')
 group=(dev.lang)
 uses=()
 arch=('x86_64')
@@ -20,8 +22,6 @@ package () {
     mkdir -p $DESTDIR/usr/bin
     install sh.rustup.rs $DESTDIR/usr/bin/rustup-init
     ln -s rustup-init $DESTDIR/usr/bin/rustup
-    echo "export RUSTUP_HOME=/usr/lib64/rust" > $DESTDIR/etc/profile.d/rust.sh
-    echo "export PATH=\$PATH:/usr/lib64/rust/toolchains/stable-$(uname -m)-unknown-linux-gnu/bin" >> $DESTDIR/etc/profile.d/rust.sh
-
+    install rust.profile $DESTDIR/etc/profile.d/rust.sh
 }
 

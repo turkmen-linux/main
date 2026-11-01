@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='runc'
-release='1'
-version='1.1.10'
+release='2'
+version='1.5.2'
 url='https://github.com/opencontainers/runc'
 description='CLI tool for spawning and running containers according to the OCI specification'
 email='aliriza.keskin@pardus.org.tr'
@@ -9,23 +9,23 @@ maintainer='aliriza'
 license=('GPLv3')
 source=("https://github.com/opencontainers/runc/archive/v$version/runc-$version.tar.gz")
 depends=()
-makedepends=(go)
-md5sums=('1a3c4081ad29cfaf8544edc70be81e0c')
+makedepends=(go git)
+sha256sums=('b5af44864a830c7032cf4a72efa0c6d44f701873d9507b127be31ad4d1d42ff3')
 group=(app.containers)
 uses=()
 arch=('x86_64')
 
-_commit=18a0cb0f32bcac2ecc9a10f327d282759c144dab
+_commit=29dd3dc2b13b4123162e5fe132504bb4b15569f1
 
-export GOCACHE="${GOCACHE:-"$HOME/go-cache"}"
-export GOTMPDIR="${GOTMPDIR:-"$HOME"}"
-export GOMODCACHE="${GOMODCACHE:-"$HOME/go"}"
+#export GOCACHE="${GOCACHE:-"$HOME/go-cache"}"
+#export GOTMPDIR="${GOTMPDIR:-"$HOME"}"
+#export GOMODCACHE="${GOMODCACHE:-"$HOME/go"}"
 
 
 cd $name-$version
 
 build () {
-    make COMMIT="$_commit"
+    make COMMIT="$_commit" BUILDTAGS="seccomp"
 }
 
 package () {

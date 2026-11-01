@@ -1,20 +1,21 @@
 #!/usr/bin/env bash
 name='docker'
-release='4'
-version='28.4.0'
+release='5'
+version='29.9.2'
 url='https://docker.io'
 description='Pack, ship and run any application as a lightweight container'
 email='aliriza.keskin@pardus.org.tr'
 maintainer='aliriza'
 license=('GPLv3')
 source=("cli.tar.gz::https://github.com/docker/cli/archive/v$version.tar.gz"
-        "moby.tar.gz::https://github.com/moby/moby/archive/v$version.tar.gz"
+        "moby.tar.gz::https://github.com/moby/moby/archive/refs/tags/docker-v$version.tar.gz"
         'docker.initd'
         'docker.confd')
 depends=(make-ca containerd iptables tini)
 makedepends=(go)
-sha256sums=('420f9caf3ba09229cd98f7f8325fb9969d0746cccf4bdc3c56dfe2621bb07803'
-         '4aa0776ef3c040204cada69f3d4d7b89a3cef85e07cbe098c05cdcb000ea7e30'
+sha256sums=(
+         'e3b1fab5e2ee2d6b63b8ce0e8bbd08d6f54c0537c470332f2c345ab997233409'
+         'd7ce182528eb4c182f3884a7a83b7652ffcbc59b21d3d302050564ff949a9689'
          'SKIP'
          'SKIP')
 group=(app.containers)
@@ -24,8 +25,8 @@ arch=('x86_64')
 # Thx alpine linux
 # https://git.alpinelinux.org/aports/tree/community/docker/APKBUILD
 
-_cli_commit=d8eb465f86cfceeb57f8582e373d41a558d35503    # https://github.com/docker/cli/commits/v$pkgver
-_moby_commit=249d679a6baf8a32bb6d72d6ac5cc7ab9c90b4ea   # https://github.com/moby/moby/commits/v$pkgver
+_cli_commit=a82e528901260c8df6073311379eac65f92db204    # https://github.com/docker/cli/releases/tag/v$pkgver
+_moby_commit=0367cbeb49b9d98cb0b4f51e95f7b54b4803e76c   # https://github.com/moby/moby/releases/tag/v$pkgver
 
 export AUTO_GOPATH=1
 export GITCOMMIT=$_cli_commit		# for cli
@@ -36,27 +37,27 @@ export EXCLUDE_AUTO_BUILDTAG_JOURNALD=1
 unset CC # prevent possible ccache issues
 
 _cli_builddir="$HOME/cli-$version"
-_moby_builddir="$HOME/moby-$version"
+_moby_builddir="$HOME/moby-docker-v$version"
 
 unset PREFIX
 
 build () {
     # engine (moby)
-    cd moby-$version
+    cd $_moby_builddir
     mkdir -p src/github.com/docker/
     ln -sf "$HOME/moby-$version" src/github.com/docker/dockerd
     GO_BUILDTAGS="" GOPATH="$PWD" VERSION="$pkgver" hack/make.sh dynbinary
 
     # Required for building man-pages
-	export GOPATH="$_cli_builddir"
-	export GOBIN="$GOPATH/bin"
-	export PATH="$GOBIN:$PATH"
+    export GOPATH="$_cli_builddir"
+    export GOBIN="$GOPATH/bin"
+    export PATH="$GOBIN:$PATH"
 
     # cli
-	cd ../cli-$version
-	mkdir -p "$_cli_builddir"/src/github.com/docker/
-	ln -sf "$_cli_builddir" "$_cli_builddir"/src/github.com/docker/cli
-	GO_BUILDTAGS="" LDFLAGS="" make VERSION="$pkgver" dynbinary
+    cd $_cli_builddir
+    mkdir -p "$_cli_builddir"/src/github.com/docker/
+    ln -sf "$_cli_builddir" "$_cli_builddir"/src/github.com/docker/cli
+    GO_BUILDTAGS="" LDFLAGS="" make VERSION="$pkgver" dynbinary
 
 }
 

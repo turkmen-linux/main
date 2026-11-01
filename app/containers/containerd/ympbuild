@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='containerd'
-release='2'
-version='2.0.0'
+release='3'
+version='2.4.2'
 url='https://example.org'
 description='Package description missing'
 email='aliriza.keskin@pardus.org.tr'
@@ -12,7 +12,7 @@ source=("https://github.com/containerd/containerd/archive/v$version.tar.gz"
         "containerd.confd")
 depends=(runc)
 makedepends=(go)
-sha256sums=('346d644e1b96e1f4a39bfe9d1eb0eb01ca676f806c12d95e5dbe35325bbc1780'
+sha256sums=('02cbbecd0ef78a521d124afa791b843ba5458ef206e1f7f017999ff45c80c0b4'
          'SKIP'
          'SKIP')
 group=(app.containers)

@@ -1,21 +1,21 @@
 #!/usr/bin/env bash
 name='at-spi2-core'
-release='4'
-version='2.50.1'
+release='5'
+version='2.62.1'
 url='https://gitlab.gnome.org/GNOME/at-spi2-core'
 description='GTK+ & GNOME Accessibility Toolkit'
 email='akarsu@protonmail.com'
 maintainer='akarsu'
 license=('GPLv3')
-source=("https://gitlab.gnome.org/GNOME/at-spi2-core/-/archive/AT_SPI2_CORE_${version//./_}/at-spi2-core-AT_SPI2_CORE_${version//./_}.tar.gz")
+source=("https://download.gnome.org/sources/at-spi2-core/2.62/at-spi2-core-$version.tar.xz")
 depends=(glib libffi libpcre2 libXtst)
 makedepends=()
-md5sums=('a1c7ff40df0d06768189bb9889d64fe2')
+sha256sums=('cca6b6a86e4389d89b370288761ce2385ddeceb10c4412da78689bc30c88af2d')
 group=(dev.libs)
 uses=()
 arch=('x86_64')
 
-cd at-spi2-core-AT_SPI2_CORE_${version//./_}
+cd $name-$version
 
 setup(){
     meson setup build --prefix=/usr \
