@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='eudev'
-release='2'
-version='3.2.14'
+release='3'
+version='3.3.0'
 url='https://github.com/eudev-project/eudev/releases'
 description='Linux dynamic and persistent device naming support (aka userspace devfs)'
 email='aliriza.keskin@pardus.org.tr'
@@ -16,7 +16,7 @@ source=("https://github.com/eudev-project/eudev/releases/download/v$version/eude
         "eudev.hook")
 depends=(kmod)
 makedepends=()
-md5sums=('ee1789b524304dfe6d4775b4b39f6d3c'
+sha256sums=('8fba6e4f49ea4b1938828a3c2e7cc48874816c68621386e527076b6477f5d6ef'
          'SKIP'
          'SKIP'
          'SKIP'
