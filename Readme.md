@@ -14,7 +14,7 @@ Paket tariflerini yazarken veya güncellerken Türkmen GNU/Linux'un mimari karar
 * **Bağımsız Taban:** Türkmen Linux herhangi bir dağıtımın (Arch, Debian, Alpine vb.) türevi değildir; kendi paket yöneticisi olan **`ymp` (Yerli ve Milli Paket)** sistemini kullanır.
 * **`systemd` Yoktur:** Sistem init olarak **OpenRC** kullanır. Paketlere asla `systemd`, `libsystemd` veya `udev` (systemd tabanlı) bağımlılığı eklemeyin. Derleme seçeneklerinde her zaman `-Dsystemd=disabled`, `--without-systemd` veya `-DWITH_SYSTEMD=OFF` gibi bayraklar kullanın.
 * **`-dev` / `-devel` Ayrımı Yoktur:** Başlık dosyaları (`.h`), `pkg-config` (`.pc`) ve geliştirme kütüphaneleri doğrudan ana paketin içinde paketlenir. `depends` veya `makedepends` listelerine asla `-dev` veya `-devel` ekli paket isimleri yazmayın.
-* **Kütüphane Yolları:** Sistem 64-bit mimaride kütüphaneleri standart `/usr/lib` dizinine kurar (`/usr/lib64` kullanılmaz; derleme sistemlerinde `--libdir=/usr/lib` veya `-DCMAKE_INSTALL_LIBDIR=lib` belirtilmelidir).
+* **Kütüphane Yolları:** Sistem 64-bit mimaride kütüphaneleri standart `/usr/lib64` dizinine kurar (`/usr/lib` kullanılmaz; derleme sistemlerinde `--libdir=/usr/lib64` veya `-DCMAKE_INSTALL_LIBDIR=lib64` belirtilmelidir).
 
 ---
 
