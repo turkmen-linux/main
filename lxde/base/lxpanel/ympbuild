@@ -1,17 +1,17 @@
 #!/usr/bin/env bash
 name='lxpanel'
-release='2'
-version='0.11.0'
+release='3'
+version='0.11.1'
 url='https://wiki.lxde.org/en/LXPanel'
 description='Lightweight X11 desktop panel for LXDE '
 email='bayramk@gmail.com'
 maintainer='bk'
 license=('GPLv3')
-source=("https://github.com/lxde/lxpanel/archive/refs/tags/$version.tar.gz"
+source=("https://github.com/lxde/lxpanel/archive/refs/tags/0.11.1.tar.gz"
         "lxpanel-0.10.1-c99.patch")
 depends=(libwnck3 wireless-tools libkeybinder3 alsa-lib curl libX11 libfm libxml2)
 makedepends=()
-sha256sums=('3a681a0902684457c6c1f7ff7fd1b6c7c16883fba1822e248347f992cf3f9ce2'
+sha256sums=('24334dde6ed37d32bb021f902dbd54a1e6cdd01f35a778d80fcd3acd23a0e93b'
             'SKIP')
 group=(lxde.base)
 uses=()
@@ -37,7 +37,10 @@ prepare(){
 }
 
 setup(){
-	autoreconf -fvi
+    # Fix AM_NLS macro issue - add m4_pattern_allow in configure.ac
+    sed -i 's/IT_PROG_INTLTOOL/IT_PROG_INTLTOOL\nm4_pattern_allow([^AM_NLS$])/g' configure.ac
+    
+    autoreconf -fvi
     ./configure --prefix=/usr \
         --libdir=/usr/lib64/ \
         --enable-gtk3 \

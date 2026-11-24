@@ -1,16 +1,16 @@
 #!/usr/bin/env bash
 name='lxmenu-data'
-release='2'
-version='0.1.6'
+release='3'
+version='0.1.7'
 url='https://github.com/lxde/lxmenu-data'
 description='Provides files needed for LXDE application menus '
 email='bayramk@gmail.com'
 maintainer='bk'
 license=('GPLv3')
-source=("https://github.com/lxde/lxmenu-data/archive/refs/tags/$version.tar.gz")
+source=("https://github.com/lxde/lxmenu-data/archive/refs/tags/0.1.7.tar.gz")
 depends=()
 makedepends=()
-sha256sums=('b237e732609fb2a521a942e08bb825ac7973ee478db7567d3606665a3793b2e8')
+sha256sums=('9f601c68f6e993451587dd422e352aa5478b7f584947587d38773f329b9b6ab4')
 group=(lxde.base)
 uses=()
 arch=('x86_64')
@@ -20,6 +20,9 @@ export CC=clang
 cd $name-$version
 
 setup(){
+    # Fix AM_NLS macro issue
+    sed -i 's/AM_GLIB_GNU_GETTEXT/AM_GLIB_GNU_GETTEXT\nm4_pattern_allow([^AM_NLS$])/g' configure.ac
+    
     autoreconf -fvi
     ./configure --prefix=/usr \
         --sysconfdir=/etc

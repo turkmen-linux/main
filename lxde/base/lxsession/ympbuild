@@ -1,16 +1,16 @@
 #!/usr/bin/env bash
 name='lxsession'
-release='2'
-version='0.5.6'
+release='3'
+version='0.5.7'
 url='https://lxde.org'
 description='Lightweight X11 session manager'
 email='akarsu@protonmail.com'
 maintainer='akarsu'
 license=('GPL2')
-source=("https://github.com/lxde/lxsession/archive/refs/tags/$version.tar.gz")
+source=("https://github.com/lxde/lxsession/archive/refs/tags/0.5.7.tar.gz")
 depends=(gtk3 polkit glib libX11 libX11)
 makedepends=(intltool vala docbook-xsl)
-sha256sums=('af469d7ed6edbd733da6ad01a46fef3eff871483db5b3d8ecc3c856dbcbed12f')
+sha256sums=('150dd1b78bb663775cd499a452817f8de9ae79b154c5c765d457d6f54daa608b')
 group=(lxde.base)
 uses=()
 arch=('x86_64')
