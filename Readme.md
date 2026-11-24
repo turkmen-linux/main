@@ -89,13 +89,30 @@ ymp build --install --no-emerge --output=output dev/cargo-c
 
 ---
 
-## 5. 🤖 AI Ajan Çalışma Protokolü (Botlar İçin Zorunlu Kurallar)
+## 5. 🤖 AI Ajan Çalışma Protokolü ve Prensipler
 
-Bu depoda görev alan tüm yapay zeka modelleri ve otomasyon araçları aşağıdaki 6 kurala harfiyen uymalıdır:
+Bu depoda görev alan tüm yapay zeka modelleri ve otomasyon araçları aşağıdaki **15 prensibe** göre çalışmalıdır:
 
-1. **Tek Paket Kuralı (Batch Yasaktır):** Birden fazla paket verildiğinde asla hepsini tek seferde düzenlemeye çalışmayın. **Her yanıtta veya işlem adımında SADECE 1 paket üzerinde çalışın.**
-2. **Dur ve Onay Bekle:** Bir paketin incelemesini, düzenlemesini ve/veya derleme komutunu tamamladıktan sonra **durun**. Kullanıcı *"devam et"*, *"onay"* veya *"sıradaki"* demeden listedeki bir sonraki pakete kesinlikle geçmeyin.
-3. **`release` Kuralını İhlal Etme:** Sürüm yükseltmelerinde bile `release` değerini asla `'1'` yapmayın; daima mevcut sayıya `+1` ekleyin.
-4. **Önce Oku, Sonra Yaz:** Bir pakete müdahale etmeden önce mutlaka o paketin mevcut `ympbuild` dosyasını, klasöründeki `.patch` dosyalarını ve kök dizindeki `build.sh` / `update-sums.sh` betiklerini okuyarak mevcut kod stiline sadık kalın.
-5. **Doğru Derleme Komutunu Kullan:** Derleme komutu çalıştırırken veya kullanıcıya önerirken daima `ymp build --install --no-emerge --output=output <dizin-konumu>` formatını kullanın. Uydurma komutlar, `-dev` uzantılı bağımlılıklar veya `systemd` referansları eklemeyin.
-6. **Kısa Raporlama:** Her paket işlemi bittiğinde yaptığınız değişikliği ve çalıştırılacak `ymp build` komutunu en fazla **3 kısa madde** halinde özetleyip beklemeye geçin.
+### 🔐 GÜVENLİK VE İŞ AKIŞI PRENSİPLERİ
+
+1. **İş Akışı Yönetimi:** Her işlem tekil ve kontrol edilmiştir. Birden fazla paket aynı anda işlenmemeli, her adım kullanıcı onayıyla ilerlenmelidir.
+2. **Süreç Kontrolü:** Her aşama (inceleme, düzenleme, derleme) tamamlandıktan sonra süreç duraklatılmalı ve kullanıcı onayı beklenmelidir.
+3. **Sürüm Bütünlüğü:** `release` numaraları paket kimliğinin ve yükseltme zincirinin bir parçasıdır; her değişiklikte mevcut değere +1 eklenir, sıfır asla kullanılmaz.
+4. **Kod Bütünlüğü:** Mevcut kod stilini ve yapısını koruyarak değişiklikler yapılmalıdır. Mevcut `ympbuild` dosyaları, patch dosyaları ve build betikleri öncelikle incelenmelidir.
+5. **Paket Yönetimi:** Türkmen Linux paket sistemi (`ymp`, OpenRC, `/usr/lib64`) dağıtımlara özgü araçlar ve varsayımlarla çalışmamalıdır.
+
+### 📦 DERLEME VE KAYNAK PRENSİPLERİ
+
+6. **Derleme Standartları:** Tüm paketler `ymp build --install --no-emerge --output=output <dizin-konumu>` komutuyla derlenir. Sistem paketleri için `-dev` bağımlılıkları veya `systemd` referansları kullanılmaz.
+7. **Kaynak Temizliği:** Paket kaynak arşifleri geçici dizinlerde (`/tmp`) indirilir, derleme tamamlandıktan sonra otomatik olarak temizlenir; asla repo dizinlerinde saklanmaz.
+8. **Değişiklik Odaklı İş:** Sadece git diff'de belirtilen ve değiştirilmiş dosyalar işlenir. Gerekli olmayan dosyalara (Makefile, betikler, config dosyaları) müdahale edilmez.
+9. **Lisans Uyumluluğu:** xorg.freedesktop.org ve benzeri açık kaynak organizasyonlarından gelen paketler MIT lisansı ile paketlenir.
+10. **Güvenlik Standartları:** Tüm paketler `sha256sums` ile doğrulanır; MD5 checksums güvenlik nedeniyle kullanılmaz.
+11. **Kaynak Doğruluğu:** Tüm `source` URL'leri resmi organizasyonlardan (xorg.freedesktop.org, proje siteleri) ve doğrulanmış kaynaklardan alınır. URL ve sürüm doğruluğu her zaman teyit edilir.
+
+### 📊 İLETİŞİM VE TEMİZLİK PRENSİPLERİ
+
+12. **Bilgi Yoğunluğu:** Her paket işlemi için yapılan değişiklikler ve gereksinimler en fazla 3 madde halinde özetlenir; gereksiz detaylardan kaçınılır.
+13. **Bağımlılık Bilinci:** Eksik bağımlılıklar (örn: xv, libXvMC) proaktif olarak tespit edilir ve kullanıcıya bildirilir.
+14. **Süreç Teyidi:** Her derlemeden sonra çıktıların (`output/` dizinindeki `.ymp` dosyaları) başarıyla oluşturulduğunu doğrulama yapılır.
+15. **Workspace Bütünlüğü:** İşlem tamamlandıktan sonra geçici dosyalar ve workspace temizliği yapılır; git workspace her zaman temiz bir durumda bırakılır.
