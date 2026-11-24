@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 name='libXpm'
-release='2'
+release='3'
 version='3.5.18'
-url='https://gitlab.freedesktop.org/xorg/lib/libXpm.git/'
+url='https://gitlab.freedesktop.org/xorg/lib/libXpm'
 description='X.Org Xpm library'
 email='bayramk@gmail.com'
 maintainer='bk'
-license=('GPLv3')
+license=('MIT')
 source=("https://www.x.org/archive/individual/lib/libXpm-$version.tar.xz")
 depends=(libX11)
 makedepends=()

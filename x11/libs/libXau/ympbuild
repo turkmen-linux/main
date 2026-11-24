@@ -1,16 +1,16 @@
 #!/usr/bin/env bash
 name='libXau'
-release='2'
+release='3'
 version='1.0.12'
-url='https://www.x.org/wiki/'
+url='https://xorg.freedesktop.org/releases/individual/lib/'
 description='X.Org X authorization library'
 email='kurth4cker@tutanota.com'
 maintainer='kurth4cker'
 license=('MIT')
-source=("https://www.x.org/releases/individual/lib/libXau-${version}.tar.xz")
+source=("https://xorg.freedesktop.org/releases/individual/lib/libXau-${version}.tar.gz")
 depends=(xorgproto)
 makedepends=()
-sha256sums=('74d0e4dfa3d39ad8939e99bda37f5967aba528211076828464d2777d477fc0fb')
+sha256sums=('2402dd938da4d0a332349ab3d3586606175e19cb32cb9fe013c19f1dc922dcee')
 uses=()
 arch=('x86_64')
 group=(x11.libs)

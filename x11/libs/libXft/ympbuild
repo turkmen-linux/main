@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 name='libXft'
-release='2'
+release='3'
 version='2.3.9'
-url='https://gitlab.freedesktop.org/xorg/lib/libXft.git/'
+url='https://gitlab.freedesktop.org/xorg/lib/libXft'
 description='XFreeType-based font drawing library for X'
 email='bayramk@gmail.com'
 maintainer='bk'
-license=('GPLv3')
+license=('MIT')
 source=("https://www.x.org/archive/individual/lib/libXft-$version.tar.xz")
 depends=(fontconfig libXrender)
 makedepends=()

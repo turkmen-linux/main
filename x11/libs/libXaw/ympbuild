@@ -2,11 +2,11 @@
 name='libXaw'
 release='2'
 version='1.0.16'
-url='https://example.org'
+url='https://gitlab.freedesktop.org/xorg/lib/libXaw'
 description='Package libXaw'
 email='bayramk@gmail.com'
 maintainer='bk'
-license=('GPLv3')
+license=('MIT')
 source=("https://www.x.org/archive/individual/lib/libXaw-$version.tar.gz")
 depends=(libXext libXt libXmu libXpm)
 makedepends=()

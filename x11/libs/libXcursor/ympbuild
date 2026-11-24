@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 name='libXcursor'
-release='2'
+release='3'
 version='1.2.3'
 url='https://gitlab.freedesktop.org/xorg/lib/libXcursor'
 description='X.Org Xcursor library'
 email='bayramk@gmail.com'
 maintainer='bk'
-license=('GPLv3')
+license=('MIT')
 source=("https://www.x.org/archive/individual/lib/libXcursor-$version.tar.xz")
 depends=(libXrender libXfixes libX11)
 makedepends=()

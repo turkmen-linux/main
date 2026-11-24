@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 name='libXcomposite'
-release='2'
+release='3'
 version='0.4.7'
 url='https://gitlab.freedesktop.org/xorg/lib/libXcomposite'
 description='X.Org Xcomposite library'
 email='bayramk@gmail.com'
 maintainer='bk'
-license=('GPLv3')
+license=('MIT')
 source=("https://gitlab.freedesktop.org/xorg/lib/libxcomposite/-/archive/libXcomposite-$version/libxcomposite-libXcomposite-$version.tar.gz")
 depends=()
 makedepends=()

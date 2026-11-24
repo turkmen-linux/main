@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 name='libXfont2'
-release='2'
+release='3'
 version='2.0.7'
-url='https://gitlab.freedesktop.org/xorg/lib/libXfont.git/'
+url='https://gitlab.freedesktop.org/xorg/lib/libXfont2'
 description='X.Org Xfont library'
 email='bayramk@gmail.com'
 maintainer='bk'
-license=('GPLv3')
+license=('MIT')
 source=("https://www.x.org/archive/individual/lib/libXfont2-$version.tar.xz")
 depends=()
 makedepends=()

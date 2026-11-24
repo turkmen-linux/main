@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 name='libXfixes'
-release='2'
+release='3'
 version='6.0.2'
 url='https://gitlab.freedesktop.org/xorg/lib/libXfixes.git/'
 description='X.Org Xfixes library'
 email='bayramk@gmail.com'
 maintainer='bk'
-license=('GPLv3')
+license=('MIT')
 source=("https://www.x.org/archive/individual/lib/libXfixes-$version.tar.gz")
 depends=()
 makedepends=()

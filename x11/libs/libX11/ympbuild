@@ -1,16 +1,16 @@
 #!/usr/bin/env bash
 name='libX11'
-release='2'
-version='1.8.13'
-url='https://www.x.org/archive/individual/lib/'
+release='3'
+version='1.8.14'
+url='https://xorg.freedesktop.org/releases/individual/lib/'
 description='X.Org X11 library'
 email='bk@gmail.com'
 maintainer='bk'
-license=('GPLv3')
-source=("https://www.x.org/archive/individual/lib/libX11-$version.tar.xz")
+license=('MIT')
+source=("https://xorg.freedesktop.org/releases/individual/lib/libX11-$version.tar.gz")
 depends=(libxcb libXau libXdmcp xtrans)
 makedepends=()
-sha256sums=('69606f485c2c07c14ef64f75b7bb326d48587af33795d9ab3e607c0b5f94f11c')
+sha256sums=('ebb8a58549ddde50aa2e742b3b256557f451053d173be8dbfc2e8ac078eee1d6')
 group=(x11.libs)
 uses=()
 arch=('x86_64')

@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 name='libXaw3d'
-release='2'
+release='3'
 version='1.6.6'
 url='https://gitlab.freedesktop.org/xorg/lib/libXaw3d'
 description='X.Org Xaw3d library'
 email='bayramk@gmail.com'
 maintainer='bk'
-license=('GPLv3')
+license=('MIT')
 source=("https://www.x.org/archive/individual/lib/libXaw3d-$version.tar.gz")
 depends=(libX11 libXt libXmu libXext)
 makedepends=()

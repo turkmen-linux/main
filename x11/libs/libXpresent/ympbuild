@@ -1,16 +1,16 @@
 #!/usr/bin/env bash
 name='libXpresent'
-release='1'
-version='1.0.1'
-url='https://gitlab.freedesktop.org/xorg/lib/libXpresent.git/'
+release='2'
+version='1.0.2'
+url='https://gitlab.freedesktop.org/xorg/lib/libXpresent'
 description='X Present Extension C Library'
 email='bayramk@gmail.com'
 maintainer='bk'
-license=('GPLv3')
-source=("https://www.x.org/archive/individual/lib/libXpresent-$version.tar.xz")
+license=('MIT')
+source=("https://www.x.org/releases/individual/lib/libXpresent-$version.tar.xz")
 depends=(libX11 xorgproto libXext libXfixes libXrandr)
 makedepends=()
-md5sums=('bdd3ec17c6181fd7b26f6775886c730d')
+sha256sums=('4e5b21b4812206a4b223013606ae31170502c1043038777a1ef8f70c09d37602')
 group=(x11.libs)
 uses=()
 arch=('x86_64')

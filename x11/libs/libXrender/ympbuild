@@ -1,16 +1,16 @@
 #!/usr/bin/env bash
 name='libXrender'
-release='1'
-version='0.9.11'
-url='https://gitlab.freedesktop.org/xorg/lib/libXrender.git/'
+release='2'
+version='0.9.13'
+url='https://gitlab.freedesktop.org/xorg/lib/libXrender'
 description='X.Org Xrender library'
 email='bayramk@gmail.com'
 maintainer='bk'
-license=('GPLv3')
+license=('MIT')
 source=("https://www.x.org/archive/individual/lib/libXrender-$version.tar.xz")
 depends=()
 makedepends=()
-md5sums=('ebf7fb3241ec03e8a3b2af72f03b4631')
+sha256sums=('3fe88c609df6782e1e7af2e4de36b2563d70cd70ff7dcb1cda561ad64912bb64')
 group=(x11.libs)
 uses=()
 arch=('x86_64')

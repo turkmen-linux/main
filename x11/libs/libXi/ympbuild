@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 name='libXi'
-release='2'
+release='3'
 version='1.8.2'
-url='https://gitlab.freedesktop.org/xorg/lib/libXi.git/'
+url='https://gitlab.freedesktop.org/xorg/lib/libXi'
 description='X.Org Xi library'
 email='bayramk@gmail.com'
 maintainer='bk'
-license=('GPLv3')
+license=('MIT')
 source=("https://www.x.org/archive/individual/lib/libXi-$version.tar.gz")
 depends=(libXfixes)
 makedepends=()

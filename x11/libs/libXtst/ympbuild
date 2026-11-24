@@ -1,16 +1,16 @@
 #!/usr/bin/env bash
 name='libXtst'
-release='1'
-version='1.2.4'
-url='https://gitlab.freedesktop.org/xorg/lib/libXtst.git/'
+release='2'
+version='1.2.6'
+url='https://gitlab.freedesktop.org/xorg/lib/libXtst'
 description='X.Org Xlib-based client API for the XTEST & RECORD extensions library'
 email='bayramk@gmail.com'
 maintainer='bk'
-license=('GPLv3')
+license=('MIT')
 source=("https://www.x.org/archive/individual/lib/libXtst-$version.tar.xz")
 depends=(libX11 libXext xorgproto libXi)
 makedepends=()
-md5sums=('02f128fbf809aa9c50d6e54c8e57cb2e')
+sha256sums=('f94f0b37c07d80d877f3eda2c2405cc7e62aa9842f6310354aa349e3d66a4fe5')
 group=(x11.libs)
 uses=()
 arch=('x86_64')

@@ -1,16 +1,16 @@
 #!/usr/bin/env bash
 name='libXres'
-release='1'
-version='1.2.2'
-url='https://gitlab.freedesktop.org/xorg/lib/libXres.git/'
+release='2'
+version='1.2.3'
+url='https://gitlab.freedesktop.org/xorg/lib/libXres'
 description='X.Org XRes library'
 email='bayramk@gmail.com'
 maintainer='bk'
-license=('GPLv3')
+license=('MIT')
 source=("https://www.x.org/archive/individual/lib/libXres-$version.tar.xz")
 depends=(libX11 libXext xorgproto)
 makedepends=()
-md5sums=('66c9e9e01b0b53052bb1d02ebf8d7040')
+sha256sums=('d2de8f5401d6c86a8992791654547eb8def585dfdc0c08cc16e24ef6aeeb69dc')
 group=(x11.libs)
 uses=()
 arch=('x86_64')

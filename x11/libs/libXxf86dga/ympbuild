@@ -1,16 +1,16 @@
 #!/usr/bin/env bash
 name='libXxf86dga'
-release='1'
-version='1.1.6'
-url='https://gitlab.freedesktop.org/xorg/lib/libXxf86dga.git/'
+release='2'
+version='1.1.7'
+url='https://gitlab.freedesktop.org/xorg/lib/libXxf86dga'
 description='X.Org Xxf86dga library'
 email='bayramk@gmail.com'
 maintainer='bk'
-license=('GPLv3')
-source=("https://www.x.org/archive/individual/lib/libXxf86dga-$version.tar.gz")
+license=('MIT')
+source=("https://www.x.org/releases/individual/lib/libXxf86dga-$version.tar.xz")
 depends=()
 makedepends=()
-md5sums=('f88c63c9be40f3a51d9c22159858c2d5')
+sha256sums=('b3be5b444d324cb6e0f4b5019a4972c99ea336ccb8ab7968eccefecd917ffde6')
 group=(x11.libs)
 uses=()
 arch=('x86_64')

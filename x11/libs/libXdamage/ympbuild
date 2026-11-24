@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 name='libXdamage'
-release='2'
+release='3'
 version='1.1.7'
 url='https://gitlab.freedesktop.org/xorg/lib/libXdamage.git/'
 description='X.Org Xdamage library'
 email='bayramk@gmail.com'
 maintainer='bk'
-license=('GPLv3')
+license=('MIT')
 source=("https://www.x.org/archive/individual/lib/libXdamage-$version.tar.xz")
 depends=(libXfixes libX11)
 makedepends=()
