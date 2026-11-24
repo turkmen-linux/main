@@ -1,16 +1,16 @@
 #!/usr/bin/env bash
 name='nemo'
-release='6'
-version='6.6.4'
+release='7'
+version='6.8.5'
 url='https://github.com/linuxmint/nemo'
 description='File manager for the Cinnamon desktop environment'
 email='brkt8khn@gmail.com'
 maintainer='brkt8khn'
 license=('GPLv2')
-source=("https://github.com/linuxmint/nemo/archive/refs/tags/${version}.tar.gz")
+source=("https://github.com/linuxmint/nemo/archive/refs/tags/6.8.5.tar.gz")
 depends=(cinnamon-desktop dconf gvfs libexif libgsf libnotify libxml2 python xapp)
 makedepends=(meson intltool gobject-introspection)
-sha256sums=('258807feb2e7bac523707d6b3daf2d9439e7135123cbe795183d5aaa6fd691ed')
+sha256sums=('8ecbf936f933f5b99546193861a08a9ace6fea5e48bf71de2040cc6d31e9d328')
 group=(cinnamon.base)
 uses=()
 arch=('x86_64')

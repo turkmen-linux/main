@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
 name='cinnamon-menus'
-release='4'
+release='5'
 version='6.4.0'
 url='https://github.com/linuxmint/cinnamon'
 description='Linux desktop which provides advanced innovative features and a traditional user experience'
 email='brkt8khn@gmail.com'
 maintainer='brkt8khn'
 license=('GPLv2')
-source=("https://github.com/linuxmint/cinnamon-menus/archive/refs/tags/${version}.tar.gz")
+source=("https://github.com/linuxmint/cinnamon-menus/archive/refs/tags/6.4.0.tar.gz")
 depends=(glib)
 makedepends=(gobject-introspection meson)
 sha256sums=('9cad5ac61900492f66c91810fd13bed9dc37b49ec0b9bbc0bbe9ebf48ee45452')

@@ -1,0 +1,42 @@
+#!/usr/bin/env bash
+name='mozjs140'
+release='1'
+version='140.17.0'
+url='https://spidermonkey.dev/'
+description='JavaScript interpreter and libraries - Version 140'
+email='akarsu@protonmail.com'
+maintainer='akarsu'
+license=('MPL')
+source=("https://deb.debian.org/debian/pool/main/m/mozjs140/mozjs140_${version}.orig.tar.xz"
+        "python3.14-fixes.patch")
+depends=()
+makedepends=('python3.14' 'rustup' 'clang' 'llvm')
+sha256sums=('d3ae08905ae03b32ac87a9999755015aec419eb5e3744c5c9bcb820b6f6aaf54'
+            'SKIP')
+group=(gnome.extra)
+uses=()
+arch=('x86_64')
+
+setup(){
+    cd "firefox-${version}"
+    patch -Np1 -i ../python3.14-fixes.patch
+}
+
+build(){
+    cd "firefox-${version}"
+    mkdir -p obj-js
+    cd obj-js
+    ../js/src/configure \
+        --prefix=/usr \
+        --libdir=/usr/lib64 \
+        --disable-jemalloc \
+        --enable-optimize \
+        --disable-debug \
+        --disable-tests
+    make -j"$(nproc)"
+}
+
+package(){
+    cd "firefox-${version}/obj-js"
+    make DESTDIR="$DESTDIR" install
+}

@@ -1,16 +1,16 @@
 #!/usr/bin/env bash
 name='cinnamon-screensaver'
-release='4'
-version='6.4.0'
+release='5'
+version='6.8.1'
 url='https://github.com/linuxmint/cinnamon-screensaver'
 description='Screensaver designed to integrate well with the Cinnamon desktop.'
 email='brkt8khn@gmail.com'
 maintainer='brkt8khn'
 license=('GPLv3')
-source=("https://github.com/linuxmint/cinnamon-screensaver/archive/refs/tags/${version}.tar.gz")
+source=("https://github.com/linuxmint/cinnamon-screensaver/archive/refs/tags/6.8.1.tar.gz")
 depends=(accountsservice cinnamon-desktop libgnomekbd py3-cairo py3-pygobject py3-setproctitle py3-xapp xapp xdotool procps-ng)
 makedepends=(gobject-introspection meson)
-sha256sums=('e985b68981482b7ead6aef55988937958539221d752f9a4feb7ced9ac32fe422')
+sha256sums=('1ff4a02d7a87fed91950093f4fb49eb9bbc6328d1f3ce47b7372e5e25e88a86a')
 group=(cinnamon.base)
 uses=()
 arch=('x86_64')

@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
 name='cinnamon'
-release='9'
-version='6.6.7'
+release='10'
+version='6.8.4'
 url='https://github.com/linuxmint/cinnamon'
 description='Linux desktop which provides advanced innovative features and a traditional user experience'
 email='brkt8khn@gmail.com'
 maintainer='brkt8khn'
 license=('GPLv2')
-source=("https://github.com/linuxmint/cinnamon/archive/refs/tags/$version.tar.gz"
+source=("https://github.com/linuxmint/cinnamon/archive/refs/tags/6.8.4.tar.gz"
         "10-cinnamon-disable-polkit.patch"
         "99-cinnamon-defaults.gschema.override")
 depends=(nm-applet accountsservice cinnamon-control-center cinnamon-menus
@@ -17,7 +17,7 @@ depends=(nm-applet accountsservice cinnamon-control-center cinnamon-menus
 		    timezonemap xapp xdg-desktop-portal-xapp ibus
 )
 makedepends=(meson gobject-introspection intltool py3-sass)
-sha256sums=('220f9ba77860d63708e682aa3fdc48cd8597b41b698467f116e477b45d514249'
+sha256sums=('d9cf68046c5d115f38d18b734dbd2dfad53c67a861942282e17cdd4688b5cf8d'
             'SKIP'
             'SKIP')
 group=(cinnamon.base)
