@@ -1,16 +1,16 @@
 #!/usr/bin/env bash
 name='xorg-xset'
 release='1'
-version='1.2.5'
-url='https://xorg.freedesktop.org/'
+version='1.2.6'
+url='https://xorg.freedesktop.org/releases/individual/app/'
 description='User preference utility for X'
 email='akarsu@protonmail.com'
 maintainer='akarsu'
-license=('custom')
-source=(https://xorg.freedesktop.org/archive/individual/app/xset-$version.tar.xz{,.sig})
-depends=(libXmu)
-makedepends=(util-macros)
-md5sums=('18ff5cdff59015722431d568a5c0bad2' 'SKIP')
+license=('MIT')
+source=('https://xorg.freedesktop.org/releases/individual/app/xset-1.2.6.tar.gz')
+depends=(libXmu util-macros)
+makedepends=()
+sha256sums=('b63c6e3dc531b054284cc14b9cae57cfa1ac99804d7ae1f2fe2f48a1adf260cf' 'SKIP')
 group=(x11.apps)
 uses=()
 arch=('x86_64')

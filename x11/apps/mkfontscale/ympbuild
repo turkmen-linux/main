@@ -1,21 +1,21 @@
 #!/usr/bin/env bash
 name='mkfontscale'
-release='1'
-version='1.2.2'
-url='https://gitlab.freedesktop.org/xorg/app/mkfontscale.git/'
+release='2'
+version='1.2.4'
+url='https://xorg.freedesktop.org/releases/individual/app/'
 description='create an index of scalable font files for X'
 email='bayramk@gmail.com'
 maintainer='bk'
-license=('GPLv3')
-source=("https://gitlab.freedesktop.org/xorg/app/mkfontscale/-/archive/mkfontscale-$version/mkfontscale-mkfontscale-$version.tar.gz")
+license=('MIT')
+source=('https://xorg.freedesktop.org/releases/individual/app/mkfontscale-1.2.4.tar.gz')
 depends=(freetype libfontenc)
 makedepends=()
-md5sums=('5740018d3a1b6887a7a5fb4ebb0070ca')
+sha256sums=('076cedba00195e81d055fb39eff94c057f97326ac2403cf71460fc613cd200bf')
 group=(x11.apps)
 uses=()
 arch=('x86_64')
 
-cd $name-$name-$version
+cd $name-$version
 
 setup(){
 	autoreconf -fvi

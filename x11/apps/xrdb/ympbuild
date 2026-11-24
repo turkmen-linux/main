@@ -1,21 +1,21 @@
 #!/usr/bin/env bash
 name='xrdb'
 release='1'
-version='1.2.1'
-url='https://gitlab.freedesktop.org/xorg/app/xrdb'
+version='1.2.3'
+url='https://xorg.freedesktop.org/releases/individual/app/'
 description='X resource database utility'
 email='aliriza.keskin@pardus.org.tr'
 maintainer='aliriza'
-license=('GPLv3')
-source=("https://gitlab.freedesktop.org/xorg/app/xrdb/-/archive/xrdb-$version/xrdb-xrdb-$version.tar.gz")
+license=('MIT')
+source=('https://xorg.freedesktop.org/releases/individual/app/xrdb-1.2.3.tar.gz')
 depends=(libX11)
 makedepends=()
-md5sums=('e82849ca3db670c59df4420e19cd7582')
+sha256sums=('89c3d0a5ee77e3f1b25a3a63cce2a322fe899acb061ed8e0bab6920189b61edd')
 group=(x11.apps)
 uses=()
 arch=('x86_64')
 
-cd $name-$name-$version
+cd $name-$version
 
 setup(){
     autoreconf -fvi

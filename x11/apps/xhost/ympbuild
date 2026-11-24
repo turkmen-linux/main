@@ -1,21 +1,21 @@
 #!/usr/bin/env bash
 name='xhost'
 release='1'
-version='1.0.9'
-url='https://gitlab.freedesktop.org/xorg/app/xhost'
+version='1.0.10'
+url='https://xorg.freedesktop.org/releases/individual/app/'
 description='X server access control program'
 email='aliriza.keskin@pardus.org.tr'
 maintainer='aliriza'
-license=('GPLv3')
-source=("https://gitlab.freedesktop.org/xorg/app/xhost/-/archive/xhost-$version/xhost-xhost-$version.tar.gz")
+license=('MIT')
+source=('https://xorg.freedesktop.org/releases/individual/app/xhost-1.0.10.tar.gz')
 depends=(libX11)
 makedepends=()
-md5sums=('39fdb4f4aa2b1e816486d986ac0a9521')
+sha256sums=('10a157a9c818e6ec17764ba22117e006089107a22aacf58be6de089a76a112f4')
 group=(x11.apps)
 uses=()
 arch=('x86_64')
 
-cd $name-$name-$version
+cd $name-$version
 
 setup(){
     autoreconf -fvi

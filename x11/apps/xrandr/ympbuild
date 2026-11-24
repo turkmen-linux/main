@@ -1,16 +1,16 @@
 #!/usr/bin/env bash
 name='xrandr'
 release='1'
-version='1.5.2'
-url='https://xorg.freedesktop.org/'
+version='1.5.4'
+url='https://xorg.freedesktop.org/releases/individual/app/'
 description='Primitive command line interface to RandR extension'
 email='akarsu@protonmail.com'
 maintainer='akarsu'
-license=('GPLv3')
-source=("https://xorg.freedesktop.org/archive/individual/app/xrandr-$version.tar.xz")
+license=('MIT')
+source=('https://xorg.freedesktop.org/releases/individual/app/xrandr-1.5.4.tar.gz')
 depends=(libX11 libXrandr)
 makedepends=(util-macros)
-md5sums=('f822a8d5f233e609d27cc22d42a177cb')
+sha256sums=('b022276f1f2e6e206803027a5f569e6eb51e69d2d8886bfb5a7bc0612ddca4ee')
 group=(x11.apps)
 uses=()
 arch=('x86_64')

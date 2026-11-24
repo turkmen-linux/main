@@ -1,21 +1,21 @@
 #!/usr/bin/env bash
 name='xeyes'
 release='1'
-version='1.2.0'
-url='X.Org xeyes application '
+version='1.3.1'
+url='https://xorg.freedesktop.org/releases/individual/app/'
 description='X.Org xeyes application'
 email='bk@gmail.com'
 maintainer='bk'
-license=('GPLv3')
-source=('https://gitlab.freedesktop.org/xorg/app/xeyes/-/archive/xeyes-1.2.0/xeyes-xeyes-1.2.0.tar.gz')
+license=('MIT')
+source=('https://xorg.freedesktop.org/releases/individual/app/xeyes-1.3.1.tar.gz')
 depends=(libICE libSM libXau libXau libXext libXi libXmu libXrender libXt libxcb)
 makedepends=()
-md5sums=('fa718fa72c9fcb07da1934debf880cdf')
+sha256sums=('d223283270488b1a6b408d0e97bd69a7704cf6a9596c0320035d807e63cdc084')
 group=(x11.apps)
 uses=()
 arch=('x86_64')
 
-cd $name-$name-$version
+cd $name-$version
 
 setup(){
 	autoreconf -fvi

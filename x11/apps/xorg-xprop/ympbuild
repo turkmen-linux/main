@@ -1,16 +1,16 @@
 #!/usr/bin/env bash
 name='xorg-xprop'
 release='1'
-version='1.2.6'
-url='https://xorg.freedesktop.org/'
+version='1.2.8'
+url='https://xorg.freedesktop.org/releases/individual/app/'
 description='Property displayer for X'
 email='akarsu@protonmail.com'
 maintainer='akarsu'
-license=('custom')
-source=(https://xorg.freedesktop.org/archive/individual/app/xprop-${version}.tar.xz{,.sig})
+license=('MIT')
+source=(https://xorg.freedesktop.org/releases/individual/app/xprop-1.2.8.tar.xz{,.sig})
 depends=(libX11)
 makedepends=(util-macros)
-md5sums=('33c090d8632a300e63efbf36edd6a333' 'SKIP')
+sha256sums=('a8394338c99775160d733d54d73cdcdc5c9c80a0dc8cffd5be1b7c977254b745' 'SKIP')
 group=(x11.apps)
 uses=()
 arch=('x86_64')

@@ -1,16 +1,16 @@
 #!/usr/bin/env bash
 name='xmodmap'
 release='1'
-version='1.0.11'
-url='https://gitlab.freedesktop.org/xorg/app/xmodmap'
+version='1.0.12'
+url='https://xorg.freedesktop.org/releases/individual/app/'
 description='utility for modifying keymaps and pointer button mappings in X'
 email='bk@gmail.com'
 maintainer='bk'
-license=('GPLv3')
-source=("https://xorg.freedesktop.org/archive/individual/app/xmodmap-$version.tar.gz")
+license=('MIT')
+source=('https://xorg.freedesktop.org/releases/individual/app/xmodmap-1.0.12.tar.gz')
 depends=(libX11)
 makedepends=()
-md5sums=('b9ffdd93021e279f5c4f6c49b6bd00b9')
+sha256sums=('dcf3eb1d5098ebd38f8ebb7014b33306a29f3c6bbac0b5d14986842b7632d872')
 group=(x11.apps)
 uses=()
 arch=('x86_64')

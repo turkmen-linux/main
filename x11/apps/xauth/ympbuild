@@ -1,21 +1,21 @@
 #!/usr/bin/env bash
 name='xauth'
-release='1'
-version='1.1.2'
-url='https://gitlab.freedesktop.org/xorg/app/xauth'
+release='2'
+version='1.1.5'
+url='https://xorg.freedesktop.org/releases/individual/app/'
 description='X authority file utility'
 email='aliriza.keskin@pardus.org.tr'
 maintainer='aliriza'
-license=('GPLv3')
-source=("https://gitlab.freedesktop.org/xorg/app/xauth/-/archive/xauth-$version/xauth-xauth-$version.tar.gz")
+license=('MIT')
+source=('https://xorg.freedesktop.org/releases/individual/app/xauth-1.1.5.tar.gz')
 depends=(libXmu libX11)
 makedepends=()
-md5sums=('1e3086f646c35e7e66e81cb878490baf')
+sha256sums=('cf94d3ee1fac0b3d9f9fb8ec5f95bd5f82e7958f929f092ec98c00fc2b7aef68')
 group=(x11.apps)
 uses=()
 arch=('x86_64')
 
-cd $name-$name-$version
+cd $name-$version
 
 setup(){
     autoreconf -fvi

@@ -1,21 +1,21 @@
 #!/usr/bin/env bash
 name='xorg-iceauth'
 release='1'
-version='1.0.9'
-url='https://xorg.freedesktop.org/'
+version='1.0.11'
+url='https://xorg.freedesktop.org/releases/individual/app/'
 description='ICE authority file utility'
 email='akarsu@protonmail.com'
 maintainer='akarsu'
-license=('custom')
-source=("https://gitlab.freedesktop.org/xorg/app/iceauth/-/archive/iceauth-${version}/iceauth-iceauth-${version}.tar.gz")
+license=('MIT')
+source=('https://xorg.freedesktop.org/releases/individual/app/iceauth-1.0.11.tar.gz')
 depends=(libICE util-macros xorgproto)
 makedepends=()
-md5sums=('b82f662f3e2c9515d6063bd62c3dc532')
+sha256sums=('db417cae6d966e67892ebc3034ec92238af9733c53b5986e56cc8be7db540b3a')
 group=(x11.apps)
 uses=()
 arch=('x86_64')
 
-cd "iceauth-iceauth"-$version
+cd "iceauth"-$version
 
 setup(){
 	autoreconf -fvi

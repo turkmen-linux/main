@@ -2,12 +2,12 @@
 name='xinit'
 release='2'
 version='1.4.4'
-url='https://gitlab.freedesktop.org/xorg/app/xinit'
+url='https://xorg.freedesktop.org/releases/individual/app/'
 description='X Window System initializer xinit'
 email='bayramk@gmail.com'
 maintainer='bk'
-license=('GPLv3')
-source=("https://gitlab.freedesktop.org/xorg/app/xinit/-/archive/xinit-$version/xinit-xinit-$version.tar.gz"
+license=('MIT')
+source=("https://xorg.freedesktop.org/releases/individual/app/xinit-1.4.4.tar.gz"
         "files/xinitrc"
         "files/xserverrc"
         "files/Xsession"
@@ -19,20 +19,20 @@ source=("https://gitlab.freedesktop.org/xorg/app/xinit/-/archive/xinit-$version/
 )
 depends=(util-macros xorgproto libX11 xorg-server xterm xhost xrdb)
 makedepends=()
-sha256sums=('a0efb773acea51c35e1295bfc1ac957ddf1edede9f76c20929e9c13b0644eb7a'
-         'SKIP'
-         'SKIP'
-         'SKIP'
-         'SKIP'
-         'SKIP'
-         'SKIP'
-         'SKIP'
-         'SKIP')
+sha256sums=('45cca1b0f3a963105f43cecc24e9cc4db0d14faa87bd9860b9ec563e8c73fc47'
+         '270f59f5b2d00b45dd0763db1b4c41ba86da84eaa60c308cf9a024de9ae41c91'
+         '86835010b5350c41035495b7b845db0eecf1e4b7eeaf152b12a881fa502e5387'
+         'f79bb26d16e482be736bd2ba5f647fcf13084afdcdf5b9cc32ffe6cbf4c1955a'
+         '1b72436d206f21a1716b00403249da42ab3fc34188dbd1ebecb055c666a3a4b2'
+         '6a92d4fc0622001a1401f82db367a9e42e248fdbf06832d2b222ef5722981e9f'
+         '95e07012539854e0f77784521d6abaf32d2110483a194168726d186fa34f02f0'
+         '855ca9a25170c3be7b64bbf282bcb650ad6c0fc669a58f11300c49d397de468b'
+         '0e69e9ac45dd6379995aa805b0174422e32c1b0f0b2ab85de7fea81470e3119f')
 group=(x11.apps)
 uses=()
 arch=('x86_64')
 
-cd $name-$name-$version
+cd $name-$version
 
 setup(){
     autoreconf -vfi
@@ -61,4 +61,3 @@ package(){
     echo "xhost +local:" >> "$DESTDIR"/etc/X11/xinit/xinitrc.d/10-local.sh
     chmod 754 "$DESTDIR"/etc/X11/xinit/xinitrc.d/10-local.sh
 }
-

@@ -1,21 +1,21 @@
 #!/usr/bin/env bash
 name='bdftopcf'
-release='1'
-version='1.1.1'
-url='https://gitlab.freedesktop.org/xorg/util/bdftopcf.git/'
+release='2'
+version='1.1'
+url='https://xorg.freedesktop.org/releases/individual/app/'
 description='X.Org bdftopcf application'
 email='bayramk@gmail.com'
 maintainer='bk'
-license=('GPLv3')
-source=("https://gitlab.freedesktop.org/xorg/util/bdftopcf/-/archive/bdftopcf-$version/bdftopcf-bdftopcf-$version.tar.gz")
+license=('MIT')
+source=('https://xorg.freedesktop.org/releases/individual/app/bdftopcf-1.1.tar.gz')
 depends=(font-util)
 makedepends=()
-md5sums=('bb9ff1d1cb088d97c1dcb28f0d08179c')
+sha256sums=('699d1a62012035b1461c7f8e3f05a51c8bd6f28f348983249fb89bbff7309b47')
 group=(x11.apps)
 uses=()
 arch=('x86_64')
 
-cd $name-$name-$version
+cd $name-$version
 
 setup(){
 	autoreconf -fvi

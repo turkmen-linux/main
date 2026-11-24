@@ -1,18 +1,18 @@
 #!/usr/bin/env bash
 name='xedit'
-release='1'
-version='1.2.3'
-url='https://xorg.freedesktop.org/'
+release='2'
+version='1.2.5'
+url='https://xorg.freedesktop.org/releases/individual/app/'
 description='Simple text editor for X'
 email='akarsu@protonmail.com'
 maintainer='akarsu'
-license=('custom')
-source=(https://xorg.freedesktop.org/archive/individual/app/xedit-$version.tar.xz
-        xedit.desktop)
+license=('MIT')
+source=('https://xorg.freedesktop.org/releases/individual/app/xedit-1.2.5.tar.xz'
+        'xedit.desktop')
 depends=(libXaw libXmu libXt libX11)
 makedepends=(util-macros)
-md5sums=('6c62e9d4e628259fe34f3018cd54873c'
-        'SKIP')
+sha256sums=('733460cbf20a9d88e2a482ff1b288f51a97150cff807c7ffb98d2430546c8867'
+        '111a99e240537d07b1dc46bcca7de0b311085407c8fa8253cae356f453e814e9')
 group=(x11.apps)
 uses=()
 arch=('x86_64')
@@ -34,4 +34,3 @@ package(){
     mkdir -p $DESTDIR/usr/share/applications
     install ../xedit.desktop $DESTDIR/usr/share/applications
 }
-
