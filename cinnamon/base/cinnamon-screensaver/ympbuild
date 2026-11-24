@@ -31,9 +31,4 @@ build () {
 package () {
     DESTDIR="${DESTDIR}" ninja -C build install $jobs
     
-    rm -f ${DESTDIR}/usr/bin/cinnamon-screensaver-command
-    rm -f ${DESTDIR}/usr/bin/cinnamon-screensaver
-
-    ln -s ../../usr/share/cinnamon-screensaver/cinnamon-screensaver-command.py ${DESTDIR}/usr/bin/cinnamon-screensaver-command
-    ln -s ../../usr/share/cinnamon-screensaver/cinnamon-screensaver-main.py ${DESTDIR}/usr/bin/cinnamon-screensaver
 }
