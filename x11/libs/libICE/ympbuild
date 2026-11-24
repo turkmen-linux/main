@@ -1,16 +1,16 @@
 #!/usr/bin/env bash
 name='libICE'
-release='1'
-version='1.1.1'
+release='2'
+version='1.1.2'
 url='https://gitlab.freedesktop.org/xorg/lib/libICE'
 description='X.Org Inter-Client Exchange library'
 email='bayramk@gmail.com'
 maintainer='bk'
-license=('GPLv3')
-source=("https://www.x.org/archive/individual/lib/libICE-$version.tar.xz")
+license=('MIT')
+source=("https://www.x.org/releases/individual/lib/libICE-$version.tar.xz")
 depends=(xorgproto)
 makedepends=()
-md5sums=('b444a0e4c2163d1bbc7b046c3653eb8d')
+sha256sums=('974e4ed414225eb3c716985df9709f4da8d22a67a2890066bc6dfc89ad298625')
 group=(x11.libs)
 uses=()
 arch=('x86_64')
