@@ -247,3 +247,4 @@ Bu depoda görev alan tüm yapay zeka modelleri, kod asistanları ve otomasyon a
 19. **Kullanıcı İsteği Dışı Değişiklik Yasağı:** Kullanıcı açıkça belirtmediği sürece **hiçbir değişiklik yapılamaz.**
 20. **En Az Değişiklik Prensibi:** Mevcut `ympbuild` dosyaları, yalnızca görev kapsamındaki değişiklikler için **en az ve en az değişiklikle** düzenlenir.
 21. **Onay ilkesi:** Bulunan hatalar düzeltilmeden önce kullanıcıdan onay istenmelidir.
+22. **Güncel sürüm:** Güncel sürüm için `https://repology.org/api/v1/project/<project>` kullanılabilir. Mutlaka en güncel sürüm kullanılmalı ve mevcut sürümden daha aşağı sürüm tercih edilmemelidir. Eğer sürüm bulunamazsa kullanıcıya sorulmalıdır.
