@@ -1,18 +1,18 @@
 #!/usr/bin/env bash
 name='spirv-llvm-translator'
-release='6'
-version='22.1.0'
+release='7'
+version='23.1.3'
 url='https://github.com/KhronosGroup/SPIRV-LLVM-Translator'
 description='Bi-directional translator between SPIR-V and LLVM IR'
 email='aliriza.keskin@pardus.org.tr'
 maintainer='aliriza'
-license=('GPLv3')
-source=("https://github.com/KhronosGroup/SPIRV-LLVM-Translator/archive/v$version/SPIRV-LLVM-Translator-$version.tar.gz")
+license=('Apache-2.0')
+source=("https://github.com/KhronosGroup/SPIRV-LLVM-Translator/archive/refs/tags/v23.1.3.tar.gz")
 #_commit="63fd3515855469507e9531db68a834c2179ef4e1"
 #source=("https://github.com/KhronosGroup/SPIRV-LLVM-Translator/archive/${_commit}.zip")
-depends=(spirv-tools llvm)
+depends=(spirv-headers llvm)
 makedepends=()
-sha256sums=('a5d476404ab88ac0d148211da50428178c89caef8af8042a3ca8e71e58ed9427')
+sha256sums=('9ed57de3f31c575c836bef8f05ce5dfa98a8d80e64d948a02aac83c2e124f842')
 group=(dev.util)
 uses=()
 arch=('x86_64')

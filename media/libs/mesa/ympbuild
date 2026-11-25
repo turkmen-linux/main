@@ -17,7 +17,7 @@ wayland_depends=(wayland wayland-protocols)
 x11_depends=(libxshmfence libXxf86vm libXrandr)
 arch=('x86_64')
 
-cd $name-$version
+cd mesa-mesa-$version
 
 export CFLAGS="-O3 -s"
 export CXXFLAGS="-O3 -s"
@@ -44,7 +44,7 @@ options=(
     -D libunwind=disabled
     -D microsoft-clc=disabled
     -D sysprof=false
-    -D valgrind=false
+    -D valgrind=disabled
     -D video-codecs=all
     -D vulkan-drivers=amd,freedreno,intel,intel_hasvk,swrast,virtio,microsoft-experimental,nouveau,asahi,gfxstream
     -D vulkan-layers=device-select,intel-nullhw,overlay,screenshot,vram-report-limit

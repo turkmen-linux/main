@@ -15,38 +15,34 @@ group=(sys.devel)
 uses=()
 arch=('x86_64')
 
-cd llvm-project-$version.src
-
-local cmake_args=(
-    -G Ninja
-    -Wno-dev
-    -DCMAKE_BUILD_TYPE=Release
-    -DCMAKE_INSTALL_PREFIX=/usr
-    -DCMAKE_INSTALL_DOCDIR=share/doc
-    -DCMAKE_SKIP_RPATH=ON
-    -DBUILD_SHARED_LIBS=ON
-    -DLLVM_BUILD_DOCS=OFF
-    -DLLVM_ENABLE_SPHINX=OFF
-    -DLLVM_EXTERNAL_LIT=/usr/bin/lit
-    -DLLVM_INCLUDE_TESTS=ON
-    -DLLVM_LINK_LLVM_DYLIB=ON
-    -DLLVM_INCLUDE_TESTS=OFF
-    -DLLVM_MAIN_SRC_DIR="$(realpath ../llvm-$version.src)"
-    -DSPHINX_WARNINGS_AS_ERRORS=OFF
-)
-
 export CFLAGS="-O2 -DNDEBUG -Ilibunwind/include"
 export CXXFLAGS="-O2 -DNDEBUG -Ilibunwind/include"
 export CC=clang
 export CXX=clang++
 
-
 prepare(){
-    ln -s ../../libunwind/include/mach-o/ lld/MachO/mach-o
+    # Not required for build
 }
 
 setup(){
     mkdir lld/build
+    local cmake_args=(
+        -G Ninja
+        -Wno-dev
+        -DCMAKE_BUILD_TYPE=Release
+        -DCMAKE_INSTALL_PREFIX=/usr
+        -DCMAKE_INSTALL_DOCDIR=share/doc
+        -DCMAKE_SKIP_RPATH=ON
+        -DBUILD_SHARED_LIBS=ON
+        -DLLVM_BUILD_DOCS=OFF
+        -DLLVM_ENABLE_SPHINX=OFF
+        -DLLVM_EXTERNAL_LIT=/usr/bin/lit
+        -DLLVM_INCLUDE_TESTS=ON
+        -DLLVM_LINK_LLVM_DYLIB=ON
+        -DLLVM_INCLUDE_TESTS=OFF
+        -DLLVM_MAIN_SRC_DIR="$(realpath ../llvm-$version.src)"
+        -DSPHINX_WARNINGS_AS_ERRORS=OFF
+    )
     cmake -S lld -B lld/build ${cmake_args[@]}
 }
 
