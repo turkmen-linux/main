@@ -244,3 +244,6 @@ Bu depoda görev alan tüm yapay zeka modelleri, kod asistanları ve otomasyon a
 16. **Hata Durumunda Güvenli Durdurma:** Derleme veya indirme sırasında beklenmeyen bir hata oluşursa ajan rastgele denemelerle sistemi kirletmez; hatanın kök nedenini analiz edip çözüm önerisiyle birlikte kullanıcıya raporlar.
 17. **Git ve Workspace Bütünlüğü:** İşlem tamamlandıktan sonra `/tmp` altındaki geçici dosyalar temizlenir ve `git status` / `git diff` kontrolü yapılarak çalışma alanının temiz ve tutarlı kaldığı teyit edilir.
 18. **Gizli Bilgi ve Ortam Güvenliği:** Kişisel e-posta, API anahtarı veya yerel sistem yolları tariflere sızdırılmaz; yalnızca resmi bakımcı bilgileri ve standart değişkenler (`$DESTDIR`, `$WORKDIR`) kullanılır.
+19. **Kullanıcı İsteği Dışı Değişiklik Yasağı:** Kullanıcı açıkça belirtmediği sürece **hiçbir değişiklik yapılamaz.**
+20. **En Az Değişiklik Prensibi:** Mevcut `ympbuild` dosyaları, yalnızca görev kapsamındaki değişiklikler için **en az ve en az değişiklikle** düzenlenir.
+21. **Onay ilkesi:** Bulunan hatalar düzeltilmeden önce kullanıcıdan onay istenmelidir.
