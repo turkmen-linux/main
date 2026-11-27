@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='libXrandr'
-release='2'
-version='1.5.3'
+release='3'
+version='1.5.5'
 url='https://gitlab.freedesktop.org/xorg/lib/libXrandr'
 description='X.Org Xrandr library'
 email='bayramk@gmail.com'
@@ -10,7 +10,7 @@ license=('MIT')
 source=("https://www.x.org/archive/individual/lib/libXrandr-$version.tar.xz")
 depends=(libXrender)
 makedepends=()
-sha256sums=('897639014a78e1497704d669c5dd5682d721931a4452c89a7ba62676064eb428')
+sha256sums=('72b922c2e765434e9e9f0960148070bd4504b288263e2868a4ccce1b7cf2767a')
 group=(x11.libs)
 uses=()
 arch=('x86_64')

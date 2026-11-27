@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='xorg-server'
-release='2'
-version='21.1.13'
+release='3'
+version='21.1.26'
 url='https://www.x.org/wiki/'
 description='X.Org X servers'
 email='bayramk@gmail.com'
@@ -12,7 +12,7 @@ depends=(libmd libbsd libepoxy libfontenc libxkbfile xauth xkbcomp setxkbmap fre
          libXfont2 libxcvt mesa libX11 libdrm pixman font-util xcb-util-renderutil
          xcb-util xcb-util-image xcb-util-wm xcb-util-keysyms)
 makedepends=()
-sha256sums=('b45a02d5943f72236a360d3cc97e75134aa4f63039ff88c04686b508a3dc740c')
+sha256sums=('c8609f9cdafde14de7ec7cb406dac9507add1d536df8d3c3e3d3d9c1cd864066')
 group=(x11.base)
 uses=()
 arch=('x86_64')

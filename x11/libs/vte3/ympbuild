@@ -1,16 +1,16 @@
 #!/usr/bin/env bash
 name='vte3'
-release='4'
-version='0.76.0'
+release='5'
+version='0.84.1'
 url='https://gitlab.gnome.org/GNOME/vte.git/'
 description='vte Library providing a virtual terminal emulator widget'
 email='bayramk@gmail.com'
 maintainer='bk'
 license=('GPLv3')
-source=("https://gitlab.gnome.org/GNOME/vte/-/archive/${version}/vte-${version}.tar.gz")
+source=("https://download.gnome.org/sources/vte/0.84/vte-${version}.tar.xz")
 depends=(libxkbcommon libxcb wayland libthai pixman  libpng pixman libpcre2 pango p11-kit nettle util-linux libjpeg-turbo libidn2 icu harfbuzz gtk3 glib gnutls gmp gdk-pixbuf fribidi fontconfig expat libepoxy dbus libdatrie libcloudproviders cairo bzip2 at-spi2-core libXfixes  libXi libXrandr libXrender libXext libXdmcp libXdamage libXcursor libXcomposite libXau libX11 libxkbcommon)
 makedepends=()
-md5sums=('bcdccadfaea49fe56c83cf838fc2615c')
+sha256sums=('aca1caa8478aebcdbb1d67897fb3511eb7601debae6810e16a15b6fa25f31ac8')
 group=(x11.libs)
 uses=()
 arch=('x86_64')

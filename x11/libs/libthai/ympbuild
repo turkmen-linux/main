@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='libthai'
-release='1'
-version='0.1.29'
+release='2'
+version='0.1.30'
 url='https://github.com/tlwg/libthai'
 description='Package libthai'
 email='bayramk@gmail.com'
@@ -10,7 +10,7 @@ license=('GPLv3')
 source=("https://github.com/tlwg/libthai/releases/download/v$version/libthai-$version.tar.xz")
 depends=(libdatrie)
 makedepends=()
-md5sums=('c1fe8255d2bdfc5ea4f68dd9aff8b7f1')
+sha256sums=('ddba8b53dfe584c3253766030218a88825488a51a7deef041d096e715af64bdd')
 group=(x11.libs)
 uses=()
 arch=('x86_64')

@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='libnotify'
-release='1'.
-version='0.8.2'
+release='2'
+version='0.8.9'
 _version='0.8'
 url='https://gitlab.gnome.org/GNOME/libnotify'
 description='Library for sending desktop notifications'
@@ -11,7 +11,7 @@ license=('LGPL')
 source=("https://download.gnome.org/sources/libnotify/${_version}/libnotify-${version}.tar.xz")
 depends=()
 makedepends=()
-md5sums=('ee2d2934a9dcfd5b1305188201e1cd50')
+sha256sums=('c906bb084027ea512f94a60fbfc0cc8d4f17e4b4d525bed370d07a6d8714c923')
 group=(x11.libs)
 uses=()
 arch=('x86_64')
@@ -24,6 +24,7 @@ setup(){
         --buildtype=release \
         -Dgtk_doc=false     \
         -Dman=false \
+        -Dtests=false \
 		-Ddefault_library=both
 }
 
@@ -32,6 +33,6 @@ build(){
 }
 
 package(){
-    ninja -C build install $jobs
+    ninja -C build install
 }
 

@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='cairo'
-release='2'
-version='1.18.0'
+release='3'
+version='1.18.6'
 url='https://gitlab.freedesktop.org/cairo/cairo.git/'
 description='A vector graphics library with cross-device output support'
 email='bayramk@gmail.com'
@@ -10,7 +10,7 @@ license=('GPLv3')
 source=("https://gitlab.freedesktop.org/cairo/cairo/-/archive/$version/cairo-$version.tar.gz")
 depends=(pixman libpng glib libpcre2 fontconfig libX11 libXext libXrender)
 makedepends=(gtk-doc meson)
-md5sums=('c61aebf23b1928a709df76ccc9537173')
+sha256sums=('a95ae4f522ef24312af7339563f65e0a03b1ad3d58a46df73d2ef690fe15ae7f')
 group=(x11.libs)
 uses=()
 arch=('x86_64')

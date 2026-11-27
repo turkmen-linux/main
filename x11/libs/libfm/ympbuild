@@ -1,18 +1,17 @@
 #!/usr/bin/env bash
 name='libfm'
-release='2'
-version='1.4.0'
+release='3'
+version='1.4.1'
 url='https://example.org'
 description='Library for file management'
 email='bk@gmail.com'
 maintainer='bk'
 license=('GPLv3')
-source=("https://github.com/lxde/libfm/archive/refs/tags/$version.tar.gz"
+source=("https://github.com/lxde/libfm/archive/refs/tags/${version}.tar.gz"
         'libfm-fixes.patch')
 depends=(gtk3 pango intltool menu-cache)
 makedepends=()
-sha256sums=('7d7b616411992389a4b7f35796109d605f30bc2ceab84d4081d1665254ebbf82'
-         'SKIP')
+sha256sums=('1dff59162eb1ca5d1a6b945de4d0bdf2256a5264f54c9225b8599adce45dcb05' '134868ab81881a233ac2df754dab58609e211f2ace3b1b2fa33988cedf941962')
 group=(x11.libs)
 uses=()
 uses_extra=(extra-only)
@@ -20,21 +19,20 @@ arch=('x86_64')
 
 cd $name-$version
 
-export CC=clang
-
 setup(){
+    # Apply AM_NLS fix to configure.ac
+    sed -i 's/AC_INIT/AC_DEFUN([AM_NLS], [AC_DEFINE_UNQUOTED(ENABLE_NLS, 1, [enable internationalization]) AC_SUBST(ENABLE_NLS)])\nAC_INIT/' configure.ac
     autoreconf -fvi
-	  ./configure --prefix=/usr \
+    ./configure --prefix=/usr \
         --libdir=/usr/lib64/ \
-	      --with-gtk=3 \
-	     $(use_opt extra-only --with-extra-only "")
+        --with-gtk=3
 }
 
 build(){
-    make $jobs
+    make
 }
 
 package(){
-    make install $jobs
+    make DESTDIR="$DESTDIR" install
 }
 

@@ -10603,3 +10603,71 @@ index 9bf0baae..00000000
 -#endif /* defined DBUS_GLIB_CLIENT_WRAPPERS_org_freedesktop_UDisks */
 -
 -G_END_DECLS
+diff --git a/aclocal.m4 b/aclocal.m4
+index 00000000..00000000
+--- /dev/null
++++ b/aclocal.m4
+@@ -0,0 +1,50 @@
++AC_DEFUN([AM_MISSING_PROG],
++[AC_REQUIRE([AC_PROG_INSTALL])dnl
++if test -z "$$1"; then
++  AC_MSG_WARN($0: must be called with AM_MISSING_PROG($program, install-sh))
++fi
++AC_PATH_PROG($1, $2, install, ${srcdir}/missing ${abs_builddir}/missing)
++m4_if($1, [install], [], [AC_SUBST($1)])
++])
++
++AC_DEFUN([AC_PROG_LIBTOOL],
++[AC_REQUIRE([AC_PROG_INSTALL])
++AC_REQUIRE([AM_MISSING_PROG])
++AC_CHECK_TOOL(LIBTOOL, libtool, :)
++test -z "$LIBTOOL" && LIBTOOL="$$libtool"
++AC_SUBST(LIBTOOL)
++])
++
++AC_DEFUN([AM_PROG_LEX],
++[AC_REQUIRE([AM_PROG_AS])dnl
++AC_REQUIRE([AC_PROG_INSTALL])dnl
++AC_REQUIRE([AM_MISSING_PROG])dnl
++AC_CHECK_PROG(LEX, lex, lex)
++AC_SUBST(LEX)
++])
++
++AC_DEFUN([AM_PROG_YACC],
++[AC_REQUIRE([AM_PROG_AS])dnl
++AC_REQUIRE([AC_PROG_INSTALL])dnl
++AC_REQUIRE([AM_MISSING_PROG])dnl
++AC_CHECK_PROG(YACC, yacc, yacc)
++AC_SUBST(YACC)
++])
++
++AC_DEFUN([AM_PROG_CC_C_O],
++[AC_REQUIRE([AM_AUX_DIR_EXPAND])dnl
++AC_REQUIRE([AC_PROG_INSTALL])dnl
++AC_REQUIRE([AM_MISSING_PROG])dnl
++AC_REQUIRE([AC_PROG_CC])dnl
++AC_REQUIRE([AC_PROG_CC_C_O])dnl
++AC_REQUIRE([AC_PROG_MAKE_SET])dnl
++])
++
++AC_DEFUN([AM_PROG_INSTALL_STRIP],
++[AC_REQUIRE([AM_PROG_INSTALL])dnl
++if test "$INSTALL_STRIP_PROGRAM" = : || test ! -s "$srcdir/install-sh"; then
++  AC_MSG_ERROR(install-sh not found)
++fi
++])
++
++AC_DEFUN([AM_PROG_MKDIR_P],
++[dnl We love love Love AUTOCONF m4_pattern_allow([^AM_PROG_MKDIR_P$])
++AC_REQUIRE([AM_SILENT_RULES])dnl
++AC_CHECK_PROG(MKDIR_P, mkdir -p, mkdir -p, mkdir)
++AC_SUBST(MKDIR_P)
++])
++
++AC_DEFUN([AM_PROG_AR],
++[AC_REQUIRE([AM_AUX_DIR_EXPAND])dnl
++AC_REQUIRE([AC_PROG_INSTALL])dnl
++AC_REQUIRE([AM_MISSING_PROG])dnl
++AC_CHECK_PROG(GNUPJL, gnu-pj, gnu-pj)
++AC_SUBST(GNUPJL)
++])

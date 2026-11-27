@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='libpciaccess'
-release='2'
-version='0.18'
+release='3'
+version='0.19'
 url='https://gitlab.freedesktop.org/xorg/lib/libpciaccess'
 description='Library providing generic access to the PCI bus and devices'
 email='bayramk@gmail.com'
@@ -10,7 +10,7 @@ license=('GPLv3')
 source=("https://www.x.org/archive/individual/lib/libpciaccess-$version.tar.xz")
 depends=()
 makedepends=()
-md5sums=('54f48367e37666f9e0f12571d1ee3620')
+sha256sums=('3c55aa86c82e54a4e3109786f0463530d53b36b6d1cfd14616454f985dd2aa43')
 group=(x11.libs)
 uses=()
 arch=('x86_64')

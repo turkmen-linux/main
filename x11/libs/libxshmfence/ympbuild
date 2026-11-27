@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='libxshmfence'
-release='1'
-version='1.3.2'
+release='2'
+version='1.3.3'
 url='https://gitlab.freedesktop.org/xorg/lib/libxshmfence.git/'
 description='Shared memory fences using futexes'
 email='bayramk@gmail.com'
@@ -10,7 +10,7 @@ license=('GPLv3')
 source=("https://www.x.org/archive/individual/lib/libxshmfence-$version.tar.xz")
 depends=(xorgproto)
 makedepends=()
-md5sums=('faa74f7483074ce7d4349e6bdc237497')
+sha256sums=('d4a4df096aba96fea02c029ee3a44e11a47eb7f7213c1a729be83e85ec3fde10')
 group=(x11.libs)
 uses=()
 arch=('x86_64')
@@ -18,6 +18,8 @@ arch=('x86_64')
 cd $name-$version
 
 setup(){
+    aclocal
+    autoreconf -vfi
     ./configure --prefix=/usr \
         --libdir=/usr/lib64/
 }

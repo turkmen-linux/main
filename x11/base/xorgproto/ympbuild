@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='xorgproto'
-release='5'
-version='2025.1'
+release='6'
+version='2026.1'
 url='https://gitlab.freedesktop.org/xorg/proto/xorgproto'
 description='X.Org combined protocol headers'
 email='kurth4cker@tutanota.com'
@@ -10,7 +10,7 @@ license=('MIT')
 source=("https://www.x.org/releases/individual/proto/xorgproto-${version}.tar.xz")
 depends=()
 makedepends=(util-macros)
-sha256sums=('56898c716c0578df8a2d828c9c3e5c528277705c0484381a81960fe1a67668e8')
+sha256sums=('f9bfe4a9ed8c8ab9d2a3b0d49797f046052dadd06b7a8b45dbffaffb137e8290')
 uses=()
 arch=('x86_64')
 group=(x11.base)

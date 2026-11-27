@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='libXi'
-release='3'
-version='1.8.2'
+release='4'
+version='1.8.4'
 url='https://gitlab.freedesktop.org/xorg/lib/libXi'
 description='X.Org Xi library'
 email='bayramk@gmail.com'
@@ -10,7 +10,7 @@ license=('MIT')
 source=("https://www.x.org/archive/individual/lib/libXi-$version.tar.gz")
 depends=(libXfixes)
 makedepends=()
-sha256sums=('5542daec66febfeb6f51d57abfa915826efe2e3af57534f4105b82240ea3188d')
+sha256sums=('4d52f03b693cf3b32ae21701310cce34344ec8535f50d1667b1510a7083eca4a')
 group=(x11.libs)
 uses=()
 arch=('x86_64')
@@ -18,9 +18,10 @@ arch=('x86_64')
 cd $name-$version
 
 setup(){
+    aclocal
     autoreconf -fvi
     ./configure --prefix=/usr \
-        --libdir=/usr/lib64/
+        --disable-specs --with-xmlto=no --with-asciidoc=no
 }
 
 build(){

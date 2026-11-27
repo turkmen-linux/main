@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='libXfont2'
-release='3'
-version='2.0.7'
+release='4'
+version='2.0.10'
 url='https://gitlab.freedesktop.org/xorg/lib/libXfont2'
 description='X.Org Xfont library'
 email='bayramk@gmail.com'
@@ -10,7 +10,7 @@ license=('MIT')
 source=("https://www.x.org/archive/individual/lib/libXfont2-$version.tar.xz")
 depends=()
 makedepends=()
-sha256sums=('8b7b82fdeba48769b69433e8e3fbb984a5f6bf368b0d5f47abeec49de3e58efb')
+sha256sums=('cef1f4ad9cd69f439bb1ac484bdc8f9d7f8e70215b92d8ca86b96e31513e5f9c')
 group=(x11.libs)
 uses=()
 arch=('x86_64')

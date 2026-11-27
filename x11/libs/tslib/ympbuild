@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='tslib'
-release='1'
-version='1.22'
+release='2'
+version='1.24'
 url='https://github.com/kergoth/tslib'
 description='Touchscreen Access Library'
 email='akarsu@protonmail.com'
@@ -10,17 +10,17 @@ license=('GPLv2')
 source=("https://github.com/libts/tslib/releases/download/${version}/tslib-${version}.tar.xz")
 depends=()
 makedepends=()
-md5sums=('822139e5cc0ee2f0feaa6ce6628b989c')
+sha256sums=('58d9941ffaa269c399f00d0d308184c96087f7acf69aa8e3c6645e852f993ba2')
 group=(x11.libs)
 uses=()
 arch=('x86_64')
 
 cd $name-$version
 
-setup () {
-	autoreconf -fvi
+setup() {
+    autoreconf -fvi
     ./configure --prefix=/usr \
-		--libdir=/usr/lib64/
+        --libdir=/usr/lib64/
 }
 
 build () {

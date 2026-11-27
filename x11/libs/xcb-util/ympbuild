@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='xcb-util'
-release='1'
-version='0.4.0'
+release='2'
+version='0.4.1'
 url='https://xcb.freedesktop.org'
 description='X C-language Bindings sample implementations'
 email='kurth4cker@tutanota.com'
@@ -10,7 +10,7 @@ license=('MIT')
 source=("https://www.x.org/releases/individual/xcb/xcb-util-${version}.tar.gz")
 depends=(libxcb)
 makedepends=(util-macros xorgproto)
-md5sums=('157d82738aa89934b6adaf3ca508a0f5')
+sha256sums=('21c6e720162858f15fe686cef833cf96a3e2a79875f84007d76f6d00417f593a')
 uses=()
 arch=('x86_64')
 group=(x11.libs)
@@ -18,6 +18,8 @@ group=(x11.libs)
 cd $name-$version
 
 setup(){
+    aclocal
+    autoreconf -vfi
     ./configure --prefix=/usr \
         --libdir=/usr/lib64 \
 	--enable-shared \

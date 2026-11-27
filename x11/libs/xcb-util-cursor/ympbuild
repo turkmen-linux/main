@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 name='xcb-util-cursor'
-release='1'
-version='0.1.4'
+release='2'
+version='0.1.6'
 url='https://xcb.freedesktop.org'
 description='X C-language Bindings sample implementations'
 email='kurth4cker@tutanota.com'
@@ -10,7 +10,7 @@ license=('MIT')
 source=("https://www.x.org/releases/individual/xcb/xcb-util-cursor-${version}.tar.xz")
 depends=(libxcb xcb-util-image xcb-util-renderutil)
 makedepends=(xorgproto)
-md5sums=('0d244518ad54b886413fe782235d6210')
+sha256sums=('fdeb8bd127873519be5cc70dcd0d3b5d33b667877200f9925a59fdcad8f7a933')
 group=(x11.libs)
 uses=()
 arch=('x86_64')
